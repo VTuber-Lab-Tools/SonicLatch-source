@@ -1,0 +1,29 @@
+SonicLatch — Guida al ritardo audio
+
+Ambiente e installazione
+
+Destinazione: Windows a 64 bit e OBS 30 o successivo (OBS 32.2.2 consigliato). Il caricamento e la visualizzazione del pannello sono stati confermati in OBS 32.2.2 su un computer reale; OBS 30/31 non sono stati verificati su un computer reale. Chiudere OBS prima dell’installazione. Consultare le istruzioni di installazione e rimozione incluse in giapponese e inglese.
+
+Misurare, verificare, regolare
+
+1. Selezionare la sorgente audio e fornire un segnale attivo. Il filtro di misura “Misurazione del ritardo audio (SonicLatch)” viene aggiunto automaticamente. Non aggiungerlo manualmente, disattivarlo, rimuoverlo o cambiarne l’ordine durante l’uso. Le modifiche interessano tutte le scene che usano la sorgente.
+
+2. Controllare le forme d’onda PRE (prima dell’elaborazione), POST (dopo), Ritardo D e Misurazione. “—” significa non disponibile, non zero. Silenzio, sorgente silenziata, bassa affidabilità o misure obsolete/non valide possono impedire la regolazione. Controllare il segnale e attendere una nuova stima valida.
+
+3. Usare Regola automaticamente (Auto) con una stima valida. Imposta l’offset assoluto S a −D; non sottrae D dall’offset esistente. Con D = +80 ms, il valore desiderato è −80 ms. La sola misurazione e visualizzazione non modifica l’offset.
+
+4. Rifinire con −5 ms, −1 ms, +1 ms, +5 ms, oppure inserire un valore e usare Applica offset inserito. La sola digitazione non scrive. Annulla ripristina il valore precedente all’ultima operazione riuscita, se ancora valido. Azzera offset imposta 0 ms, non il valore originale.
+
+5. Verificare una registrazione o trasmissione reale. Ambiente e carico di elaborazione possono impedire un allineamento perfetto. Valori e ritardo possono cambiare dopo la regolazione o durante la trasmissione. Se si verifica uno sfasamento, attendere una stima attuale valida e usare nuovamente Auto. Auto è una regolazione esplicita, non un inseguimento continuo né una garanzia di sincronizzazione esatta.
+
+Cosa dimostra la visualizzazione
+
+D è stimato confrontando PRE e POST. S è l’offset di sincronizzazione OBS (Offset attuale O). Residuo attuale equivale a D + S. La posizione POST visualizzata include S; posizione e residuo sono stime del modello, non una nuova misura dell’uscita corretta. Una rilettura corrispondente conferma solo il valore salvato in OBS, non la sincronizzazione della registrazione.
+
+Intervalli e problemi
+
+Stereo: 44,1 kHz o 48 kHz. La misura del ritardo è approssimativamente entro ±500 ms, esclusi gli estremi di ricerca; la scrittura dell’offset va da −950 a +1000 ms. Sono intervalli diversi. Modifiche esterne a sorgente o offset possono invalidare proposte e annullamento. Leggi offset attuale legge soltanto e non ripristina l’annullamento. Se scrittura o rilettura non sono confermate, non presumere il successo e non premere ripetutamente. Verificare stato, sorgente e proprietà audio avanzate di OBS.
+
+Lingue e assistenza
+
+Interfaccia e guida coprono le stesse 16 impostazioni locali. Le richieste sono gestite in giapponese e inglese; non è promessa assistenza o traduzione del Setup in tutte le 16 lingue. Indicare versione OBS, tipo di sorgente, stato, passaggi e risultato in una registrazione reale. Non inviare password o registrazioni private senza aver concordato sia la necessità sia la condivisione. Cambiare la lingua nelle impostazioni OBS e riavviare OBS. Aprire il file della guida corrispondente.

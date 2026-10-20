@@ -29,13 +29,21 @@ def require(ok, reason):
         raise PackageError(reason)
 
 
+def product_role(path):
+    if path == 'SonicLatch/bin/64bit/SonicLatch.dll':
+        candidate.path_key(path)
+        return 'module'
+    return candidate.role(path)
+
+
 def validate_document(doc):
     require(type(doc) is dict and set(doc) == FIELDS, 'product manifest fields')
     require(type(doc['schemaVersion']) is int and doc['schemaVersion'] == 1 and
             doc['artifactKind'] == 'product-package' and doc['fixtureOnly'] is False and
             doc['publicationAuthorized'] is False, 'product schema/publication gate')
-    require((doc['productId'], doc['moduleId'], doc['productVersion'], doc['layoutVersion'],
-             doc['architecture']) == ('SonicLatch', 'SonicLatch', '0.1.0', 'obs33-flat-v1', 'amd64'),
+    require((doc['productId'], doc['moduleId'], doc['productVersion'],
+             doc['architecture']) == ('SonicLatch', 'SonicLatch', '0.1.0', 'amd64') and
+            doc['layoutVersion'] in {'obs33-flat-v1', 'obs-windows-bin64-v2'},
             'product identity/layout mismatch')
     require(doc['copyrightHolder'] == 'VTuber-Lab-Tools' and
             doc['licenseExpression'] == 'GPL-3.0-or-later', 'approved copyright/license required')
@@ -57,7 +65,7 @@ def validate_document(doc):
         require(type(row) is dict and set(row) == {'relativePath', 'sha256', 'size', 'role', 'componentLicenseId'},
                 'product file fields')
         path = row['relativePath']; key = candidate.path_key(path)
-        require(key not in keys and candidate.role(path) == row['role'] and
+        require(key not in keys and product_role(path) == row['role'] and
                 row['componentLicenseId'] == 'GPL-3.0-or-later', 'product path/role/license')
         require(type(row['size']) is int and 0 <= row['size'] <= LIMITS.max_file_bytes and
                 type(row['sha256']) is str and candidate.HASH.fullmatch(row['sha256']), 'product file hash/size')
@@ -65,7 +73,8 @@ def validate_document(doc):
     for key in keys:
         require(not any('/'.join(key.split('/')[:n]) in keys for n in range(1, len(key.split('/')))),
                 'product ancestor collision')
-    require('soniclatch/soniclatch.dll' in keys and
+    expected_module = 'soniclatch/soniclatch.dll' if doc['layoutVersion'] == 'obs33-flat-v1' else 'soniclatch/bin/64bit/soniclatch.dll'
+    require(expected_module in keys and sum(row['role'] == 'module' for row in rows) == 1 and
             sum(row['size'] for row in rows) <= LIMITS.max_total_bytes, 'product DLL/total size')
     return rows
 
@@ -138,14 +147,14 @@ def build(*, context, inputs, source_archive, source_sha256, output):
     payload = {}; rows = []; total = 0
     for path, spec in sorted(inputs.items()):
         require(type(spec) in (tuple, list) and len(spec) == 2, 'input source/hash pair')
-        role = candidate.role(path); data = candidate.read_pinned(spec[0], spec[1]); total += len(data)
+        role = product_role(path); data = candidate.read_pinned(spec[0], spec[1]); total += len(data)
         require(total <= LIMITS.max_total_bytes, 'product input total limit')
         payload[path] = data
         rows.append({'relativePath': path, 'sha256': sha(data), 'size': len(data), 'role': role,
                      'componentLicenseId': 'GPL-3.0-or-later'})
     doc = {'schemaVersion': 1, 'artifactKind': 'product-package', 'fixtureOnly': False,
            'publicationAuthorized': False, 'productId': 'SonicLatch', 'moduleId': 'SonicLatch',
-           'productVersion': '0.1.0', 'layoutVersion': 'obs33-flat-v1', 'architecture': 'amd64',
+           'productVersion': '0.1.0', 'layoutVersion': 'obs-windows-bin64-v2' if 'SonicLatch/bin/64bit/SonicLatch.dll' in inputs else 'obs33-flat-v1', 'architecture': 'amd64',
            'copyrightHolder': 'VTuber-Lab-Tools', 'licenseExpression': 'GPL-3.0-or-later',
            'sourceContext': context, 'sourceArchive': source_identity(source_archive, source_sha256),
            'files': rows}

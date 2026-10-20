@@ -1,54 +1,51 @@
-# ビルド手順（Windows 用候補）
+# Building SonicLatch for Windows
 
-## 必要なもの
+The 0.1.0 Windows DLL was built with the genuine OBS Studio **32.2.2** SDK, Qt **6.11.1**, MSVC 19.44.35224 (tools 14.44.35207), Windows SDK 10.0.26100.0 and CMake 4.3.1. Both product QA and wheel diagnostics were OFF. Its SHA-256 is `867b0a34ff371021075d53594759158a81094769e85dbe9d5e34ce94d4b976f8` (890880 bytes).
 
-- CMake 3.24 以降、C++20 対応 MSVC と Windows SDK
-- Qt 6.11.1（CMake は EXACT 指定）、Core / Widgets
-- 対象 OBS の libobs / frontend API ヘッダーと、対応する生成済み obsconfig.h
-- 同梱の QCustomPlot 2.1.1 ソース
+OBS 32.2.2 is the tested and recommended host. The product targets OBS 30 or newer; OBS 30/31 have not been tested. An OBS33-only build existed during development and is not the DLL described here. Do not override the module API version to simulate compatibility.
 
-Qt、OBS、コンパイラー、Windows SDK のバイナリはこのソースに含みません。既存環境の依存ロックと取得元を確認してください。異なる SDK や OBS に置換して動作確認済みとみなさないでください。
+## Dependencies and configuration
 
-## 製品ターゲット
+Use a C++20 MSVC compiler, CMake 3.24 or newer, Windows SDK, the exact Qt 6.11.1 Core/Gui/Widgets SDK, OBS32.2.2 libobs/frontend headers, and the bundled QCustomPlot 2.1.1 source. OBS, Qt, Microsoft tools, Python and NSIS binaries are external dependencies and are not included in this source archive.
 
-ソースルートから、実際の検証済みパスを指定します。以下の山括弧部分は置換が必要です。
+`DEPENDENCIES.lock.json` records 1022 actual build inputs under logical roots, without workstation paths. `OBS_32_2_2` and `OBS_32_CONFIG` identify the SDK and its generated configuration. `PRODUCT_SOURCE` contains 49 compile inputs; `BUILD_GENERATED` identifies generated build files. The lock is an input inventory, not a dependency downloader or permission to redistribute the listed SDKs.
+
+Generate `obsconfig.h` from the official 32.2.2 `libobs/obsconfig.h.in` with `OBS_RELEASE_CANDIDATE=0` and `OBS_BETA=0`; preserve the template's normal undef handling. [BUILD-INPUTS.md](BUILD-INPUTS.md) provides the exact template/config hashes and configuration example. The historical `generate-obsconfig.cmake` script is explicitly for OBS33 RC2 and must not be used for this SDK32 build.
+
+## Product DLL
+
+Run from this source root, replacing the SDK paths with the verified locations:
 
 ```powershell
-cmake -S poc/normal-source-dock -B build/product -A x64 `
-  -DCMAKE_PREFIX_PATH="<Qt 6.11.1 の prefix>" `
-  -DOBS_HEADERS="<libobs headers>" `
-  -DOBS_CONFIG_DIR="<obsconfig.h directory>" `
+cmake -S poc/normal-source-dock -B build/product -G "Visual Studio 17 2022" -A x64 `
+  -DCMAKE_PREFIX_PATH="C:/sdk/qt6.11.1" `
+  -DOBS_HEADERS="C:/sdk/obs-studio-32.2.2-sources/libobs" `
+  -DOBS_CONFIG_DIR="C:/build/obs32-config" `
   -DSONICLATCH_BUILD_QA=OFF `
   -DSONICLATCH_BUILD_WHEEL_DIAGNOSTIC=OFF
-cmake --build build/product --config Release --target pitatuner_normal_source_dock
+cmake --build build/product --config Release --target pitatuner_normal_source_dock --parallel 2
 ```
 
-出力名は SonicLatch.dll、内部ターゲット名は互換性のため維持します。MSVC runtime は MultiThreadedDLL です。配置時は `data/locale` をプラグインのデータ領域へ同梱します。自動インストール・アンインストール実装は別成果物であり、このソース一式のビルド完了だけでは配布用インストーラーは完成しません。
+The output is `SonicLatch.dll`; the internal target name is retained. The DLL uses `MultiThreadedDLL` (/MD). The installed layout is `SonicLatch/bin/64bit/SonicLatch.dll` and `SonicLatch/data/`. The payload contains the DLL plus 42 data files: 16 locales, 16 language guides, one help index, six usage/support/limitations files, LICENSE, THIRD_PARTY_NOTICES and SOURCE-AVAILABILITY.
 
-## 開発用試験
+`qa/` and `tests/` contain development targets; they are not installed. Only run tests relevant to a change. Normal product builds keep QA and wheel diagnostics OFF; see `qa/development-targets.cmake` for optional targets.
 
-通常製品ビルドでは QA と wheel diagnostic は OFF です。`qa/` と `tests/` は開発用であり、製品 DLL のインストール対象ではありません。QA の分離条件は `qa/development-targets.cmake` を確認してください。旧仕様の試験は対象を選んで実行します。
+## Corresponding source and build evidence
 
-## 記録済みビルド環境と依存ロック
+The DLL compile baseline is `19e221286bab7b10a5a541b6ab6832c41318956a`. Its 49 compile inputs and 1022 tracked build inputs were hashed and recorded. The saved compile-source snapshot was reconstructed after the build from the immutable compile commit and actual MSBuild source read inputs; all 49 files matched byte for byte. Later installer, fixture and documentation changes do not imply a DLL rebuild: the package preparation verifies the 49 DLL compile inputs against the frozen snapshot and retains the DLL bytes. The distribution source commit therefore differs from the DLL compile baseline.
 
-今回の候補は公式OBS Studio 33.0.0-rc2ソース（tag commit f1c0a116441bdb7a1de7896f810009ea487b8508）のlibobs/frontend APIとRC2生成obsconfig.h、Qt6.11.1、MSVC14.44.35207、Windows SDK10.0.26100.0でビルドしています。QA・wheel diagnosticはOFFです。OBS32以前は対象外です。
+The build binding connects the DLL hash/size, compile-source manifest and build proof. The release's separate source inventory, product manifest and SHA-256 list identify the exact corresponding source and package. A byte binding does not by itself prove ABI compatibility or reproducible binaries. See [BUILD-INPUTS.md](BUILD-INPUTS.md) for the recorded build and packaging stages.
 
-DEPENDENCIES.lock.jsonは今回のMSBuild実読込入力を再ハッシュし、絶対パスを論理rootへ置換した一覧です。PRODUCT_SOURCEはコンパイル時のソース、BUILD_GENERATEDは生成物の記録で、SDKやランタイムの再配布指定ではありません。OBS_33_CONFIGのobsconfig.hはOBS_RELEASE_CANDIDATE=2、OBS_BETA=0です。同じ公式ソースの生成設定を使い、空ファイルで置換しないでください。Qt/OBS SDKや実行時DLLはソースZIPに含みません。
+The earlier installer candidate e392d78 was accepted after a normal native overwrite/reinstall and OBS-running rejection reported by the user, with independent receipt/payload/registration readback. A later documentation repack preserves that evidence but is a distinct installer artifact; its own validation status is recorded alongside its hashes. Native uninstall and interrupted-recovery acceptance have not been recorded.
 
-最終配布文書と依存記録の更新はDLLのコンパイル後にパッケージ用コピーへ適用しています。実コンパイル入力173ファイルと配布ソースの差は文書・依存記録・installer接続scriptに限定し、製品C++ソースは同一です。
+## Installer
 
-## インストーラーソース
+`packaging/windows/` supplies helper, NSIS and package/catalog generation sources. Python 3.10 or newer and NSIS 3.13 are additional build dependencies. The package tooling's Python modules are included under `integrations/windows-candidates-20261019/installer-next-implementation/`.
 
-`packaging/windows/` に helper、NSIS、package/catalog生成、入力固定のソースを同梱しています。Python 3.10 以降と NSIS 3.13 は外部依存です。Python モジュールの依存は `integrations/windows-candidates-20261019/installer-next-implementation/` にあります。
+The product path is `product_package.py` / `build_release_package.py` / `generate_release_catalog.py`. The older `generate_product_catalog.py` is a separate candidate path. First freeze the corresponding source, DLL/build proof and every data input; generate the product archive/manifest and fixed catalog; build the helper; freeze its bytes; then compile NSIS. Changing source or data requires regenerating the catalog, helper and Setup. The reviewed predecessor ledger must include every required authenticated predecessor, including the actually installed e392d78 release.
 
-製品 DLL と対応ソース ZIP の実際の hash・size、成功 build の入力 inventory と証拠を確定してから catalog を生成します。未確定値や旧成果物の値で置換しません。生成 catalog を helper に接続し、helper → freeze → NSIS の順で構築します。catalog を更新した後は helper も再構築してください。`SONICLATCH_REVIEWED_CATALOG` は生成済み `packaging/windows/installer-helper/product_release.generated.hpp` を必要とします。未生成のまま有効にしません。
+The default helper catalog is empty and fails closed before product writes. `SONICLATCH_REVIEWED_CATALOG=ON` requires the generated `product_release.generated.hpp`. The helper uses `MultiThreaded` (/MT) and requests administrator execution. Source compilation alone does not authorize installation or publication. Generated payload headers, build trees, executables, credentials, private receipts and workstation configuration are excluded from corresponding source.
 
-`product_package.py` / `build_release_package.py` / `generate_release_catalog.py` が製品 package の生成経路です。`generate_product_catalog.py` は既存 candidate 用経路であり、製品 package と混同しないでください。生成 payload/header、build tree、実行ファイル、個人パスを含む設定、private 履歴はソースに含めません。
+## Offset calculation
 
-## 補正計算の技術補足
-
-有効な推定遅延を D、現在の同期オフセットを S とすると、自動調整は絶対値 −D を設定し、残差表示は D + S です。± は現在の S を基準に操作します。
-
-## 外部取得元・入力schema・生成順の補足
-
-[BUILD-INPUTS.md](BUILD-INPUTS.md) を参照してください。公式OBS/Qt取得元、実DLLのconfigure/build引数、同一hashのobsconfig再生成、inventory/binding生成手順を記載しています。既存ビルド証拠の再検証であり、新規環境の全再ビルドや修正版インストーラー導入成功を意味しません。
+For an accepted delay estimate D and current sync offset S, recommended offset is the absolute value -D; displayed estimated residual is D + S. The increment buttons operate relative to the current S. The capture waveform is not the actual output after sync-offset processing; see the usage and limitations documents.

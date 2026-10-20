@@ -1,0 +1,29 @@
+SonicLatch — Ses gecikmesi yardımı
+
+Ortam ve kurulum
+
+Hedef: 64 bit Windows ve OBS 30 veya üzeri (OBS 32.2.2 önerilir). Yükleme ve dock gösterimi gerçek bir bilgisayarda OBS 32.2.2 ile doğrulandı; OBS 30/31 gerçek bir bilgisayarda henüz test edilmedi. Kurulumdan önce OBS’yi kapatın. Birlikte verilen Japonca/İngilizce kurulum ve kaldırma talimatlarını kullanın.
+
+Ölçün, inceleyin, ayarlayın
+
+1. Ses kaynağını seçip etkin bir sinyal sağlayın. “Ses Gecikmesi Ölçümü (SonicLatch)” ölçüm filtresi otomatik eklenir. Elle eklemeyin; kullanım sırasında devre dışı bırakmayın, silmeyin veya sırasını değiştirmeyin. Ofset değişiklikleri bu kaynağı kullanan tüm sahneleri etkiler.
+
+2. PRE (işleme öncesi), POST (işleme sonrası) dalga biçimlerini, Gecikme D ve Ölçüm alanlarını kontrol edin. “—” sıfır değil, kullanılamayan değer demektir. Sessizlik, susturma, düşük güven, eski veya geçersiz ölçüm ayarlamayı engelleyebilir. Sinyali kontrol edip yeni geçerli tahmini bekleyin.
+
+3. Geçerli tahmin olduğunda Otomatik ayarla (Auto) kullanın. Mutlak ofset S değerini −D yapar; mevcut ofsetten D çıkarmaz. D = +80 ms ise hedef −80 ms olur. Ölçüm ve görüntüleme tek başına ofseti değiştirmez.
+
+4. −5 ms, −1 ms, +1 ms, +5 ms ile ince ayar yapın veya sayı girip Girilen ofseti uygula kullanın. Yalnızca yazmak değer kaydetmez. Geri al, hâlâ geçerliyse son başarılı işlemden önceki değeri geri getirir. Ofseti sıfırla ilk değeri değil, 0 ms değerini ayarlar.
+
+5. Gerçek kaydı veya yayını kontrol edin. Ortama ve işlem yüküne bağlı olarak tam hizalama mümkün olmayabilir. Değerler ve gecikme ayardan sonra veya yayın sırasında değişebilir. Kayma olursa geçerli güncel tahmini bekleyip Auto ile tekrar ayarlayın. Auto, açıkça başlatılan bir yeniden ayardır; sürekli takip ya da kusursuz eşzamanlama garantisi değildir.
+
+Göstergenin anlamı
+
+D, PRE ve POST karşılaştırılarak tahmin edilir. S, OBS eşzamanlama ofsetidir (Mevcut ofset O). Mevcut artık değer, D + S değeridir. Görüntülenen POST konumu S içerir; konum ve artık değer model tahminleridir, düzeltilmiş çıkışın yeni ölçümü değildir. Eşleşen geri okuma yalnızca OBS içinde saklanan değeri doğrular, kaydın eşzamanlandığını kanıtlamaz.
+
+Aralıklar ve sorun giderme
+
+Stereo: 44,1 kHz veya 48 kHz. Gecikme ölçümü arama uçları hariç yaklaşık ±500 ms içindedir; ofset yazma aralığı −950 ile +1000 ms arasındadır. Aralıklar farklıdır. Kaynak veya ofsetin dışarıdan değiştirilmesi önerileri ve geri almayı geçersiz kılabilir. Mevcut ofseti oku yalnızca okur, geri almayı geri getirmez. Yazma veya geri okuma doğrulanmadığında başarı varsaymayın ve tekrar tekrar tıklamayın. Durumu, kaynağı ve OBS gelişmiş ses özelliklerini kontrol edin.
+
+Diller ve destek
+
+Arayüz ve yardım aynı 16 yerel ayarı kapsar. Sorular Japonca ve İngilizce desteklenir; 16 dilin tümünde destek veya Setup çevirisi vaat edilmez. OBS sürümünü, kaynak türünü, durum metnini, adımları ve gerçek kayıtta oluşup oluşmadığını belirtin. Hem gerekliliği hem de paylaşımı konusunda anlaşılmadıkça parola veya özel kayıt göndermeyin. OBS ayarlarından dili değiştirip OBS’yi yeniden başlatın. Aynı yerel ayara ait yardım dosyasını açın.

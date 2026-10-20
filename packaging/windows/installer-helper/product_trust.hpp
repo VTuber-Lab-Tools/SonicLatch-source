@@ -17,7 +17,7 @@ struct KnownTransition {
 };
 inline void validateKnown(const KnownRelease& r) {
  need(hex(r.manifest,64)&&hex(r.source,64)&&!r.productId.empty()&&!r.moduleId.empty()&&!r.version.empty(),"release identity incomplete");
- need(!r.owned.empty()&&r.owned.size()<=512&&r.owned.contains("SonicLatch/SonicLatch.dll"),"release inventory incomplete");
+ need(!r.owned.empty()&&r.owned.size()<=512&&(r.owned.contains("SonicLatch/SonicLatch.dll")!=r.owned.contains("SonicLatch/bin/64bit/SonicLatch.dll")),"release inventory needs exactly one known module layout");
  for(const auto& [path,ref]:r.owned){need(safePath(path),"release namespace");refValid(ref);}
 }
 inline void authorizeTransition(const Plan& p,const KnownTransition& known) {

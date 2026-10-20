@@ -26,3 +26,5 @@ void obs_source_remove_audio_capture_callback(obs_source_t*,void(*)(void*,obs_so
 signal_handler_t* obs_source_get_signal_handler(obs_source_t*);
 void signal_handler_connect(signal_handler_t*,const char*,void(*)(void*,calldata_t*),void*);void signal_handler_disconnect(signal_handler_t*,const char*,void(*)(void*,calldata_t*),void*);
 bool obs_get_audio_info(obs_audio_info*);
+// Module-local locale lookup, declared by the real OBS module header.
+const char* obs_module_text(const char*);

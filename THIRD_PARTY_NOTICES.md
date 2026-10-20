@@ -20,7 +20,7 @@ Windows SDK / MSVC とインストーラー作成ツールも外部依存です�
 
 `DEPENDENCIES.lock.json` の論理 root により外部依存を識別できます。
 
-- OBS_33_RC2 / OBS_33_CONFIG: OBS Studio 33.0.0-rc2 の libobs / frontend API。SDK は外部に保持し、本ソースZIPには含めません。
+- OBS_32_2_2 / OBS_32_CONFIG: OBS Studio 32.2.2 の libobs / frontend API。SDK は外部に保持し、本ソースZIPには含めません。
 - QT_6_11_1: Qt Core / Gui / Widgets 6.11.1 のヘッダー、CMake 設定、import libraries、DLL の記録。本ソースZIPには含めません。
 - MSVC_14_44_35207 / WINDOWS_SDK_10 / CMAKE: 開発ツール・システムSDK。記録にあるからといって再配布対象にしません。
 
@@ -28,7 +28,7 @@ Windows SDK / MSVC とインストーラー作成ツールも外部依存です�
 
 ## Windows インストーラーに組み込む NSIS 関連部分
 
-NSIS 3.13 を使用する現行定義 `packaging/windows/SonicLatch.nsi` は、生成 installer／uninstaller の実行部分、Modern UI 2 の画面・日本語リソース、`nsExec`、および zlib 展開部分を利用します。Modern UI 2 の Welcome 画面は `nsDialogs` を使用します。これらは生成物に組み込まれる部分であり、ビルド用 `makensis.exe` や NSIS ツール一式の再配布とは区別します。NSIS ツール一式は本 sourcepack に含めません。
+NSIS 3.13 を使用する現行定義 `packaging/windows/SonicLatch.nsi` は、生成 installer／uninstaller の実行部分、Modern UI 2 の画面・日本語リソース、`nsExec`、`System`、および zlib 展開部分を利用します。Modern UI 2 の Welcome 画面は `nsDialogs` を使用します。これらは生成物に組み込まれる部分であり、ビルド用 `makensis.exe` や NSIS ツール一式の再配布とは区別します。NSIS ツール一式は本 sourcepack に含めません。
 
 - NSIS: Copyright (C) 1999–2026 Contributors。個別ファイルの著作権表示が優先されます。
 - NSIS 公式文書は、例外が明記された部分を除くコード・プラグイン・ヘッダー・画像、および zlib 圧縮モジュールに zlib/libpng license を適用しています。
@@ -50,9 +50,9 @@ helper が明示リンクする `bcrypt`、`advapi32`、`shell32`、`ole32` は 
 
 ## 最終配布物との照合が必要な事項
 
-1. NSIS の実使用 3.13 配布物に含まれるライセンス文書と、最終コンパイルで取り込んだプラグイン・リソースの一覧。現候補には当該ツール全体と最終 Setup がないため、マクロ由来の追加部分まで確定していません。
+1. NSIS の実使用 3.13 配布物に含まれるライセンス文書と、最終コンパイルで取り込んだプラグイン・リソースの一覧。記録済み構築は NSIS 3.13、Modern UI 2、nsDialogs、nsExec、System、zlib を使用しています。最終 Setup の構築ログと展開結果をこの構成に照合します。
 2. 最終 helper のコンパイル／リンク記録と PE import 一覧、および使用した MSVC／Build Tools の版・適用ライセンス条件。静的ランタイムの正確な組込み版・構成は現候補だけでは確定していません。
-3. 最終 product manifest／埋込み catalog と対応する SonicLatch.dll の依存一覧。現候補の既定 catalog は空で、第三者 DLL を追加梱包した最終 manifest はありません。
+3. 最終 product manifest／埋込み catalog と対応する SonicLatch.dll の依存一覧。既定 catalog は空のまま失敗する構成であり、配布候補は別途生成した固定 catalog を使用します。現行の製品 payload は SonicLatch.dll と 42 data ファイルの計43件で、Qt/OBS SDK やその DLL は含めません。
 4. 本書が実配布データに入ること。現行 validator は `.md` を許可しないため、同じ内容を `SonicLatch/data/THIRD_PARTY_NOTICES.txt` として明示的な data 入力に追加し、生成 manifest のサイズ・SHA-256 と実ファイルを照合してください。`LICENSE` 本文も改変せず `.txt` の data 入力として扱ってください。
 
 以上はソース定義から確認できる構成の表記であり、未確認の最終バイナリやライセンス条件について配布適合を宣言するものではありません。

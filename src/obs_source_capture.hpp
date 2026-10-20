@@ -102,7 +102,7 @@ class Binding {
  struct Invocation{Session* session;uint64_t id,sessionId,offsetToken;};static inline thread_local Invocation invocation_{};
  static inline std::atomic<uint64_t> liveFilters_{};
  static constexpr const char* filterId="pitatuner_capture_boundary_dev";
- static constexpr const char* filterDisplayName="\xE9\x9F\xB3\xE5\xA3\xB0\xE9\x81\x85\xE5\xBB\xB6\xE6\xB8\xAC\xE5\xAE\x9A\xEF\xBC\x88\x53\x6F\x6E\x69\x63\x4C\x61\x74\x63\x68\xEF\xBC\x89"; // UTF-8 display name; stable internal ID above.
+ static const char* filterDisplayName(){return obs_module_text("FilterAudioDelayMeasurement");} // Lookup-owned text; do not cache across locale changes.
  const Api& api_;SessionIds& ids_;const std::thread::id owner_=std::this_thread::get_id();
  obs_source_t* source_{};obs_source_t* filter_{};signal_handler_t* signals_{};std::shared_ptr<Session> session_;
  struct Watched {obs_source_t* source;signal_handler_t* signals;};std::vector<Watched> watched_;
@@ -147,7 +147,7 @@ class Binding {
  timingqa::Scope qa(false,false);
 #endif
  auto& s=*static_cast<Session*>(data);const auto call=invocation_.session==&s&&invocation_.sessionId==s.key.session?invocation_.id:0;const auto offsetToken=invocation_.offsetToken;invocation_={};copy(s,audio->data,audio->frames,audio->timestamp,false,muted,call);if(call&&s.accepting.load(std::memory_order_acquire)&&!s.faults.load(std::memory_order_acquire)&&!muted)s.pairedPacketSeen.store(true,std::memory_order_release);s.offsetAck.post(offsetToken,call!=0,s.accepting.load(std::memory_order_acquire)&&!s.faults.load(std::memory_order_acquire)&&!muted);}
- static const char* name(void*){return filterDisplayName;}
+ static const char* name(void*){return filterDisplayName();}
  static void* create(obs_data_t*,obs_source_t*){auto* c=new FilterContext{pending_};if(c->session){c->session->filterAlive.store(true);++liveFilters_;}return c;}
  static void destroy(void* data){auto* c=static_cast<FilterContext*>(data);if(!c)return;if(c->session){c->session->filterAlive.store(false);fault(*c->session,Fault::Removed);--liveFilters_;}delete c;}
  static void analyze(const std::shared_ptr<Session>& s)noexcept{try{
@@ -322,7 +322,7 @@ public:
   session_=std::make_shared<Session>();session_->sampleRate=info.samples_per_sec;session_->key={uuid,*id,1};
   if(uuid.size()>=session_->uuid.size()){stop();return false;}std::memcpy(session_->uuid.data(),uuid.data(),uuid.size());
   const auto* type=api_.obs_source_get_id(source_);if(type){const auto n=std::min(std::strlen(type),session_->type.size()-1);std::memcpy(session_->type.data(),type,n);}
-  pending_=session_;filter_=api_.obs_source_create_private(filterId,filterDisplayName,nullptr);pending_.reset();if(!filter_){stop();selectionError_=SelectError::FilterCreate;return false;}
+  pending_=session_;filter_=api_.obs_source_create_private(filterId,filterDisplayName(),nullptr);pending_.reset();if(!filter_){stop();selectionError_=SelectError::FilterCreate;return false;}
   // OBS visual TOP is the last array entry; filter_audio executes in reverse.
   // Move only our measurement filter; other filters retain relative order.
   api_.obs_source_filter_add(source_,filter_);api_.obs_source_filter_set_order(source_,filter_,OBS_ORDER_MOVE_TOP);

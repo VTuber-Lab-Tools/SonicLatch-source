@@ -1,0 +1,25 @@
+// Production Engine/trust with RAM-only changes over preserved installed bytes.
+#include "product_windows_store.hpp"
+#include <fstream>
+#include <iostream>
+using namespace soniclatch::product;using namespace soniclatch::product::win;
+#include "reinstall_inputs.generated.hpp"
+Bytes load(const fs::path& p){std::ifstream f(p,std::ios::binary);need(bool(f),"copied input missing");return {std::istreambuf_iterator<char>(f),std::istreambuf_iterator<char>()};}
+Image imageOf(const std::optional<Bytes>& b){return b?Image{Ref{hashBytes(*b),b->size()}}:Image{};}
+Bytes receiptFor(const KnownRelease& r){Writer w;w.text("SonicLatch-owned-receipt-v1");for(const auto* s:{&fixtureRoot,&r.manifest,&r.source,&r.productId,&r.moduleId,&r.version})w.text(*s);return w.b;}
+struct Cut:std::exception{};
+struct Model:Store{
+ Plan p;KnownTransition policy;std::map<std::string,Bytes> files,blobs;std::optional<Bytes> receipt;Bytes plan,journal;unsigned writes{},cut{};bool cutBefore{};
+ Model(const fs::path& dir,bool same,unsigned boundary,bool before=false):cut(boundary),cutBefore(before){auto old=same?newRelease():oldRelease(),next=newRelease();receipt=same?receiptFor(old):load(dir/L"receipt.bin");need(*receipt==receiptFor(old),"actual receipt authenticated");p.transactionId=hashBytes("reinstall"+std::to_string(same)+std::to_string(boundary)+std::to_string(before)).substr(0,32);p.rootIdentity=fixtureRoot;p.productId=next.productId;p.moduleId=next.moduleId;p.version=next.version;p.sourceIdentity=next.source;p.operation=Operation::Upgrade;p.oldManifest=old.manifest;p.newManifest=next.manifest;p.oldReceipt=imageOf(receipt);p.newReceipt=imageOf(receiptFor(next));p.predecessorEvidence=hashBytes(*receipt);blobs.emplace(hashBytes(*receipt),*receipt);auto nr=receiptFor(next);blobs.emplace(hashBytes(nr),nr);
+  for(const auto& [name,image]:old.owned){auto raw=load(dir/L"payload"/fs::path(name));need(imageOf(raw)==Image{image},"copied baseline catalog mismatch");files.emplace(name,raw);blobs.emplace(image.sha256,raw);auto after=next.owned.at(name);need(image==after,"test requires unchanged actual product bytes");p.steps.push_back({name,image,after});}need(p.steps.size()==43,"exact43 files");policy={Operation::Upgrade,p.rootIdentity,p.predecessorEvidence,old,next,p.oldReceipt,p.newReceipt};authorizeTransition(p,policy);
+ }
+ std::string sha256(const Bytes& b)const override{return hashBytes(b);}void guard(const Plan& v)const override{need(encode(v)==encode(p),"fixed plan");}void authorize(const Plan& v,const std::string& d)const override{need(d==hashBytes(encode(p)),"plan digest");authorizeTransition(v,policy);}
+ std::optional<Bytes> readOwned(const std::string& s)const override{auto f=files.find(s);return f==files.end()?std::optional<Bytes>{}:f->second;}std::optional<Bytes> readReceipt()const override{return receipt;}Bytes readPlan()const override{return plan;}Bytes readJournal()const override{return journal;}Bytes readBlob(const std::string& s)const override{return blobs.at(s);}
+ void createPrepared(const Bytes& p0,const std::map<std::string,Bytes>& b,const Bytes& j)override{need(plan.empty(),"fresh transaction");plan=p0;blobs=b;journal=j;}void writeJournalDurable(const Bytes& j)override{journal=j;}
+ void changeOwned(const std::string&,const Image&,const std::optional<Bytes>&)override{throw std::runtime_error("unchanged payload must not be rewritten");}
+ void changeReceipt(const Image& expected,const std::optional<Bytes>& desired)override{need(imageOf(receipt)==expected,"receipt CAS");if(cutBefore&&++writes==cut)throw Cut{};receipt=desired;if(!cutBefore&&++writes==cut)throw Cut{};}
+ void verify(bool after){for(const auto& [name,image]:policy.newRelease->owned)need(imageOf(readOwned(name))==Image{image},"owned bytes preserved");need(imageOf(receipt)==(after?p.newReceipt:p.oldReceipt),"receipt direction");}
+};
+int wmain(int argc,wchar_t** argv){try{need(argc==2,"copied fixture path");unsigned cases{};for(bool same:{false,true})for(unsigned mode:{0u,1u,2u}){Model m(argv[1],same,mode?1:0,mode==1);Engine::prepare(m,m.p,m.blobs);bool interrupted=false;try{Engine(m).apply();}catch(const Cut&){interrupted=true;}m.cut=0;auto result=Engine(m).recover();bool after=mode!=1||same;need(after?result.payloadReceiptCommitted:result.rolledBack,"recovery outcome");need(interrupted==(mode!=0),"cut reached");m.verify(after);auto repeat=Engine(m).recover();need(after?repeat.payloadReceiptCommitted:repeat.rolledBack,"recovery idempotent");++cases;}
+ {Model m(argv[1],false,0);m.files.begin()->second="external modification";bool refused=false;try{Engine::prepare(m,m.p,m.blobs);}catch(...){refused=true;}need(refused&&m.plan.empty(),"changed baseline refused before prepare");++cases;}
+ std::cout<<"PASS "<<cases<<" copied-state cases: upgrade and same-release reinstall; unchanged43 never rewritten; before/after receipt cuts recover consistently/idempotently; modified baseline retained. RAM only, native management/registry/Setup NOT RUN.\n";return 0;}catch(const std::exception& e){std::cerr<<e.what()<<"\n";return 1;}}

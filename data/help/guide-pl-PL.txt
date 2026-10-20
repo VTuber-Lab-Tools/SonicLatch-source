@@ -1,0 +1,29 @@
+SonicLatch — Pomoc dotycząca opóźnienia dźwięku
+
+Środowisko i instalacja
+
+Środowisko docelowe: 64-bitowy Windows i OBS 30 lub nowszy (zalecany OBS 32.2.2). Ładowanie i wyświetlanie panelu potwierdzono w OBS 32.2.2 na rzeczywistym komputerze; OBS 30/31 nie zostały sprawdzone na rzeczywistym komputerze. Zamknij OBS przed instalacją. Użyj dołączonych instrukcji instalacji i usuwania po japońsku lub angielsku.
+
+Pomiar, kontrola, regulacja
+
+1. Wybierz źródło dźwięku i podaj aktywny sygnał. Filtr pomiarowy „Pomiar opóźnienia dźwięku (SonicLatch)” jest dodawany automatycznie. Nie dodawaj go ręcznie, nie wyłączaj, nie usuwaj i nie zmieniaj kolejności podczas używania. Zmiany przesunięcia wpływają na wszystkie sceny korzystające z tego źródła.
+
+2. Sprawdź przebiegi PRE (przed przetwarzaniem), POST (po), Opóźnienie D i Pomiar. „—” oznacza brak wartości, nie zero. Cisza, wyciszenie, niska wiarygodność oraz nieaktualne lub nieprawidłowe pomiary mogą uniemożliwić regulację. Sprawdź sygnał i poczekaj na nową poprawną estymację.
+
+3. Przy poprawnej estymacji użyj Dostosuj automatycznie (Auto). Bezwzględne przesunięcie S jest ustawiane na −D; D nie jest odejmowane od obecnego przesunięcia. Dla D = +80 ms celem jest −80 ms. Sam pomiar i wyświetlanie niczego nie zmieniają.
+
+4. Dopasuj za pomocą −5 ms, −1 ms, +1 ms, +5 ms albo wpisz wartość i użyj Zastosuj wpisane przesunięcie. Samo wpisanie nie zapisuje wartości. Cofnij przywraca wartość sprzed ostatniej udanej operacji, jeśli jest to nadal dopuszczalne. Wyzeruj przesunięcie ustawia 0 ms, nie wartość początkową.
+
+5. Sprawdź rzeczywiste nagranie lub transmisję. Środowisko i obciążenie przetwarzania mogą uniemożliwić idealne wyrównanie. Wartości i opóźnienie mogą zmieniać się po regulacji lub w czasie transmisji. Przy rozbieżności poczekaj na aktualną poprawną estymację i ponownie użyj Auto. Auto to jawna ponowna regulacja, nie ciągłe śledzenie ani gwarancja idealnej synchronizacji.
+
+Znaczenie wyświetlanych danych
+
+D jest szacowane przez porównanie PRE i POST. S to przesunięcie synchronizacji OBS (Bieżące przesunięcie O). Bieżące odchylenie resztkowe wynosi D + S. Wyświetlana pozycja POST uwzględnia S; ta pozycja i reszta są estymacjami modelu, a nie nowym pomiarem skorygowanego wyjścia. Zgodny odczyt zwrotny potwierdza tylko zapisaną wartość OBS, nie synchronizację nagrania.
+
+Zakresy i rozwiązywanie problemów
+
+Stereo: 44,1 kHz lub 48 kHz. Pomiar opóźnienia mieści się w przybliżeniu w ±500 ms, bez końców zakresu wyszukiwania; zapis przesunięcia obejmuje −950 do +1000 ms. To różne zakresy. Zewnętrzne zmiany źródła lub przesunięcia mogą unieważnić zalecenia i cofanie. Odczytaj bieżące przesunięcie tylko odczytuje i nie przywraca cofania. Bez potwierdzonego zapisu lub odczytu nie zakładaj powodzenia i nie klikaj wielokrotnie. Sprawdź stan, źródło i zaawansowane właściwości dźwięku OBS.
+
+Języki i pomoc techniczna
+
+Interfejs i pomoc obejmują te same 16 ustawień regionalnych. Zgłoszenia są obsługiwane po japońsku i angielsku; nie oznacza to obsługi ani Setup we wszystkich 16 językach. Podaj wersję OBS, typ źródła, tekst stanu, kroki i informację, czy problem występuje w rzeczywistym nagraniu. Nie wysyłaj haseł ani prywatnych nagrań, dopóki nie uzgodniono zarówno potrzeby, jak i ich udostępnienia. Zmień język w ustawieniach OBS i uruchom OBS ponownie. Otwórz plik pomocy dla wybranych ustawień regionalnych.

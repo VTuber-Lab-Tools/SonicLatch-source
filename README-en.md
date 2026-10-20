@@ -19,7 +19,7 @@ Delay D is estimated by comparing PRE and POST. The displayed POST waveform is s
 
 ## Target environment and ranges
 
-Target environment: 64-bit Windows, OBS Studio 33 or later. This candidate was tested on 33.0.0-rc2 only; untested versions are not guaranteed.
+Target environment: 64-bit Windows and OBS 30+ (OBS 32.2.2 recommended). Loading and dock display have been confirmed in OBS 32.2.2 on a real system. OBS 30/31 remain untested on a real system. The support target and the verified scope are distinct.
 
 Audio configuration: stereo at 44.1 kHz or 48 kHz.
 
@@ -29,7 +29,7 @@ Silence, mute, or an invalid estimate can make measurement or correction unavail
 
 ## Installation and removal
 
-For first-time setup, see [installation and removal instructions](USAGE-en.md). The installer is a pre-publication candidate; final installation and removal instructions will be confirmed with the distribution.
+For first-time setup, see [installation and removal instructions](USAGE-en.md). Close OBS before running setup. The DLL is installed in obs-studio\plugins\SonicLatch\bin\64bit under the Windows common application-data folder.
 
 ## Building
 

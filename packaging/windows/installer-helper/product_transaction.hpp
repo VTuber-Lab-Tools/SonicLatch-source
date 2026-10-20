@@ -30,7 +30,7 @@ inline void need(bool ok, const char* why) { if(!ok) throw std::runtime_error(wh
 inline bool hex(std::string_view s, std::size_t n) { return s.size()==n && std::all_of(s.begin(),s.end(),[](char c){return (c>='0'&&c<='9')||(c>='a'&&c<='f');}); }
 inline std::string fold(std::string s) { for(auto& c:s) if(c>='A'&&c<='Z') c=static_cast<char>(c+32); return s; }
 inline bool safePath(const std::string& s) {
- if(s!="SonicLatch/SonicLatch.dll" && s.rfind("SonicLatch/data/",0)!=0) return false;
+ if(s!="SonicLatch/SonicLatch.dll" && s!="SonicLatch/bin/64bit/SonicLatch.dll" && s.rfind("SonicLatch/data/",0)!=0) return false;
  if(s.size()>240 || s.back()=='/') return false;
  for(std::size_t p=0;p<s.size();) {
   auto end=s.find('/',p); if(end==s.npos) end=s.size(); auto part=s.substr(p,end-p);
@@ -59,7 +59,7 @@ inline void validate(const Plan& p) {
  for(const auto& s:p.steps) {
   need(safePath(s.path),"payload path refused");auto key=fold(s.path);
   for(const auto& prior:paths) need(key!=prior&&key.rfind(prior+'/',0)!=0&&prior.rfind(key+'/',0)!=0,"path collision");
-  paths.push_back(key);dll|=s.path=="SonicLatch/SonicLatch.dll";refValid(s.before);refValid(s.after);
+  paths.push_back(key);dll|=s.path=="SonicLatch/SonicLatch.dll"||s.path=="SonicLatch/bin/64bit/SonicLatch.dll";refValid(s.before);refValid(s.after);
   if(p.operation==Operation::Install) need(!s.before,"install cannot acquire prior file");
   if(p.operation==Operation::Uninstall) need(!s.after,"uninstall cannot create payload");
   total+=(s.before?s.before->size:0)+(s.after?s.after->size:0);need(total<=totalLimit,"plan byte limit");

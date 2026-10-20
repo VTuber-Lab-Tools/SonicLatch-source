@@ -1,0 +1,29 @@
+SonicLatch — Trợ giúp độ trễ âm thanh
+
+Môi trường và cài đặt
+
+Mục tiêu: Windows 64 bit và OBS 30 trở lên (khuyến nghị OBS 32.2.2). Đã xác nhận việc nạp và hiển thị bảng dock trên OBS 32.2.2 trên máy thực; OBS 30/31 chưa được kiểm tra trên máy thực. Đóng OBS trước khi cài đặt. Hãy dùng hướng dẫn cài đặt và gỡ bỏ bằng tiếng Nhật/Anh đi kèm.
+
+Đo, kiểm tra, điều chỉnh
+
+1. Chọn nguồn âm thanh và cung cấp tín hiệu đang hoạt động. Bộ lọc đo “Đo độ trễ âm thanh (SonicLatch)” được thêm tự động. Không thêm thủ công, tắt, xóa hoặc đổi thứ tự bộ lọc khi đang dùng. Thay đổi độ lệch ảnh hưởng mọi cảnh sử dụng nguồn này.
+
+2. Kiểm tra dạng sóng PRE (trước xử lý), POST (sau xử lý), Độ trễ D và Phép đo. “—” nghĩa là không có giá trị, không phải số 0. Im lặng, tắt tiếng, độ tin cậy thấp, phép đo cũ hoặc không hợp lệ có thể ngăn điều chỉnh. Kiểm tra tín hiệu và chờ ước lượng hợp lệ mới.
+
+3. Dùng Tự động điều chỉnh (Auto) khi có ước lượng hợp lệ. Đặt độ lệch tuyệt đối S thành −D, không trừ D khỏi độ lệch hiện tại. Nếu D = +80 ms, mục tiêu là −80 ms. Chỉ đo và hiển thị không thay đổi độ lệch.
+
+4. Tinh chỉnh bằng −5 ms, −1 ms, +1 ms, +5 ms, hoặc nhập giá trị rồi dùng Áp dụng độ lệch đã nhập. Chỉ nhập số chưa ghi giá trị. Hoàn tác khôi phục giá trị trước thao tác thành công gần nhất nếu vẫn hợp lệ. Đặt lại độ lệch đặt 0 ms, không phải giá trị ban đầu.
+
+5. Kiểm tra bản ghi hoặc buổi phát thực tế. Môi trường và tải xử lý có thể khiến âm thanh không khớp hoàn toàn. Giá trị và độ trễ có thể thay đổi sau thiết lập hoặc trong khi phát. Nếu bị lệch, chờ ước lượng hiện tại hợp lệ rồi dùng Auto để đặt lại. Auto là thao tác điều chỉnh lại rõ ràng, không phải theo dõi liên tục hay bảo đảm đồng bộ tuyệt đối.
+
+Ý nghĩa của hiển thị
+
+D được ước lượng bằng cách so sánh PRE và POST. S là độ lệch đồng bộ OBS (Độ lệch hiện tại O). Phần dư hiện tại là D + S. Vị trí POST hiển thị bao gồm S; vị trí và phần dư này là ước lượng theo mô hình, không phải phép đo mới của đầu ra đã hiệu chỉnh. Đọc lại trùng khớp chỉ xác nhận giá trị lưu trong OBS, không chứng minh bản ghi đã đồng bộ.
+
+Phạm vi và xử lý sự cố
+
+Âm thanh nổi: 44,1 kHz hoặc 48 kHz. Phạm vi đo độ trễ xấp xỉ trong ±500 ms, không gồm điểm cuối tìm kiếm; phạm vi ghi độ lệch là −950 đến +1000 ms. Đây là hai phạm vi khác nhau. Thay đổi nguồn hoặc độ lệch từ bên ngoài có thể vô hiệu hóa đề xuất và hoàn tác. Đọc độ lệch hiện tại chỉ đọc, không khôi phục hoàn tác. Nếu chưa xác nhận ghi/đọc lại, đừng coi là thành công hoặc nhấp liên tục. Kiểm tra trạng thái, nguồn và thuộc tính âm thanh nâng cao của OBS.
+
+Ngôn ngữ và hỗ trợ
+
+Giao diện và trợ giúp bao gồm cùng 16 ngôn ngữ/khu vực. Câu hỏi được hỗ trợ bằng tiếng Nhật và tiếng Anh; không hứa hỗ trợ hoặc bản dịch Setup cho cả 16 ngôn ngữ. Cung cấp phiên bản OBS, loại nguồn, thông báo trạng thái, các bước và việc lỗi có xuất hiện trong bản ghi thực tế không. Không gửi mật khẩu hoặc bản ghi riêng tư khi chưa thống nhất về cả sự cần thiết lẫn việc chia sẻ. Đổi ngôn ngữ trong cài đặt OBS rồi khởi động lại OBS. Mở tệp trợ giúp tương ứng với ngôn ngữ/khu vực đó.

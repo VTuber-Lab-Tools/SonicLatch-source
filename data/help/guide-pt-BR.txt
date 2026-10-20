@@ -1,0 +1,29 @@
+SonicLatch — Ajuda sobre atraso de áudio
+
+Ambiente e instalação
+
+Destino: Windows de 64 bits e OBS 30 ou posterior (OBS 32.2.2 recomendado). O carregamento e a exibição do painel foram confirmados no OBS 32.2.2 em um computador real; OBS 30/31 ainda não foram testados em um computador real. Feche o OBS antes da instalação. Consulte as instruções de instalação e remoção incluídas em japonês e inglês.
+
+Medir, conferir e ajustar
+
+1. Selecione a fonte de áudio e forneça um sinal ativo. O filtro de medição “Medição do atraso de áudio (SonicLatch)” é adicionado automaticamente. Não o adicione manualmente, desative, remova ou reordene durante o uso. As alterações afetam todas as cenas que usam essa fonte.
+
+2. Confira as formas de onda PRE (antes do processamento), POST (depois), Atraso D e Medição. “—” significa indisponível, não zero. Silêncio, fonte silenciada, baixa confiança ou medições antigas/inválidas podem impedir o ajuste. Confira o sinal e aguarde uma nova estimativa válida.
+
+3. Use Ajustar automaticamente (Auto) com uma estimativa válida. Define o deslocamento absoluto S como −D; não subtrai D do deslocamento existente. Para D = +80 ms, o destino é −80 ms. Medir e exibir, por si só, não alteram o deslocamento.
+
+4. Refine com −5 ms, −1 ms, +1 ms, +5 ms, ou digite um valor e use Aplicar deslocamento inserido. Apenas digitar não grava. Desfazer restaura o valor anterior à última operação bem-sucedida, se ainda válido. Redefinir deslocamento define 0 ms, não o valor original.
+
+5. Verifique uma gravação ou transmissão real. Dependendo do ambiente e da carga de processamento, o alinhamento pode não ser perfeito. Valores e atraso podem variar após o ajuste ou durante a transmissão. Se houver desvio, aguarde uma estimativa atual válida e use Auto novamente. Auto é um reajuste explícito, não um acompanhamento contínuo nem garantia de sincronização exata.
+
+O que a exibição comprova
+
+D é estimado comparando PRE e POST. S é o deslocamento de sincronização do OBS (Deslocamento atual O). Resíduo atual é D + S. A posição POST exibida inclui S; essa posição e o resíduo são estimativas do modelo, não uma nova medição da saída corrigida. Uma leitura correspondente confirma somente o valor armazenado no OBS, não a sincronização da gravação.
+
+Faixas e solução de problemas
+
+Estéreo: 44,1 kHz ou 48 kHz. A medição de atraso fica aproximadamente dentro de ±500 ms, excluindo as extremidades da busca; a gravação do deslocamento usa −950 a +1000 ms. São faixas diferentes. Alterações externas na fonte ou no deslocamento podem invalidar recomendações e Desfazer. Ler deslocamento atual apenas lê e não restaura Desfazer. Se a gravação ou a leitura não forem confirmadas, não suponha sucesso nem clique repetidamente. Confira o estado, a fonte e as propriedades avançadas de áudio do OBS.
+
+Idiomas e suporte
+
+A interface e a ajuda cobrem as mesmas 16 localidades. As consultas são atendidas em japonês e inglês; isso não promete suporte nem Setup nos 16 idiomas. Informe a versão do OBS, o tipo de fonte, o texto de estado, os passos e se ocorre em uma gravação real. Não envie senhas ou gravações privadas sem que tanto a necessidade quanto o compartilhamento tenham sido acordados. Altere o idioma nas configurações do OBS e reinicie o OBS. Abra o arquivo de ajuda da localidade correspondente.

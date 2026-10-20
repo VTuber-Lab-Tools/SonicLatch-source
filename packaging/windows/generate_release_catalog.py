@@ -24,7 +24,7 @@ def known(bundle):
 
 
 def generate(*, archive, manifest_sha256, corresponding_source, output,
-             enable_installation=False, predecessors=()):
+             enable_installation=False, predecessors=(), predecessor_ledger=None):
     bundle = product.verify(archive, manifest_sha256)
     doc = product.strict_json(bundle.manifest)
     source = product.source_identity(corresponding_source, doc['sourceArchive']['sha256'])
@@ -33,6 +33,18 @@ def generate(*, archive, manifest_sha256, corresponding_source, output,
     previous = [product.verify(path, pin) for path, pin in predecessors]
     if len(previous) > 32 or len({old.identity for old in previous}) != len(previous):
         raise product.PackageError('duplicate/excess predecessor inventory')
+    if predecessor_ledger is not None:
+        ledger = product.strict_json(Path(predecessor_ledger).read_bytes())
+        required = ledger.get('requiredManifests', [])
+        if (set(ledger) != {'schema', 'requiredManifests'} or
+                ledger.get('schema') != 'SonicLatch-reviewed-predecessors-v1' or
+                type(required) is not list or not required or
+                any(type(value) is not str or len(value) != 64 or
+                    any(c not in '0123456789abcdef' for c in value) for value in required) or
+                len(set(required)) != len(required)):
+            raise product.PackageError('invalid reviewed predecessor ledger')
+        if not set(required).issubset({old.identity for old in previous}):
+            raise product.PackageError('reviewed predecessor omitted from catalog')
     lines = ['// GENERATED product catalog from actual pinned payload and corresponding source.\n',
              '// Publication is not authorized by this file. Rebuild helper after every manifest change.\n']
     payloads = {}
@@ -60,7 +72,8 @@ def generate(*, archive, manifest_sha256, corresponding_source, output,
     return {'catalogSha256': product.sha(raw), 'manifestSha256': bundle.identity,
             'sourceArchive': source, 'productVersion': doc['productVersion'],
             'dllSha256': next(product.sha(data) for path, data in bundle.payload
-                              if path == 'SonicLatch/SonicLatch.dll'),
+                              if product.product_role(path) == 'module'),
+            'acceptedPreviousManifests': [old.identity for old in previous],
             'installationEnabled': enable_installation, 'publicationAuthorized': False}
 
 
@@ -71,7 +84,9 @@ if __name__ == '__main__':
     p.add_argument('--enable-installation', action='store_true',
                    help='Existing explicit execution opt-in; not publication approval')
     p.add_argument('--predecessor', nargs=2, action='append', default=[], metavar=('ARCHIVE', 'MANIFEST_SHA256'))
+    p.add_argument('--predecessor-ledger', help='Reviewed manifests that must all be present; never populated from an observed receipt')
     a = p.parse_args()
     print(json.dumps(generate(archive=a.archive, manifest_sha256=a.manifest_sha256,
           corresponding_source=a.corresponding_source, output=a.output,
-          enable_installation=a.enable_installation, predecessors=a.predecessor), indent=2))
+          enable_installation=a.enable_installation, predecessors=a.predecessor,
+          predecessor_ledger=a.predecessor_ledger), indent=2))
