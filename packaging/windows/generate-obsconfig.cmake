@@ -1,0 +1,6 @@
+if(NOT IS_DIRECTORY "${OBS33_SOURCE}/libobs" OR NOT DEFINED OUT_DIR)
+ message(FATAL_ERROR "OBS33_SOURCE and OUT_DIR are required")
+endif()
+set(OBS_RELEASE_CANDIDATE 2)
+set(OBS_BETA 0)
+configure_file("${OBS33_SOURCE}/libobs/obsconfig.h.in" "${OUT_DIR}/obsconfig.h")

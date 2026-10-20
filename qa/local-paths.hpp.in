@@ -1,0 +1,4 @@
+#pragma once
+// Generated locally. Do not distribute configured absolute paths.
+#define SONICLATCH_QA_OBS32_PATH LR"(@SONICLATCH_QA_OBS32_EXE@)"
+#define SONICLATCH_QA_OBS33_PATH LR"(@SONICLATCH_QA_OBS33_EXE@)"

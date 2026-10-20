@@ -1,0 +1,4388 @@
+{
+  "schemaVersion": 1,
+  "status": "fresh-final-candidate-build-input-pins",
+  "obsSourceVersion": "33.0.0-rc2",
+  "obsSourceCommit": "f1c0a116441bdb7a1de7896f810009ea487b8508",
+  "productDllSha256": "0b59d3fd3ff026826d80a7c51166bd2a78107abe70986e5041dc3f008aa5d5d8",
+  "trackedInputCount": 1087,
+  "rootMapping": {
+    "PRODUCT_SOURCE": "PRODUCT_SOURCE",
+    "BUILD_GENERATED": "BUILD_GENERATED",
+    "OBS_33_RC2": "OBS_33_RC2",
+    "OBS_33_CONFIG": "OBS_33_CONFIG",
+    "QT_6_11_1": "QT_6_11_1",
+    "MSVC_14_44_35207": "MSVC_14_44_35207",
+    "WINDOWS_SDK_10": "WINDOWS_SDK_10",
+    "CMAKE": "CMAKE",
+    "WINDOWS_SYSTEM": "WINDOWS_SYSTEM"
+  },
+  "externalFilesByRoot": {
+    "CMAKE": [
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CHECKCXXCOMPILERFLAG.CMAKE",
+        "sha256": "2580ca6917ceffbff1207d2a1721cd5b726c84bfb5117678d91aa383f45eddc6"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CHECKCXXSOURCECOMPILES.CMAKE",
+        "sha256": "8c15544c6d79e6586e7aa0a59d9944921deeb3859fc285a63ad0f1ce8501a5f4"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CHECKINCLUDEFILECXX.CMAKE",
+        "sha256": "e197436ebffbd2a990a1223abc43741d7cf962aa602a11d9653bab1d8bb0db42"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CHECKLIBRARYEXISTS.CMAKE",
+        "sha256": "d76de761babfe0b6edca7c42f5401cf2b7ccdb18aa37f15eae78d20e4f9fd43b"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKECHECKCOMPILERFLAGCOMMONPATTERNS.CMAKE",
+        "sha256": "5dd036d273e2447729fd6f992be9c6f25ff6beda090aeaf462f1cb8a6bd8d594"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKECOMMONLANGUAGEINCLUDE.CMAKE",
+        "sha256": "c0697c7c36b523547fc76e159020d7eb31e83517ebc5c4ad13ceda653f7c3030"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKECOMPILERIDDETECTION.CMAKE",
+        "sha256": "35f95653946a977b10cd956ce5340eb987f3b3e5ee58e27c4dd48707b652e663"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKECXXCOMPILER.CMAKE.IN",
+        "sha256": "61546cc9c7312cc28c7239767630ad9cf2151fbc29f89815b000e7f74e0d2eb8"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKECXXCOMPILERABI.CPP",
+        "sha256": "9646a97700ab4b76b17ef086c235926f4b71341be677473b654eb56e4b1e7c22"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKECXXINFORMATION.CMAKE",
+        "sha256": "56f579ad1eca6a8516411b7641e4863a2fc61c2822070e9da71ae713f28ecc39"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKEDETERMINECOMPILER.CMAKE",
+        "sha256": "6674844080d1f4f5755b95fedaaddb3bad209892911d2dfd61e15b4f6dd75c08"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKEDETERMINECOMPILERABI.CMAKE",
+        "sha256": "a8cd1c0a8d986b4c2861132644f66aa488069f2215f24c4c70a9c8c858980105"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKEDETERMINECOMPILERID.CMAKE",
+        "sha256": "11a96719da96dd64c01708d10c52f22b307e1c6972b576b5800c5350884f71d1"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKEDETERMINECOMPILERSUPPORT.CMAKE",
+        "sha256": "5bcb538a0259d4a7aefe3dd9d0166862414a447c494d0dbd2101b2501450d25e"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKEDETERMINECXXCOMPILER.CMAKE",
+        "sha256": "000cb7a4bd51db0cec6457614a563d933bf1a39b7b7a619a37537d5a8fe435cf"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKEDETERMINERCCOMPILER.CMAKE",
+        "sha256": "79d612826f20596785d3ac517e9ae0b429fd9e46cbf1239138e41a77a56131b9"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKEDETERMINESYSTEM.CMAKE",
+        "sha256": "b3694de154a57c21ec339b9fe645089f037801e24e5c0e9de9bc9c32dc117b2b"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKEFINDBINUTILS.CMAKE",
+        "sha256": "c9527885404a3339fcbf8674ee3ced9ec81a9573da64c03c2e188993814c5823"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKEFINDDEPENDENCYMACRO.CMAKE",
+        "sha256": "c54f0e0478658f7068bfb44095ef9c636b4c8762716593ab29d5fd43cc5803e6"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKEGENERICSYSTEM.CMAKE",
+        "sha256": "996f5d82cf4776db17d5399c1475fd4e09f8b76aa15975d96ca9115ca45bcb15"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKEINITIALIZECONFIGS.CMAKE",
+        "sha256": "19fb8de38294ae1d28f67d08a6e0d460cde6760a73e4a535103e1c18f54655b5"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKELANGUAGEINFORMATION.CMAKE",
+        "sha256": "44c9384fb93c62b46679a0daf4e89ee7288ddfb1aaddaa06078958e51fe0c800"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKEPARSEIMPLICITINCLUDEINFO.CMAKE",
+        "sha256": "c817f4386a1a787a7e3f8fd73ac52a837dab10fd40e3a069ad438245658a73d0"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKEPARSEIMPLICITLINKINFO.CMAKE",
+        "sha256": "5e557142fe6288f2b04d292379db7dd00469b2697d73131c72cb8c54f73d5fbe"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKEPARSELIBRARYARCHITECTURE.CMAKE",
+        "sha256": "e75a26cf0d9593f2c74f5c4d93c7c7e0aa16977a30809004da1f837f58dfd2a0"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKERCCOMPILER.CMAKE.IN",
+        "sha256": "0e19bc399558a8c69a9495bd493a80e3b29fdd3837a1cea8185ebdd8d40557af"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKERCINFORMATION.CMAKE",
+        "sha256": "fa4b7d7b0d4b087c0c47e8c7ed7a258db3d78a500f459aca3cf273e1302e6982"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKESYSTEM.CMAKE.IN",
+        "sha256": "892560781b19d01b3adaf08b5da235cd99bcee414e5b4ce80d99c585d6b66e35"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKESYSTEMSPECIFICINFORMATION.CMAKE",
+        "sha256": "2a425eb248ea0846d4c3b48c89f3599e30aa18df403f513754bcff077f3b5928"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKESYSTEMSPECIFICINITIALIZE.CMAKE",
+        "sha256": "67e03349d424931b97bc8f057ac3a0760239bafeabee3892d0618f5d98fb0ccd"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKETESTCOMPILERCOMMON.CMAKE",
+        "sha256": "cda743426939dfc0d4292638f2779c41c9957e5300e5fabbcab78427050d3ab1"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKETESTCXXCOMPILER.CMAKE",
+        "sha256": "1ecf36cae8fc30020c05a7790107a7e5d783253a541357e471464237e0534e6c"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/CMAKETESTRCCOMPILER.CMAKE",
+        "sha256": "4fdafa8f9bdd5c0d8a099d63b1a152ac05f8908a577c86ed35a23899d832b3b1"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/ADSP-DETERMINECOMPILER.CMAKE",
+        "sha256": "817ea53868a6e888ecf2cf9be9ab8f62552c4d5b54181e0c2f787dc7dafeeb1c"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/APPLECLANG-DETERMINECOMPILER.CMAKE",
+        "sha256": "a127501ee54a94a4fb147af4485b1c5534250141685ccd168fb983dbfd0e15eb"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/ARMCC-DETERMINECOMPILER.CMAKE",
+        "sha256": "6ab3dff235e725af0f7a0c537d11b7368183b49777c02d19508f35aa331eae5b"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/ARMCLANG-DETERMINECOMPILER.CMAKE",
+        "sha256": "122b22c309d7f17864c00458d63f8ca4415fbef020f6cd3d4169051c9ee4fc79"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/BORLAND-DETERMINECOMPILER.CMAKE",
+        "sha256": "911ca508802309e28bc90afc063014430b68ed32066e36827d6476df8d17cede"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/CLANG-DETERMINECOMPILER.CMAKE",
+        "sha256": "1c2bdaea4494ec6ee5b8ceaea1b091fa143c5d6e4274aa8c2d542dee17c67d0c"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/CLANG-DETERMINECOMPILERINTERNAL.CMAKE",
+        "sha256": "bfbe3afacdd57c9c60d49f1bbfea298d5bbdcaeed29ac46a46fd7c6aefc914c0"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/CMAKECOMMONCOMPILERMACROS.CMAKE",
+        "sha256": "d7de563803359047f665723f297902779dbb095fdf6badf563c5cbdfed9b651d"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/COMPAQ-CXX-DETERMINECOMPILER.CMAKE",
+        "sha256": "472f26db64dadfb84d3d3d925ae46083f1791475b82da596860e836005cc250a"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/CRAY-DETERMINECOMPILER.CMAKE",
+        "sha256": "bcd86455ac77197a187fb02a217a6645d87ba8171913644027e9e3b9ef9c37d0"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/CRAYCLANG-DETERMINECOMPILER.CMAKE",
+        "sha256": "45702bf66ae39eca4c69e87703043e36da5c929d0a2b301fa0883da4a79646e4"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/DIAB-DETERMINECOMPILER.CMAKE",
+        "sha256": "a6041bbbbfbe17c307a0775f1c0341265f2e7f39aefcb2898a3d0e649e21aabe"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/EMBARCADERO-DETERMINECOMPILER.CMAKE",
+        "sha256": "3dfc229c255b4a4b113da38c3792d48582872c7422472f86ba7d02bcb8b0c59c"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/FUJITSU-DETERMINECOMPILER.CMAKE",
+        "sha256": "9f1352bee0d9e9e71bf854a89f9fe6c0d0025b67c5f81b72ff7df763c30477f8"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/FUJITSUCLANG-DETERMINECOMPILER.CMAKE",
+        "sha256": "df1c613989a9ced1b2b38e681ee90ed7727158e06d741695af391c0a7ea81575"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/GHS-DETERMINECOMPILER.CMAKE",
+        "sha256": "f5f4425e44240e2a913b827f3d23d40f8ddaf9384ee3de8fe2e6502ea8ced51c"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/GNU-CXX-DETERMINECOMPILER.CMAKE",
+        "sha256": "062d821b266f29cf1aa0d0b2e0b7e21484c292e30c414ea29de5c8727fc1f2a0"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/HP-CXX-DETERMINECOMPILER.CMAKE",
+        "sha256": "1f895d6b6de32cbc085d45786e83e7f9e3d4cb43fd9c970a623d957f6686ded6"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/IAR-DETERMINECOMPILER.CMAKE",
+        "sha256": "0f294d3fa2df36efbeb46de60dbe5aa75565372bc64d55cb5d37d40709b73f2f"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/IBMCLANG-CXX-DETERMINECOMPILER.CMAKE",
+        "sha256": "9ccc20025a88d55fdabce1cc7556cae05abcb41617f8d389887bf8d7ec7b47b6"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/IBMCPP-CXX-DETERMINEVERSIONINTERNAL.CMAKE",
+        "sha256": "9c29fb54a25b7b1cb5915c11eb8b40103ba8a8a0efa9fa368ea441ab8ee58e3d"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/INTEL-DETERMINECOMPILER.CMAKE",
+        "sha256": "112392e6cbbf7bf650af3865eff73007b829d6c84ae044e11e9ae4540c2f5862"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/INTELLLVM-DETERMINECOMPILER.CMAKE",
+        "sha256": "26e15a01b302679e6f3679359cfd2daeaabed1dfdc1d7ed09e1d3aab3f5b3578"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/LCC-CXX-DETERMINECOMPILER.CMAKE",
+        "sha256": "aea7e2976d027619dce0bbd1d2125acb65430564937453b99ccb9465992a93e6"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/MSVC-CXX.CMAKE",
+        "sha256": "d937306cf8e5f7471db9e43e00adae6b511880fbe7189aaeb51907f887501178"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/MSVC-DETERMINECOMPILER.CMAKE",
+        "sha256": "301b1ea7c2fc7ad6afee63a5e10ad5c8d2c54d1ff3f0ed0fdadb29bdd38be3f9"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/MSVC.CMAKE",
+        "sha256": "55cbedd788bbfd30d06092bcb02e046b4c5e7f02a746b9403a66ea0460db3e8e"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/NVHPC-DETERMINECOMPILER.CMAKE",
+        "sha256": "32add69c344dcaa43c9d58d13a4dd0485abf1acfab1c98b13abe87b3ca049c92"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/NVIDIA-DETERMINECOMPILER.CMAKE",
+        "sha256": "250411bdae770c159319b160a4a7a35c23caf47c3953b4e6f2c8e2118acfa893"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/OPENWATCOM-DETERMINECOMPILER.CMAKE",
+        "sha256": "33ffd48e11a0718fea7251cd8fa5dbc10624df5c80401db2e0cb448bb428a76e"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/ORANGEC-DETERMINECOMPILER.CMAKE",
+        "sha256": "c201394423340daa6d97e69269719ff89ee8558d8569bd4d98715106118e0fe1"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/PATHSCALE-DETERMINECOMPILER.CMAKE",
+        "sha256": "9bed6570207de8fbc9f6f4c242ad5d0b9e6d57388a531871bbbd9028182be6c4"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/PGI-DETERMINECOMPILER.CMAKE",
+        "sha256": "67586eafe2b572852c3e02809dae3a486f2e7a0c6bb8454460d5070109660908"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/RENESAS-DETERMINECOMPILER.CMAKE",
+        "sha256": "4161ee8ca382d99420f34daf3d7a1800eee1366681031ffba775d5cbfd192226"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/SCO-DETERMINECOMPILER.CMAKE",
+        "sha256": "64a67818e2ecfae75a062c62b213a648d6b081c1b974ed9b3a1511c60025b0ea"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/SUNPRO-CXX-DETERMINECOMPILER.CMAKE",
+        "sha256": "351b4edb1822c00521f6966b1219a9145585a126752849f2da6300da2a5dc496"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/TASKING-DETERMINECOMPILER.CMAKE",
+        "sha256": "6dec4a7f87371ed93fc32fdbb1245fa797ae810d85e6ab3e39bf310a30ff5fa3"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/TI-DETERMINECOMPILER.CMAKE",
+        "sha256": "aef911a56b7f6e78957c83274a358db2506c1b07eaa8dfa06d75b30517cd0473"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/TICLANG-DETERMINECOMPILER.CMAKE",
+        "sha256": "e1eb498dd60dab9ce139ad4f66175e397bf07f4fc6f7b441d5f0e05f959fbdc2"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/VISUALAGE-CXX-DETERMINECOMPILER.CMAKE",
+        "sha256": "6522d060db4fc99e2ab690400191e9177c0e2e7cf88c05b94889add18c295491"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/WATCOM-DETERMINECOMPILER.CMAKE",
+        "sha256": "0cd6dcd25de9f7aedf9d92da46754963edf1edf3972d91f2c07e024cb969b4fb"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/XL-CXX-DETERMINECOMPILER.CMAKE",
+        "sha256": "d1794fe9f919361d7de8a716933ed7f1bee3a3395f7cd3ab3a0acf155565c5f5"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/XLCLANG-CXX-DETERMINECOMPILER.CMAKE",
+        "sha256": "2d38cf08c1a8fddc59c4e33ce3b61378f6c47b6fb21d9a7dead194fb8ceb7c7a"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILER/ZOS-CXX-DETERMINECOMPILER.CMAKE",
+        "sha256": "19883154068cf065896fb2c3ec21852963900194b4f6021d514cc839571ed2f9"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/COMPILERID/VS-10.VCXPROJ.IN",
+        "sha256": "355ad764b5bafe93c3e64afd084304769417db559ddb9659b99d00e085f66d27"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/FINDPACKAGEHANDLESTANDARDARGS.CMAKE",
+        "sha256": "da96bccbb3ab89b5fcd101042bb0adc062721d651b4b13ddd109003c0cfecf64"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/FINDPACKAGEMESSAGE.CMAKE",
+        "sha256": "6e84dca6ae0ef97eb89700ccb61bcbffe7cfd922b48df8278e7d815c2c75aca8"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/FINDTHREADS.CMAKE",
+        "sha256": "2731b30084d2462c67e7670988a71cbab98fc14e54d091c937e3260594d7af78"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/GNUINSTALLDIRS.CMAKE",
+        "sha256": "f8d64b5d472528645572d62138453f6aa595d9a7d9258482a0ee69274f200b09"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/INTERNAL/CHECKCOMPILERFLAG.CMAKE",
+        "sha256": "4e9515c28be80a9f688808a8b62dc4e2d21eec8ddf8f2cdbfa67fa244f9ade6e"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/INTERNAL/CHECKFLAGCOMMONCONFIG.CMAKE",
+        "sha256": "624415e3586fcb8590e09b08e6e3f81b0556f0ca6e75de7e95dae9bdb4dba66f"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/INTERNAL/CHECKSOURCECOMPILES.CMAKE",
+        "sha256": "a6c6117ab0b2767cb3b561baa5965d9469b11f4b778dd533e108d88a73f17f98"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/INTERNAL/CMAKECOMMONLINKERINFORMATION.CMAKE",
+        "sha256": "d09a07ba1961487b892c80a138423db8f6532a1bb67eca14b9c5a92cc2f459f4"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/INTERNAL/CMAKECXXLINKERINFORMATION.CMAKE",
+        "sha256": "6a12fa8ab76dcaa181dbea86320f2f3dfad7565e05ea10826c77b3d335ddda6b"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/INTERNAL/CMAKEDETERMINELINKERID.CMAKE",
+        "sha256": "fbdd7b26a73f2b3bb0ea461ecd2e2c9555a4ea96723d7425f8bb308275bbea87"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/INTERNAL/CMAKEINSPECTCXXLINKER.CMAKE",
+        "sha256": "bc7f652d68e036d9507f4dcb5fa5fbae740e077a2fec618e4b43b27e3bdb75c6"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/INTERNAL/FEATURETESTING.CMAKE",
+        "sha256": "615f4b243c8fb7dc08223d3fc8e2c4cc3e703f96f47d20b9d176b9744433249c"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/LINKER/MSVC-CXX.CMAKE",
+        "sha256": "72b2534d005d18f9236b48a81f7724456b6c740ee044b471279b14129727669a"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/LINKER/MSVC.CMAKE",
+        "sha256": "5f219b1d2d60b4e060f4c7ad75ce99e2084c542c201b3128dad6559e1f9dfd2e"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/PLATFORM/LINKER/WINDOWS-MSVC-CXX.CMAKE",
+        "sha256": "67a3753256f5d933143e631b574c05b9821c07213ad305c2e619566a2d2b8d2c"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/PLATFORM/LINKER/WINDOWS-MSVC.CMAKE",
+        "sha256": "89d1a5ca3b9dcd8faac401b989e58a0491d8f1c393e21d4a40e64ad7740e7a28"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/PLATFORM/WINDOWS-DETERMINE-CXX.CMAKE",
+        "sha256": "566c31dab30a8e3fed7cd5f0f584c42143c99671ae1e54a7599e202543cad6ba"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/PLATFORM/WINDOWS-INITIALIZE.CMAKE",
+        "sha256": "1b6cf89c4cb5700a9edd5c01c70cef88268ee3a90a5ebbe6c51cabb61334ea57"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/PLATFORM/WINDOWS-MSVC-CXX.CMAKE",
+        "sha256": "5f263e4aab367fbd84454e62937584674079619182dd0444ad1e8545def386e8"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/PLATFORM/WINDOWS-MSVC.CMAKE",
+        "sha256": "bff42812fd297a41089cdb9152d6d0f115e8e82c8cd193d27ce1120f118b8d20"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/PLATFORM/WINDOWS.CMAKE",
+        "sha256": "8142ef4ef770bd72772bd31fcf7510bc179114a6fd6cdbb6f2c4d38c8975bbc2"
+      },
+      {
+        "relativePath": "SHARE/CMAKE-4.3/MODULES/PLATFORM/WINDOWSPATHS.CMAKE",
+        "sha256": "2bd1111c39c43d858dd108c12bd1c735cc69066a90bf611336b852a6f6578f7d"
+      }
+    ],
+    "MSVC_14_44_35207": [
+      {
+        "relativePath": "BIN/HOSTX64/X64/1041/LINKUI.DLL",
+        "sha256": "c41edb161f3a70f75ed5ef28e1c2c84ffde2a6267fc2ff8f466a6e96e408c97a"
+      },
+      {
+        "relativePath": "BIN/HOSTX64/X64/CVTRES.EXE",
+        "sha256": "d2fff6de8c6f5f2ce0dca73f051f77e4ceae52450d4e71bc4fc9cb879e2b4ec4"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_BIT_UTILS.HPP",
+        "sha256": "fd07ec800d789d222ba2b98c8ddcc3354930bd83e5ebd3ebc2491f35d047b331"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_CHRONO.HPP",
+        "sha256": "0fefff2b74e2fe60ef89d42042d8f9ecc7bda3f60472d353c84bb1a3fce7cb9c"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_FORMAT_UCD_TABLES.HPP",
+        "sha256": "0011433c71c625191e10d074d06bae571eb9cfcff979bd5650bb436fa6cda9fa"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_FORMATTER.HPP",
+        "sha256": "fc22eb5e9c24a0e72f0f2a07fd0e5d2c619da57ad2b10cce988a4f229b0053d3"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_HEAP_ALGORITHMS.HPP",
+        "sha256": "56c6be67b7c0ff9b3ffb7d48943c1ec01728f41f0663dca2c49c296f492bf619"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_INT128.HPP",
+        "sha256": "90ce6fb0b91872d5687c80502e7dbc4b3081bd93bffd3faaa06116861ef6e360"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_ITER_CORE.HPP",
+        "sha256": "4fe1273bd571601435c7032dabf6e57b88f84b1740bc65768e00ccdc60b1c9ad"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_MINMAX.HPP",
+        "sha256": "2f899749842ccf2adbeabca98f1bba634d787a96f1ddebf62a2c5d0c6a83c8b2"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_OSTREAM.HPP",
+        "sha256": "e2016938b271458a2ed0e04ffbf5dd38ca219755f8ec6c7b0447d46ae112cea5"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_PRINT.HPP",
+        "sha256": "29413fa5b9d6b3af7fbda3b6e0d4918cc65fbb1afa160ad2f61a356cdbe6da26"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_RANGES_TO.HPP",
+        "sha256": "ddbf635c1268718b7570133ff58c04aecbe753d3022152cf1fca3caa5e617989"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_RANGES_TUPLE_FORMATTER.HPP",
+        "sha256": "0efb7bfc2323b6c40e9d174ea4aa86f4f65722a4a13694cc1de24be33255a2ac"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_SANITIZER_ANNOTATE_CONTAINER.HPP",
+        "sha256": "50d83b50fd98df02f58c3c643b5bc26313968a9edd75a485f7af4a24cfcef8e1"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_STRING_VIEW.HPP",
+        "sha256": "957ae97e03169f46d8d9b77c9dc5ab3f66c619be5a228d062499b60b8d336c47"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_SYSTEM_ERROR_ABI.HPP",
+        "sha256": "c5c46618a13ba9a8087f0db8d2d2ecdeadad7694c8bef71a2e39b72b683d14d3"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_THREADS_CORE.HPP",
+        "sha256": "e29bc7049cc854234dbc1b332e1f7118aa0cc3b495fe538dfda9e7fbd0374529"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_TZDB.HPP",
+        "sha256": "8bb96dcb97cbe29f9475c35b4c5536cbe7524686f3e7a82a0b18264a10a86917"
+      },
+      {
+        "relativePath": "INCLUDE/__MSVC_XLOCINFO_TYPES.HPP",
+        "sha256": "1ee04bf81213a765a6b6c894275303d46d372c0555c8f4b17a1c97124dbdf860"
+      },
+      {
+        "relativePath": "INCLUDE/ALGORITHM",
+        "sha256": "e4cfb31da8ec07af89834d829ea72b20c7e3202476af3b0641cfe8d6ebb245d7"
+      },
+      {
+        "relativePath": "INCLUDE/AMMINTRIN.H",
+        "sha256": "267f97d9d269e39204b31efcdc2a7a32fd63b2e15dc21a80fb18d739d3d03b12"
+      },
+      {
+        "relativePath": "INCLUDE/ARRAY",
+        "sha256": "48d2c6c4926e08d0d96f41e59f69513737f76107530f68c94d5d9fe668689a15"
+      },
+      {
+        "relativePath": "INCLUDE/ATOMIC",
+        "sha256": "76a3e00e57e342f26eb5db7a0e38002b0f5db850ac2fe33d026733bf8217b4b4"
+      },
+      {
+        "relativePath": "INCLUDE/BIT",
+        "sha256": "f08c873229e5c11b6e89a0d47c5ca5e2555947321aa382bf52224d041648d483"
+      },
+      {
+        "relativePath": "INCLUDE/CASSERT",
+        "sha256": "66b8b995aa5463922b23541f335a95345ff4081ce91c827641c7abc88fe3df36"
+      },
+      {
+        "relativePath": "INCLUDE/CCTYPE",
+        "sha256": "d764f74333f84776e778d936af9c78d9a9a21a0668dc1833fdd4a98e26a00f18"
+      },
+      {
+        "relativePath": "INCLUDE/CERRNO",
+        "sha256": "4c8b39febc5b11b08e7a1253dc363bd8c8acdbe0159855b1c15d21b604f71e74"
+      },
+      {
+        "relativePath": "INCLUDE/CFLOAT",
+        "sha256": "615e244a422277b8362e591881df1bd701d7e0ad0467d1787cb04a89565b333c"
+      },
+      {
+        "relativePath": "INCLUDE/CHARCONV",
+        "sha256": "ca94da19ba8b2c4e2156559b9bf2921739c3fe09182f1429661199ae20e54b5f"
+      },
+      {
+        "relativePath": "INCLUDE/CHRONO",
+        "sha256": "8af902a185268ba20756a2c4b5fb309c80e03c2a6fe3f166c67c3eb3aa6ffc4d"
+      },
+      {
+        "relativePath": "INCLUDE/CLIMITS",
+        "sha256": "dd0a6215a16748afdb3c6ad3f877e32ffab31326645b14dda13fdc76c2683da4"
+      },
+      {
+        "relativePath": "INCLUDE/CLOCALE",
+        "sha256": "95cb0b228d1448969c55add911b4abe6d0108422c05ba27a71dd3ec7d4f61e38"
+      },
+      {
+        "relativePath": "INCLUDE/CMATH",
+        "sha256": "3f10507b4bca07cd07b7b4ae1403377634a37e91459305094e9f8cba34dd8ca5"
+      },
+      {
+        "relativePath": "INCLUDE/COMPARE",
+        "sha256": "8f185f3771075b2dd0c41c13f4c12ff4995566c1f7240a2881d810ced72679ae"
+      },
+      {
+        "relativePath": "INCLUDE/COMPLEX",
+        "sha256": "f455a3adc6c3ff97edafb303981211099a793f9f198c46ae48dd8a4d4f6dfdb7"
+      },
+      {
+        "relativePath": "INCLUDE/CONCEPTS",
+        "sha256": "cadf7ebe363fa04b56e84d664d0e3cf5683eabe2e671d3d38f4c1f95efabea56"
+      },
+      {
+        "relativePath": "INCLUDE/CONCURRENCYSAL.H",
+        "sha256": "1ea9a2e32a6ff298ad7904610cc71028caa9b172399a579ca90a120d1b1aec12"
+      },
+      {
+        "relativePath": "INCLUDE/CONDITION_VARIABLE",
+        "sha256": "be511dcb80ec92b697d4f81f2d8c99be8a384f9c54dc3a87ccacbb4cff1d8308"
+      },
+      {
+        "relativePath": "INCLUDE/CRTDEFS.H",
+        "sha256": "82bdcc78bdab153e2a41a72a3860201b33aab6e46d207194caf09326f47b298f"
+      },
+      {
+        "relativePath": "INCLUDE/CSTDDEF",
+        "sha256": "8388948efa6dc3b3b20866fa1c3057ea53b8dfd028f22abe1d7dce23ef1d9ecc"
+      },
+      {
+        "relativePath": "INCLUDE/CSTDINT",
+        "sha256": "7e608450751cd44f43942b20e1c1c455d42872e78e7119361316850644f1fb75"
+      },
+      {
+        "relativePath": "INCLUDE/CSTDIO",
+        "sha256": "d13434f976c70f1ea3f930ad63121bfd8cfb5c736cfc48a91f06a7608b1fbaa0"
+      },
+      {
+        "relativePath": "INCLUDE/CSTDLIB",
+        "sha256": "0a7edd2c3ba954e98aa26894f28c3eb7fb9b0ba748261ec6e568563ed17b2fc4"
+      },
+      {
+        "relativePath": "INCLUDE/CSTRING",
+        "sha256": "6f16cc44e5505c1d46e0869b8a7cbabf0be1646203261ab6e885165faceb98a6"
+      },
+      {
+        "relativePath": "INCLUDE/CTIME",
+        "sha256": "6d807f129b2ac76e16769464ab789b9a7980ecdd39041c02bf2974e2301aa485"
+      },
+      {
+        "relativePath": "INCLUDE/CWCHAR",
+        "sha256": "6395a6c56a62c4b02e58f4f5bf6904f7baabd7b90d0de281148ee3c115e7291a"
+      },
+      {
+        "relativePath": "INCLUDE/DEQUE",
+        "sha256": "5a2cf95749f1cb7f2760818b1db1945db17fa3c7e15fe9ce7aa54ac60ce06352"
+      },
+      {
+        "relativePath": "INCLUDE/EH.H",
+        "sha256": "f9809ac3f6929a584a971f14823be5a737e763a8d8f93bd50af2c3575c286c52"
+      },
+      {
+        "relativePath": "INCLUDE/EMMINTRIN.H",
+        "sha256": "0088e279e28e47717d37096a52a328c6068ef41a33b8f8804e463e1e2984017e"
+      },
+      {
+        "relativePath": "INCLUDE/EXCEPTION",
+        "sha256": "f656e780c4b7de2d580f34e2c96d9992f8f0d154d068235ba5bee709ae0334a2"
+      },
+      {
+        "relativePath": "INCLUDE/EXCPT.H",
+        "sha256": "191ab83e320a5e9712fe483257fecae14cb0c158a4517b620f3fddb1aa6ef23b"
+      },
+      {
+        "relativePath": "INCLUDE/FILESYSTEM",
+        "sha256": "39256226f45015211e088956fdea8148dd326d65d71106df7376386c2a7d6f3e"
+      },
+      {
+        "relativePath": "INCLUDE/FORMAT",
+        "sha256": "b87d42ec97598dc6d003901948e15bd45f3db5d56841dee66cfc833ebd989f32"
+      },
+      {
+        "relativePath": "INCLUDE/FORWARD_LIST",
+        "sha256": "81ec7d91f571a65cce9065c9fd80b1c022c7b3fbcd3fa7137b241339b06a5cbf"
+      },
+      {
+        "relativePath": "INCLUDE/FUNCTIONAL",
+        "sha256": "a8c6b1a515aff37bd9314475bafb1f1f1a1cbfbc5c771974ea68a22a85625a6c"
+      },
+      {
+        "relativePath": "INCLUDE/FUTURE",
+        "sha256": "999707cdad4b19a8007ffb9769b6a77080ea413e6549b0e4fabbba9a5dd3498f"
+      },
+      {
+        "relativePath": "INCLUDE/IMMINTRIN.H",
+        "sha256": "fb8a3706c9013407f918ed92585be0eab7034ef124ec4c88f9ff4b00915d1cfa"
+      },
+      {
+        "relativePath": "INCLUDE/INITIALIZER_LIST",
+        "sha256": "6ff91697d3fc1734976f2290dca64db6ff910a7d7add242029f692c745ac4558"
+      },
+      {
+        "relativePath": "INCLUDE/INTRIN.H",
+        "sha256": "b1cfcc48e6e64200641d677886f63473e3d4135209bcc3438d5a73a298293e0d"
+      },
+      {
+        "relativePath": "INCLUDE/INTRIN0.H",
+        "sha256": "bdbbcc2c993b2b90ea601cb033701c9ed6b66f65a39e031d65207464d7095e2c"
+      },
+      {
+        "relativePath": "INCLUDE/INTRIN0.INL.H",
+        "sha256": "be7631000a4e89dda44873b0c5e6336c8d3a2f4fdf594365b16f8aaaf7177aeb"
+      },
+      {
+        "relativePath": "INCLUDE/IOMANIP",
+        "sha256": "f39b13944cb0e111ee6d81f1d842d25aae2c0cf570efbc26b031eb170a4c312d"
+      },
+      {
+        "relativePath": "INCLUDE/IOS",
+        "sha256": "f0114492124ab2dc5eff7fda5dfacc836ab0a84efbde4d6207c93a23efdd7373"
+      },
+      {
+        "relativePath": "INCLUDE/IOSFWD",
+        "sha256": "5bb1f37c08ab118972567c468f8f9e024046b7bd1f884571828a19006b3b4076"
+      },
+      {
+        "relativePath": "INCLUDE/ISTREAM",
+        "sha256": "55f487a42ace45ef5262b5b895605f3ec305209eac02efb32f11969f29731029"
+      },
+      {
+        "relativePath": "INCLUDE/ITERATOR",
+        "sha256": "c26eadf25004e352bbb57d189820392aefaf08a82b15027f18b32725ba106db2"
+      },
+      {
+        "relativePath": "INCLUDE/LIMITS",
+        "sha256": "5cda311b1b514cdea1fdda5c1b53865a85c9288ef50d59b7b8f09802bf9bc60b"
+      },
+      {
+        "relativePath": "INCLUDE/LIMITS.H",
+        "sha256": "2ed583abdb8a052b919d4652b10839e28a6fadbe63674108dcc65f719c9ff51c"
+      },
+      {
+        "relativePath": "INCLUDE/LIST",
+        "sha256": "4e3d4a6f46c2b07b18b22b1b12a003511e87b271f009786a45736a8fe67c9cb7"
+      },
+      {
+        "relativePath": "INCLUDE/LOCALE",
+        "sha256": "f45bb27d685f45610de3bd3dd1f122667c4a51caf820238b8b7f2ab7081272d3"
+      },
+      {
+        "relativePath": "INCLUDE/MAP",
+        "sha256": "626f4bda2f71ec89ae1b7bac7b13d4b2a0483a8c8b70e777f66dd50238d47277"
+      },
+      {
+        "relativePath": "INCLUDE/MEMORY",
+        "sha256": "ebe9836c7d6460e9a414bcbf8e7a57d67a4760ab5f217c1ff1a06cee95af57bb"
+      },
+      {
+        "relativePath": "INCLUDE/MMINTRIN.H",
+        "sha256": "d2dce9191fbdd235a94fc1af6bd163119dbcdfeadfb50f777b2d75b12ca1f028"
+      },
+      {
+        "relativePath": "INCLUDE/MUTEX",
+        "sha256": "b8a1b115e4f763429314e6bd80460beecbc07206955ccdecd3bb6b0b3e10aa63"
+      },
+      {
+        "relativePath": "INCLUDE/NEW",
+        "sha256": "101647348d130ff13563e2e8b07af3390a6dcfc0bea675207375eb493b213009"
+      },
+      {
+        "relativePath": "INCLUDE/NMMINTRIN.H",
+        "sha256": "69ecf104338622b7f1e44b0d99469adb95c46dd9e5858f5dc8279c3ef3b99421"
+      },
+      {
+        "relativePath": "INCLUDE/NUMERIC",
+        "sha256": "73cdb7f284b55d1dfa94a9ee42b31d9f23221f64f5fa144ddfebe298a9590fb3"
+      },
+      {
+        "relativePath": "INCLUDE/OPTIONAL",
+        "sha256": "c597c685b29c361cf9689b1b7fd19b42155982dbef5729e9a21c033f73c24a88"
+      },
+      {
+        "relativePath": "INCLUDE/PMMINTRIN.H",
+        "sha256": "2fb7131f91e5e300a7d9f2f148b6fe79a9775d06c3f1be26908e138ac6f9fbc5"
+      },
+      {
+        "relativePath": "INCLUDE/PPLCANCELLATION_TOKEN.H",
+        "sha256": "96d80acdfd872ca88b2376e5f2ff44a9bcb63678a2964e8996effa7552dfe6ca"
+      },
+      {
+        "relativePath": "INCLUDE/PPLINTERFACE.H",
+        "sha256": "b7a3697e1285cc03cddacf25dccbe1aa444e194b397adba823615000cb592b60"
+      },
+      {
+        "relativePath": "INCLUDE/PPLTASKS.H",
+        "sha256": "3d03ca7e3adf0164fa76caa3c8a1aa0f9f5a5ba23d75e88d38c2a0437a67aedc"
+      },
+      {
+        "relativePath": "INCLUDE/PPLTASKSCHEDULER.H",
+        "sha256": "e26280040ae00860751c5f172fd47ccdb96fed29124a4d9d9f96a3feca05524c"
+      },
+      {
+        "relativePath": "INCLUDE/PPLWIN.H",
+        "sha256": "ff322a8707ee3d84386dd46c6fc921397c7f95ce594115922008ceb926c5e83b"
+      },
+      {
+        "relativePath": "INCLUDE/RANGES",
+        "sha256": "c846bc15cfac8bd35ffcf46492c47d7e2ab848eee34804f9a735f6fe9ab479a6"
+      },
+      {
+        "relativePath": "INCLUDE/RATIO",
+        "sha256": "1d195b2c2d72c73c9a728d3d9d516d87aa62bbab80335a9d8e81e7f0f97b019b"
+      },
+      {
+        "relativePath": "INCLUDE/SAL.H",
+        "sha256": "cda06459ca38681800ce5e98703c66534c74a803aa652bd4bc2b3407dd45ed46"
+      },
+      {
+        "relativePath": "INCLUDE/SET",
+        "sha256": "ac358c43e66ad20b6bc31d83a0c34c0e90fff702087428e98f3865ac4da0b4f7"
+      },
+      {
+        "relativePath": "INCLUDE/SETJMP.H",
+        "sha256": "529dce71c496d77b104b85876c65d8d6e61d7aed2d9e4b64c1011491fd566f10"
+      },
+      {
+        "relativePath": "INCLUDE/SMMINTRIN.H",
+        "sha256": "2f773512dac1c4515c13cb9173a2c852d8c884b0cedc5814cff3956b742a1071"
+      },
+      {
+        "relativePath": "INCLUDE/SPAN",
+        "sha256": "ffd080146fdde499a87fbb8a8e0babb7e192d3a61b1cfa0d29889770457dad38"
+      },
+      {
+        "relativePath": "INCLUDE/SSTREAM",
+        "sha256": "cff76f476a58ba328e60c70b7a008b0fdf335bc1482b349632fdfe6b7b6949d3"
+      },
+      {
+        "relativePath": "INCLUDE/STDARG.H",
+        "sha256": "5d61d0b6734ef0832c30064800e8d01b3f12d29d24c8b1bd07b3ece3b72a9330"
+      },
+      {
+        "relativePath": "INCLUDE/STDBOOL.H",
+        "sha256": "78fd5b71a4a0cc9c1c115e6bf282b63a1eb3a5483718a14799c26d3aaf2ff20d"
+      },
+      {
+        "relativePath": "INCLUDE/STDEXCEPT",
+        "sha256": "e677daf8465dd4b870f420df9010ee3a17cd80fb6f6f5655f2ad3dc6d8009ae1"
+      },
+      {
+        "relativePath": "INCLUDE/STDINT.H",
+        "sha256": "29fb6d4ba5e311e06877609c20a1bc49c6cdfb730f56dd0f9c53a6241c40ab5c"
+      },
+      {
+        "relativePath": "INCLUDE/STOP_TOKEN",
+        "sha256": "b691531ef9e1dbfaceddda6f8d94b5ae89750edf942b89014a01b07eb8b707b2"
+      },
+      {
+        "relativePath": "INCLUDE/STREAMBUF",
+        "sha256": "b8bec573d0d281db12a779a161e0485d9b801fc8d7f040752909aa15cebb8478"
+      },
+      {
+        "relativePath": "INCLUDE/STRING",
+        "sha256": "dafa5ec4d069f7e85001d6a03fdcac5bde1d18eb7412240aa5cc7e10c7cddf05"
+      },
+      {
+        "relativePath": "INCLUDE/STRING_VIEW",
+        "sha256": "4954e7353138c42fec445ac2357cdb90278807a57e395bb3e7a6a1e5b1007f3a"
+      },
+      {
+        "relativePath": "INCLUDE/SYSTEM_ERROR",
+        "sha256": "2749bc4705adc1b6cfc7e488f2fa9f3db4231990a33a5f5ec63c6568fdcba753"
+      },
+      {
+        "relativePath": "INCLUDE/THREAD",
+        "sha256": "028f328b217c689a2c37c978371defc1c8835be98238fac814d61e0596f80060"
+      },
+      {
+        "relativePath": "INCLUDE/TMMINTRIN.H",
+        "sha256": "e5981ed52590bbcd7cad7d84e7ab3b47b81837136138854de0ee807332f95dab"
+      },
+      {
+        "relativePath": "INCLUDE/TUPLE",
+        "sha256": "feb355a9d1552af6e7b8cbdb3a6a2540604ae14ee5ed8f3dd6649bba46b3cd1d"
+      },
+      {
+        "relativePath": "INCLUDE/TYPE_TRAITS",
+        "sha256": "357e102b4e6ab85a864980a01bba28440791311df288b8987b580e577c928d5c"
+      },
+      {
+        "relativePath": "INCLUDE/TYPEINFO",
+        "sha256": "9fe7fd18aaf6ea9714837a862d40d3bbaebdf57321a60f0951a0fafd157e25d2"
+      },
+      {
+        "relativePath": "INCLUDE/UNORDERED_MAP",
+        "sha256": "989a75d74b4b4370bc4a610dc1555db4be223f3ae184fe81fb0d5cf06d104edd"
+      },
+      {
+        "relativePath": "INCLUDE/UNORDERED_SET",
+        "sha256": "3e281112ab487066b6a41b33a5875156ff29c577d707ce303368c8a3716a49c0"
+      },
+      {
+        "relativePath": "INCLUDE/USE_ANSI.H",
+        "sha256": "f3133ce73105aa38ea2fa0ee1495c8620b2d7dc0ab00dd980d9325ac38c7d443"
+      },
+      {
+        "relativePath": "INCLUDE/UTILITY",
+        "sha256": "403bcf5919d0e0371f25a929752f0a05aae7b0667129d65cfe3a8dff858e97d6"
+      },
+      {
+        "relativePath": "INCLUDE/VADEFS.H",
+        "sha256": "200b49c2efd26bc7a92e9dfa3b847cc612b237dff5c7291d9f901d39b4a5e52e"
+      },
+      {
+        "relativePath": "INCLUDE/VARIANT",
+        "sha256": "7980eb6181f1888a4cd1d7d9a5d82c98ee242c920f9bcf0204b1e719eeed1d39"
+      },
+      {
+        "relativePath": "INCLUDE/VCRUNTIME.H",
+        "sha256": "a2fe9117dc2640e243f91fa94e1d05fc35083218c2a67a446db9e34cece779b5"
+      },
+      {
+        "relativePath": "INCLUDE/VCRUNTIME_EXCEPTION.H",
+        "sha256": "0dd3dcc67b655fbfc96708f131c9e7f86416d2db95fd33b1e7acc8489f2c32d4"
+      },
+      {
+        "relativePath": "INCLUDE/VCRUNTIME_NEW.H",
+        "sha256": "8ee45e7db7f08475d1ddf33d493fd7cb5cd10b54b4756b39156c8548281b3e63"
+      },
+      {
+        "relativePath": "INCLUDE/VCRUNTIME_NEW_DEBUG.H",
+        "sha256": "c3f552f0f27600ad991ad4b8b39d2204b65b4afcf0123504f03e781546f0f010"
+      },
+      {
+        "relativePath": "INCLUDE/VCRUNTIME_STARTUP.H",
+        "sha256": "fb0bcd4cc6af20cedc3ddc02bdddd7e95cde5ede5c5c4aefa720702a2a75557a"
+      },
+      {
+        "relativePath": "INCLUDE/VCRUNTIME_STRING.H",
+        "sha256": "b05204f6814d1d7b7ca729b41d4192d0e47722f162c0b1d322f994bf9650af63"
+      },
+      {
+        "relativePath": "INCLUDE/VCRUNTIME_TYPEINFO.H",
+        "sha256": "d6a1a675ad9592ba87ec95dc130e0ad690040c6dbb4faa974945c778190cccf8"
+      },
+      {
+        "relativePath": "INCLUDE/VECTOR",
+        "sha256": "351604d91a2ceac79f9bd9448c0553cccc22711e22955b5938eaf41de98334a6"
+      },
+      {
+        "relativePath": "INCLUDE/VERSION",
+        "sha256": "f9c5a2952c6053e3bf8a50c7599dfba75815666ebfd963779c5698118915dbde"
+      },
+      {
+        "relativePath": "INCLUDE/WMMINTRIN.H",
+        "sha256": "ccee1d63e178b3dcff1625817c2a0722fbb2966956d3cbe5531feecb6afd5a9b"
+      },
+      {
+        "relativePath": "INCLUDE/XATOMIC.H",
+        "sha256": "769a41b38adbc4760a70feb5678a843e1df91ae33b64c60da2c993d8ad768d9c"
+      },
+      {
+        "relativePath": "INCLUDE/XATOMIC_WAIT.H",
+        "sha256": "9048eb4c65793df84d037413206471c41859cb02e12c95816dc1e77fdbad4e0b"
+      },
+      {
+        "relativePath": "INCLUDE/XBIT_OPS.H",
+        "sha256": "ce23055e9f7d2fe88d0e4733848c9374db361ab610fa512cbbebb3c01765e0b8"
+      },
+      {
+        "relativePath": "INCLUDE/XCALL_ONCE.H",
+        "sha256": "6d0dd9d0c84f4a4baf7969e257b9013ba73b8b2e4061abab626c2621f326c03d"
+      },
+      {
+        "relativePath": "INCLUDE/XCHARCONV.H",
+        "sha256": "7372e9cd682c47df5b0c5b5b0adbe0a1f1c41ffd908950a77afd037cdf77802d"
+      },
+      {
+        "relativePath": "INCLUDE/XCHARCONV_RYU.H",
+        "sha256": "265b74f46e8815f6e2eb4868cd0e5f4b5a28a52d68411805249c991062980090"
+      },
+      {
+        "relativePath": "INCLUDE/XCHARCONV_RYU_TABLES.H",
+        "sha256": "18e4dc7b7783d788f3123f9e871b00754521264e199608a908887a692c311f13"
+      },
+      {
+        "relativePath": "INCLUDE/XCHARCONV_TABLES.H",
+        "sha256": "291ec21d518f16a3c1399ae4bd269fa25d5288c4b71597fde600b476e2d170e8"
+      },
+      {
+        "relativePath": "INCLUDE/XERRC.H",
+        "sha256": "41bf5400ac3bc3e6f1d738089a77b3112d988bff89b31ef15bf532922d52b04d"
+      },
+      {
+        "relativePath": "INCLUDE/XFACET",
+        "sha256": "71d7bd76e31f7aee31c2d22386e00bf508936cea4e510ed3a7cde20dc3ab8312"
+      },
+      {
+        "relativePath": "INCLUDE/XFILESYSTEM_ABI.H",
+        "sha256": "66e149294f6c93ecc10b7a934c39cb6b276bc09e6dbdbdc2c637175cf82c38fc"
+      },
+      {
+        "relativePath": "INCLUDE/XHASH",
+        "sha256": "b5b183c4fb05fa5c1079a6eb79b7de6b395bd5cb405c09832820e89e82423435"
+      },
+      {
+        "relativePath": "INCLUDE/XIOSBASE",
+        "sha256": "6fa886b895d0ee805985b9ef57d96d7e372431acc87184cfc02b7d65ea0a82fc"
+      },
+      {
+        "relativePath": "INCLUDE/XKEYCHECK.H",
+        "sha256": "fdb1dc9ca22f9309bfb7e87b3f9e2b340ced7945344af2450be4beac589a3df9"
+      },
+      {
+        "relativePath": "INCLUDE/XLOCALE",
+        "sha256": "cbaf5f6a4b5609dac0ce91facab9812b0f0400ce0ea13689b8e3eecbf8431ee1"
+      },
+      {
+        "relativePath": "INCLUDE/XLOCBUF",
+        "sha256": "5b0fbdec54a6501ccb7cb66d1f31e4f3c207cb8a3f11e0876ab762d8a85e1a61"
+      },
+      {
+        "relativePath": "INCLUDE/XLOCINFO",
+        "sha256": "3577fc29730c92dc4878003f0877695f6c7a8ad782d61be534c765a65661f741"
+      },
+      {
+        "relativePath": "INCLUDE/XLOCMES",
+        "sha256": "fda364686c3132ef20c94db904334cf52071e154d4875c8883525e1a7b1b69b1"
+      },
+      {
+        "relativePath": "INCLUDE/XLOCMON",
+        "sha256": "3a60a39b65c8abd859a61a784e4132e5d859b485501bda03776353a38070cda3"
+      },
+      {
+        "relativePath": "INCLUDE/XLOCNUM",
+        "sha256": "f02525562ce44675849016b2182a3e41105e329c790ece37a6d5f109f2599e11"
+      },
+      {
+        "relativePath": "INCLUDE/XLOCTIME",
+        "sha256": "25a52e6e11c644fd3c630ed6e15e1da956f553987a083125d2f5c44c17e0fab9"
+      },
+      {
+        "relativePath": "INCLUDE/XMEMORY",
+        "sha256": "76359d0893ef63b0baa617e3f2d8729c50a24d349b41af51ad8e00ad7be82d70"
+      },
+      {
+        "relativePath": "INCLUDE/XMMINTRIN.H",
+        "sha256": "1f2376321c0f53c06cca13a354a519e2870b7cb1e6e0f223c242390b9114dd48"
+      },
+      {
+        "relativePath": "INCLUDE/XNODE_HANDLE.H",
+        "sha256": "559b99d9f52414b17923f7f791028ad50e310ebbcfb4ef4bee9d7c5d930c4935"
+      },
+      {
+        "relativePath": "INCLUDE/XPOLYMORPHIC_ALLOCATOR.H",
+        "sha256": "df09c8ef5650c7e4980da1254f4d422fc0385e9852bb009e70449190a29db0f9"
+      },
+      {
+        "relativePath": "INCLUDE/XSMF_CONTROL.H",
+        "sha256": "b69b98ce04a1d505f2f7fcf8a610664682c3a754d85b4bb2f857f09bce61f3dd"
+      },
+      {
+        "relativePath": "INCLUDE/XSTRING",
+        "sha256": "9407c290a1d0c6bebc42cf131bd04f09a9892f61b713eecb12827c0f6bbc3045"
+      },
+      {
+        "relativePath": "INCLUDE/XTHREADS.H",
+        "sha256": "76a4a9ce19140621d2d3c32738bf396177ebe72b893c5f50dea331c9cff15e3b"
+      },
+      {
+        "relativePath": "INCLUDE/XTIMEC.H",
+        "sha256": "d6a25d6dfaf39141a7bfb86b296eb54c0b76aa29fc54a7c2a52c7bc17014d958"
+      },
+      {
+        "relativePath": "INCLUDE/XTR1COMMON",
+        "sha256": "f9afdc2123d09c564f42552e160e7a558b87c8f0f63939e98bfcadb7dbf913ba"
+      },
+      {
+        "relativePath": "INCLUDE/XTREE",
+        "sha256": "06b661c5906bcc6eae0078851b60898a2ec9c7af81e53c988d78e713a4e6952b"
+      },
+      {
+        "relativePath": "INCLUDE/XUTILITY",
+        "sha256": "d5959e0964ea09991888e5b45eecfd8c71c094034261489fbb450c2f2f450ef5"
+      },
+      {
+        "relativePath": "INCLUDE/YMATH.H",
+        "sha256": "bee0ca00435e7f6060937131533c660275006617d5ee1383e837ecd1221a06ee"
+      },
+      {
+        "relativePath": "INCLUDE/YVALS.H",
+        "sha256": "a186476441eaa158056be01da9a1473217e14a7cc33365cbd0b6c9115833e0dc"
+      },
+      {
+        "relativePath": "INCLUDE/YVALS_CORE.H",
+        "sha256": "5070449e37a1735adf49204a12c7a7d5efa145d6aa607720aef5adbd2c57ef83"
+      },
+      {
+        "relativePath": "INCLUDE/ZMMINTRIN.H",
+        "sha256": "ee8d0c6ce34ae423958ec2abc61d31e2a18a00d99761fcec8f4775c8775fdcc2"
+      },
+      {
+        "relativePath": "LIB/X64/MSVCPRT.LIB",
+        "sha256": "59d3ab1065f0a14bd9b27debef4008a91eafbc7411290013f61091bf12dfca0f"
+      },
+      {
+        "relativePath": "LIB/X64/MSVCRT.LIB",
+        "sha256": "a31bcb8a83dd659caee7a1025992ee54632302f3ddc2f0ca4b64516c2d55cbb0"
+      },
+      {
+        "relativePath": "LIB/X64/OLDNAMES.LIB",
+        "sha256": "35bd82cfb02a0146ff9c0ca6bf7dbde61d49c6d4f3493befe584218c370ff41d"
+      },
+      {
+        "relativePath": "LIB/X64/VCRUNTIME.LIB",
+        "sha256": "1acbd98b43a4be8373e25c65dcae4412f36f6111d6b64e47e4a2a97a1d16b27b"
+      }
+    ],
+    "WINDOWS_SDK_10": [
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/APISET.H",
+        "sha256": "e984e20681fd3de73ce14ab09d759d5b4faf03f7d66a78602da2ac9234b24df4"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/APISETCCONV.H",
+        "sha256": "1093683104f97c8c9725bb2e7539dca22722dc8c5618cd846287e9458698abfe"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/BASETSD.H",
+        "sha256": "d35b73f885d7ef7dfd27fce3762c190c1c952a21e10a3945bcb3d1860c673b12"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/BCRYPT.H",
+        "sha256": "c979ee7490ec190779385d69a39026f9d79308eeb6aaada64ef0766c1e3e0376"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/CDERR.H",
+        "sha256": "bf32afdc975ba03781b01dfc7b3a450787cc213257a3f4b7f53ec168ce07dd7c"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/DRIVERSPECS.H",
+        "sha256": "9cf7e9e1c9b55c7c351e87ff5a98e362b6ffdb511c3309ab9cf46b62b0dace42"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/GUIDDEF.H",
+        "sha256": "0c08463fbc5a23a8862e57699e2f30dd14cd3db4a40903e4fca9392a57942dae"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/INADDR.H",
+        "sha256": "a2ae281be066b6a2164ae5639dca411d8b03842ff91b216396203b1e62038572"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/KERNELSPECS.H",
+        "sha256": "e844c7726c42736df74445b36351dc01e29bccee7d57ea208f77f61aa4c2b191"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/KTMTYPES.H",
+        "sha256": "68d2848d00ae33282fb265880f8166f2b5dc60cd7a26db652450a5b44d44ee11"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/MINWINDEF.H",
+        "sha256": "a9cf08be8407a196104124d5ade2308e204e47d3252bcd2ad20d0f2137843d62"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/POPPACK.H",
+        "sha256": "a50d0ef5cfe96d634a41ee9a97749c147165f8656cdfed5df53bc24c8adb1210"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/PSHPACK1.H",
+        "sha256": "dee27f2712b9e72ca78a404834735303d16bdb21c8aa3addaca7dbca22664529"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/PSHPACK2.H",
+        "sha256": "971d19074639cb36134bb40776cb2f817c53cbd05d748b52468f571932bbcc49"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/PSHPACK4.H",
+        "sha256": "1cb4d07a218ec43c7935b431b16146fc0f3d29d43bd192f12959051d62c48d57"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/PSHPACK8.H",
+        "sha256": "47f3972a1211e3a5ac32b18fae1a824db087dc7dc562d152e9ccab9b297faef0"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/RPC.H",
+        "sha256": "063bd35df91c85b029064abe19d635d985e414c9733c60ee8ca8ce937c98d6d5"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/RPCASYNC.H",
+        "sha256": "5e91801cee17b175a397cc56ff08790783d4fcdbc8d52fe7bb7461ccfa369a85"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/RPCDCE.H",
+        "sha256": "991883893134c8ecbe6af8335df0781bfb779c11684b3367def514136241b866"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/RPCDCEP.H",
+        "sha256": "df032ed7952b84113857284d86e7365b158cc57f955a5c0580e57e96c6df5ba2"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/RPCNDR.H",
+        "sha256": "7eeaaa2b4a5972b44a03086884eeb4338d2b0790e3dbc3cb858cbab5fa813978"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/RPCNTERR.H",
+        "sha256": "9d94281cbd9272e02a39b51e19367df2a87f3756b85b5c848bee38828e0cdc23"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/RPCSAL.H",
+        "sha256": "c15959eb632ab0f27d2bcb3b6873cd2873bdd5669069409d936ef993dcb1c108"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/SDKDDKVER.H",
+        "sha256": "2472140e0a4d56595743bb74002a51aee9b58667bd178fc43742e19debfeb774"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/SDV_DRIVERSPECS.H",
+        "sha256": "99fd81f9464150f56963c3bbafaa95f93b837c221c4237e6e399a85e00ea9f39"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/SPECSTRINGS.H",
+        "sha256": "3b83b1cd3b4f9bf46009bfdccf01d5c3a6fa6eed3f823d1ef497ed6d1b9bce0e"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/SPECSTRINGS_STRICT.H",
+        "sha256": "49b12898b42bcf53e5f8fb75e6db1a5d3ffb7a9f394e50df3351e0824d4a8b42"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/SPECSTRINGS_UNDEF.H",
+        "sha256": "6aba76eabbec627edadba5ab29304d9e2ff4eb9da165fd81a9095c851f405a01"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/STRALIGN.H",
+        "sha256": "f7d2f48b6a9154937ad907e91b70faf6c68044fbe9d4042c392ac3c0eb1a82ef"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/TVOUT.H",
+        "sha256": "8c359d2dff894d546f3eced2fe9463dfa4824bffc6c8c71ecd8feef02e7eae21"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/WINAPIFAMILY.H",
+        "sha256": "bda507d14f2e40023d344cb943cbd98af26de8a47f3b0f5fac694d2025711af1"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/WINDEF.H",
+        "sha256": "040535b19a60264e5fe6971f7cb13cbf24be17abeeaa8acd21e44f5d7dfe8d22"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/WINERROR.H",
+        "sha256": "0284ea46280c14063bb714d08c9ec48de18de6a7f0384323b263fec234428833"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/WINPACKAGEFAMILY.H",
+        "sha256": "8f74e254896094a3884e6975fd24b3493846514065f47d2666df53cdea45b8ea"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/WINSMCRD.H",
+        "sha256": "d692cc4fe3b409bbbf175df4ef4d648813d366001e479de06631650d548a517e"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/WNNC.H",
+        "sha256": "fb3aaeef324b5d00ce0a6ae11702dcc3c1de65fa0a10caaab4336b97d3adf493"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/WTYPES.H",
+        "sha256": "71417094369493700ce385e32c63002ed651dd70b5d7f7d8a6f64c9e9a0939db"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/SHARED/WTYPESBASE.H",
+        "sha256": "e5277f89186f786ae0923c9d7689a16d91dbeff7fad36a86b08671416e4b679d"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/ASSERT.H",
+        "sha256": "9f49681f2534ac2f12fe866ba174bb5f64adfc4d91c817ce2ddc32e9ba653ea8"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT.H",
+        "sha256": "822e503b81dd7b3d7df93ca22fced3672a5154484fd42054d5941e619bcf6cbc"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_MALLOC.H",
+        "sha256": "44bd1bb518e730ba0be045f44a4735869e08f7d54ab85c298270770812fcff80"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_MATH.H",
+        "sha256": "ca2f0f25b2e07b3613984efd1135dd9f1d0786fabaa56da2ba3c83b1a23eb918"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_MEMCPY_S.H",
+        "sha256": "359f3ce9e84bc00c983f01d9c3375d0ca9e0ef6a42e797d16e119c62b2ef333b"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_MEMORY.H",
+        "sha256": "18ca520416579183bc369c0a8e555914db5c7577075b9359173fc6bc45595560"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_SEARCH.H",
+        "sha256": "fe06c4dd27c3df5ca6bed52a433b8848f32e14ed0f3712d00f7e602416471c1b"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_SHARE.H",
+        "sha256": "08e7a7eb0b0c7ebdd7e5fa9f9a65f626f5a725b688502ac178ca67334328b898"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_STARTUP.H",
+        "sha256": "2e2e27515bfe462435f5222022e5afdc84a50f093f87ade27db8afcaea202cb7"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_STDIO_CONFIG.H",
+        "sha256": "a7e100624320a8e0123890c5008bcb2281c1273ca7ce5bb1d297f987fdbe79a0"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_TERMINATE.H",
+        "sha256": "c8dc9a2497bcae0a9084eb1120f25660a575c7957997301c4f017fc44c908f54"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_WCONIO.H",
+        "sha256": "6cfdcfd9e1ec60014c4e7e87913275ce3cacda008dbc397a17306976266aa5b6"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_WCTYPE.H",
+        "sha256": "b622b24cbda842a1736987f38c9deb5076e51af018630842a127bebd9104076e"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_WDIRECT.H",
+        "sha256": "b8477593983d23ed4ef93c3efcabb8239375b518ba589a65338db29bb0dc2237"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_WIO.H",
+        "sha256": "e6a08ad4c75ef96fd5fafcff334048c4cc610f990f39c15e07c03af14d607197"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_WPROCESS.H",
+        "sha256": "e75c5cdf244070ddcebac8920dd4cc96c33d0e21fdfbc82446c0374950e98487"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_WSTDIO.H",
+        "sha256": "a10bbf4667b3aada380a6b80df853f9fbddc3cc691ca57389b3b6759f119e515"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_WSTDLIB.H",
+        "sha256": "98b62ac5fb4291961c19ecf5c1b2e641b437f9042054f1a56ebdfd0deb71eca1"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_WSTRING.H",
+        "sha256": "c485f918d43f0f846d77a36eaee9e111f57bf2eec32db7d9719ff924771744c6"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CORECRT_WTIME.H",
+        "sha256": "4e487fddafbc724cf4e6df45feb920bc46dae80f54ffe5d983bf742a1fd9a12f"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CRTDBG.H",
+        "sha256": "d9ebd063f0243dd122ec33901661d1ae175359adbb019f0d815fb902e6f617e4"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/CTYPE.H",
+        "sha256": "6a10e9f0505b896d356d986d671c939b7fb0602012e463314ff7bfd0182a861f"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/ERRNO.H",
+        "sha256": "c64e8df96f057fdebc0474bd765cee3ae17de34a2b1fc9d197597321f2d1e447"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/FLOAT.H",
+        "sha256": "0fbf87532c053b666940a65360f2488f5b6bb2e601632e32a0f1a8a078d8fdcd"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/LOCALE.H",
+        "sha256": "877aa49e1f22814dd5634e785d305210d3c7ac0a1274e8552ce4f687a91ac4cb"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/MALLOC.H",
+        "sha256": "8acfe0c7a33a4d5ae2253f7167f92b0e728dea86f83289cee9d583c45b175b6e"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/MATH.H",
+        "sha256": "fb747990091c8c6e4ed8b4cfb40ed14eadd37547153607459e9ddef71c64edff"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/PROCESS.H",
+        "sha256": "c11858d0260086e5a61cf0c02d3533ebec6d4ec6133c18967d8b8cfe8231f490"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/SHARE.H",
+        "sha256": "f706b5df86d1bdf22cfe8d86dc798b255ce1bd2719d5d25f8f491595075a2bc2"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/STDDEF.H",
+        "sha256": "3f1f7eeefad270928749c89a2a2094ccc3f38829b1d8c197f6ce7483ead2284c"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/STDIO.H",
+        "sha256": "06cbab3a501306fdd9176a00a83e5bb92ea4d7863cfd666355743527cf99edc6"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/STDLIB.H",
+        "sha256": "1576fdb40eb225dff53489db2fd52e41c7bb24f1e621e4a95c2c7f4a7216949c"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/STRING.H",
+        "sha256": "39767b2e1963b8ef679b62d5e27cb2d0ca1de6a6173b75389b79c9d575da92fc"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/SYS/STAT.H",
+        "sha256": "2b720dd0426cf0a74eefdb684ac559c8b4f84b1d7d345e3582ce0dfeb01b9aa7"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/SYS/TYPES.H",
+        "sha256": "dfb9ebc7d527c30d71f1056ddd85e33fb931df573b41424bb1db9a48457bebd7"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/TIME.H",
+        "sha256": "b775fe03a3288dfcd68a72caad43e8198283164eae94b665fdd3375a3baea44c"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UCRT/WCHAR.H",
+        "sha256": "802dc6f33d128ac94cb0e8a978c65382c7c18e85dc2eb7d340b038d79ad10ea5"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/APIQUERY2.H",
+        "sha256": "56c61c2ee306428d38037a578b66a49ef347a14a3760936416035b0d45da2b11"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/CGUID.H",
+        "sha256": "36eaed76fe65e7dc5382761439bc9f22a66701d0259001943bfbe35f257aa6e2"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/COMBASEAPI.H",
+        "sha256": "4b33bdf8cad7d07a0bd2945b4b96436b21021c46eee900881d2531616ba4df5f"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/COML2API.H",
+        "sha256": "73b81b7fefef903c28a3c2eab09cc52139ede97c38d8fe0e3f46faddb106a65e"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/COMMDLG.H",
+        "sha256": "8b98a194569e52ca87266b5a8d676ccba67538ce7851571003db8f7a606b0d2b"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/CONSOLEAPI.H",
+        "sha256": "a0e727e696f3599ef0b570942f28646dbd94374e62c812659eba5ebe2a42a99f"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/CONSOLEAPI2.H",
+        "sha256": "f2134e1d2c01611e60ff939ccd45561884aa0ccbce590136ffd1d95161892d17"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/CONSOLEAPI3.H",
+        "sha256": "0a00bf6ca901d0d980fe8c2b9bb91a39fb84c3a99e9c87498149a04cf7cf5925"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/DATETIMEAPI.H",
+        "sha256": "a4325c76b9bc900c22ef3d766c739ccd3a71894e81833ad637d50f9e45417117"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/DDE.H",
+        "sha256": "dfa78b30d4c4a6bd7fc0db7e2df4041c589db7068b5c5020c5671b674416df11"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/DDEML.H",
+        "sha256": "c97abab2627346d786459fc86a5da696f930c85c622a78732a71b7ad0790c1dc"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/DEBUGAPI.H",
+        "sha256": "d63f6c4aad9787bb8ff2e54966c8db156b0ef1570be58201d74dff12cd6f1e22"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/DLGS.H",
+        "sha256": "12b23d2256c80141d61044010c9fc16610a8ae0086c7dbe8376295d4b5f06f31"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/DPAPI.H",
+        "sha256": "a98783da8086def831c97880296504468a043b01e7eb35e500a70198f33582bc"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/ENCLAVEAPI.H",
+        "sha256": "9467c4bc6400057c3d3205d53667000be525cad64a381552291e869430af6a76"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/ERRHANDLINGAPI.H",
+        "sha256": "b73cccce6dac8ce02c6a399862ec2a6e22fe27a4d09874d86ec2be3bd5d17fbf"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/FIBERSAPI.H",
+        "sha256": "f8eeadc28f8e3e4c7bfd1217d55315eb31d63f3d86c66a3948d74ceb8e7a00d0"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/FILEAPI.H",
+        "sha256": "f8927178c75de487c0e57f044a215e455522bf6eaa0b660421be09cd06ae05a1"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/FILEAPIFROMAPP.H",
+        "sha256": "d07110e7f7989aeef7eed77d5f584f3ee60ff2ce58bc1a374d70151a18b4a664"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/HANDLEAPI.H",
+        "sha256": "c967fdf1a98e4ce8d501dae26b905f6452173b2be1c25e6aa2e5eeae415369cc"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/HEAPAPI.H",
+        "sha256": "22b606b0a4096295272bcae6fc353c4f159f0cdfc90b5f1a9a712b2fff50b53f"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/IME_CMODES.H",
+        "sha256": "27904e900938749c12a4d1e741afd564198a57a24724c1ddd36cd3302224df26"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/IMM.H",
+        "sha256": "942d0b80eb7d186ee935fce8064ccdcdea3a49b39bcc03f55208b7c37e289779"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/INTERLOCKEDAPI.H",
+        "sha256": "4b0d3bc138eaab8dc9dd40bfb109f5fea4cbd2caaf92d63a4cf60a8edcfb0e3a"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/IOAPISET.H",
+        "sha256": "7c3f659f98b3f1748a314bd64106583d01649333e0419b66232b4f64b3f85b0c"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/JOBAPI.H",
+        "sha256": "08ddff85ec80f12b156837bbce4f969480fea0e32a08dade7cc16acecb0892d1"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/JOBAPI2.H",
+        "sha256": "a8f9591dc2b0bd249d03150b70abd47c0068c6eda2a1d74d24bc8964bcd68549"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/JOYSTICKAPI.H",
+        "sha256": "d87b7dd3517d2018478df501ba3ea578d7ecdc4dddf44720802c414376fb5734"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/LIBLOADERAPI.H",
+        "sha256": "8ad0ba5600d6c2e9aed318ca9d2f48f2bdf9f47ed3cd5d9f243e6f779c8e04c4"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/LZEXPAND.H",
+        "sha256": "55e2fe7b987a83eeb10466a2f38411f406480362accce187fdc222af36656061"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/MCIAPI.H",
+        "sha256": "b1cf4890ae3d0153c3c998f6286df53969e106db2da08564a7c37acfdbf70dd8"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/MCX.H",
+        "sha256": "4ee416b2d24e45cfc5d35ce5b34833b64b34fd9a39957c66d75509f6d3b8f972"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/MEMORYAPI.H",
+        "sha256": "58edcc2090c411a1821e04a6a2954c258fd59ded44440bdd671984027e0a852f"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/MINWINBASE.H",
+        "sha256": "7d1408f4b8eeba96ae45892209132258cde80cab6dab192b4cceea591972c78b"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/MMEAPI.H",
+        "sha256": "ee475f72ae76fea07ce189895a14a4c7dd345568f59884801e6aa4744e931c65"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/MMISCAPI.H",
+        "sha256": "c732d81ff59b188f570972cbeeedfd5bc3bc5d18cceb5475c41c4ab540358cf3"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/MMISCAPI2.H",
+        "sha256": "3cac85c113c9b56101d3e3d5c5eb51542400764af7ef49f641fcd215aed6b830"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/MMSYSCOM.H",
+        "sha256": "e312d128602e8e6d51456f12229f81b0228ad1c8ea6c9ac438053966a7d20c8f"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/MMSYSTEM.H",
+        "sha256": "86d1387337af7793c583262108c1d671413ea5d6eaff597e0161ad6b604e33e0"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/MSXML.H",
+        "sha256": "001de8d9f111a4449dffbd9c2640f92eb329ff43fff9e6b46c1a10a6bcddc16b"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/NAMEDPIPEAPI.H",
+        "sha256": "37062eba19e35b391cf050519c9403e19c6782663ea644ff38b2b5eb71dfce6b"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/NAMESPACEAPI.H",
+        "sha256": "3257ad8af53c5809be4d5d17ed0ffd8b49451d3f27c1fd747ffde3e0a7a81583"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/NB30.H",
+        "sha256": "69759909f41583263f20cadfe1a013f023ba89a6a7752dccc16240b1e9b5fc1b"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/NCRYPT.H",
+        "sha256": "3319fb310ba9056c4b5d8457bc14f5fabd1c7a428f2611d6d4f9084d9cb42e66"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/OAIDL.H",
+        "sha256": "6432dc84174c12d5d3764b83fb4a21c5aed38b6a839c968133eca2920ee702fb"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/OBJBASE.H",
+        "sha256": "14d465a8f602f2394c5455f67f129756fc525b26ad9c3099d3f6d943cafb5007"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/OBJIDL.H",
+        "sha256": "6728b27fad8860be3a481ee33ae5bb8bda6acd5d692f79646fb7ef0c4cb03f0b"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/OBJIDLBASE.H",
+        "sha256": "677379339246e36e9dfa9325ae41fe790579ea474f4d05f688cde2e8ac521bd6"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/OLE2.H",
+        "sha256": "ff6645d2ba037df3835689ca7efa3fa4990c229bc98e195e500145a6b1344ce6"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/OLEAUTO.H",
+        "sha256": "76a024c41b0778979c84466199d9c868fc767f1eaca8b2660d298798382137b4"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/OLEIDL.H",
+        "sha256": "d9e6028b3447ad94b01d0676047355d8eebf6ff11afa8529904dfc11b941359d"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/PLAYSOUNDAPI.H",
+        "sha256": "29fb73d46381a51143b05c0ba5603dad5dff3ec879bb7376dd20e4a271e2d818"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/PROCESSENV.H",
+        "sha256": "c10dd3bd48a2416e0aece2259ea57cc47d6c8b9fdbae085a4c7a5b29c71a85dd"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/PROCESSTHREADSAPI.H",
+        "sha256": "436ae4cbb017d1cdb381aaf2119a3f89b04bae257fd4c881ef251daa02533540"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/PROCESSTOPOLOGYAPI.H",
+        "sha256": "4507a5e0c4f41d19a80d1543833f1a9d90277bc376441b277884bb043be24ba5"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/PROFILEAPI.H",
+        "sha256": "cfa8e3626dba11689997d8fcd65b5dfbf4bcef8de09dd7e4e881769d48d165a2"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/PROPIDL.H",
+        "sha256": "07200a21ea1247b97a91f2e28991c2de475b03cf890155a4de3d0990a2b70066"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/PROPIDLBASE.H",
+        "sha256": "637483de9f1d2d3d40c966e8daa9ed238a4469cb07fe168bac7c685e0cf1e1fd"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/PRSHT.H",
+        "sha256": "c894f54ac5e0584457f176f668b20b14577b06aa2ba5ce321e243c46248ea242"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/REALTIMEAPISET.H",
+        "sha256": "00c874b981a1242ee4ebc21e6ae96a69d7aa70662d820ceffbabcfea859b03e4"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/REASON.H",
+        "sha256": "30540eb35daa79c7a5cb98059430df480e86b549b7980247288da8a2801add1d"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/RPCNSI.H",
+        "sha256": "f49466a31875d34a6e5c02f301d81b7a78f25cb947f3d6e6ea712ab356b42c8e"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/RPCNSIP.H",
+        "sha256": "7c8138b43e028724e0fd143be29c40de5b5650a3e0f87356662a77dbad186712"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/SECURITYAPPCONTAINER.H",
+        "sha256": "85cc13ed7028960bd7f97c91f98b96825b46f4b8bc386aed2f2a6a9bccbe4083"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/SECURITYBASEAPI.H",
+        "sha256": "a443b4183d3ec5b8e1ae40db5824f002a34eb0415f38227fa1dddbbf02a448d4"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/SERVPROV.H",
+        "sha256": "5f25310cfbfb07bfb737b37c04bb74cd6c713505fdb9c8c4954f76bccd86dea4"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/SHELLAPI.H",
+        "sha256": "c0712ed939babdd72f9602a031120d71360324d7ec7933c31d6739aadb49c989"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/STRINGAPISET.H",
+        "sha256": "624c82fb73517a3829f3766a50a0235e2f9a51cb4bda95a0c39981e39fa4d42d"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/SYNCHAPI.H",
+        "sha256": "d962588974e5e100205f683160b351dee70ea100aa736e14d878b7a74577a9c5"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/SYSINFOAPI.H",
+        "sha256": "077088cb53ec69d454916aac5f00e45dda79e09da64054acc141120eb67a5700"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/SYSTEMTOPOLOGYAPI.H",
+        "sha256": "8bfd1a78cc30b6d33c88e3f61ae2ac6468cee0607352ee8d096ba5375b4d401c"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/THREADPOOLAPISET.H",
+        "sha256": "e91d7dee4d22ca848e3110a4c55f32e1918dc865479343896aec9ab653ee5110"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/THREADPOOLLEGACYAPISET.H",
+        "sha256": "87c1630abf7dc4ed7978f2c4dbacf418f6bcf94cb946e277cb7250770bd44200"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/TIMEAPI.H",
+        "sha256": "0252981f62c9ed1ece53434c3863f4bf503c2ead70719adb2cfd38e3e21ab6da"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/TIMEZONEAPI.H",
+        "sha256": "621c0252a8a831813592c4a95e183a2e7ae55efbbd7b8ad886af7d8871fc4d50"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/UNKNWN.H",
+        "sha256": "d0bbc6a30fa025fa3e5c198c68c638dec855b27b3ec34c9d404a95f890dd6a53"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/UNKNWNBASE.H",
+        "sha256": "7fc28ae112c678a18567387fdbb43c615af6253429c9c1a8037cd0861f7568b6"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/URLMON.H",
+        "sha256": "a69ff621172bda7dcbd26b92f209e0bd7a7b00bad74e2ef375c2b6a8ec8b6f2f"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/UTILAPISET.H",
+        "sha256": "a8e0f6001c784b3ad9feb44c61d96b58c57366c473832ca8b2ea5de05877b470"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/VERRSRC.H",
+        "sha256": "ff9bee8ee5b7aa81eaf79a1eab0e93bd307601e87d3b80a73f24984e9c951c61"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINBASE.H",
+        "sha256": "ec538199f5ebe8cec2dfd4f1ba48316ef776c82d37277aed3a677965e494f192"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINCON.H",
+        "sha256": "98e33720f9ec8fded808ab94f111b8335d0ba2fd2246a5adab3aab2ce05503d9"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINCONTYPES.H",
+        "sha256": "209e79fdbbb30971740e59b2da2d6c86e27c0e9dd02bee9cbc21736fbd2426ad"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINCRYPT.H",
+        "sha256": "d73ba64946bbaad342447564676a837e15380041b37674639fcf659ee67f13e2"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINDOWS.H",
+        "sha256": "b337d661d03a4abefb7b86a2742ce1ad5d19b57cd8b858bd13e7bbcc1dbeeaaa"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINEFS.H",
+        "sha256": "9db6c6c3188c7a4822f7484c554846795d859f498b7568f8014abad513437000"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINGDI.H",
+        "sha256": "96f3528cabc7e5fe30e2f2c51daa01c018dd6cedb3768121202434758629b8a2"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINIOCTL.H",
+        "sha256": "e4f42e55b43604f34c8d7080c2435363845ba13484f4163b2d8ac5f730bd8fd2"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINNETWK.H",
+        "sha256": "7c7412df502fb6ea390c96d7c9f805a2a211609b95b8fdb4740540f789d9c4ce"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINNLS.H",
+        "sha256": "e47861762a4b51a2689c8a99798a1a7e68335573e03c857e545172b095c5c829"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINNT.H",
+        "sha256": "8693f0ad4ada355c912d40ca41ce929b480e92291bda2f9227acf56736bffbff"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINPERF.H",
+        "sha256": "f73392e4535cbd70ef811b91d9de580a35e57930640a8a8b584507841006e20a"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINREG.H",
+        "sha256": "bff833e8d092a0cb657837e3162b8bb0cf35b43105203f4ce880972a501d61d6"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINSCARD.H",
+        "sha256": "ee43c5a32fd009da030047a0df19a66e02ed6387f54af0162ec9bd6f9854e845"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINSOCK.H",
+        "sha256": "f5d2165d8609daf35bfc796846f67c8f6129e47b4c6536aefba90f9488520737"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINSPOOL.H",
+        "sha256": "c9954b0f6051bbac7dc550f92b88c9306c2d76ddd5cffdb224fee4de3c010f23"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINSVC.H",
+        "sha256": "8108fe3f099960014f36d1b2da425a8382e9d839de3477eb06f181289a0685c8"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINUSER.H",
+        "sha256": "014e26f0041535ebcc53c7b46f1d280f66283ec5eb4612b4e82f5b0f6c0d428c"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WINVER.H",
+        "sha256": "c60e137e7ff88582f72e50fe74904f5773502d229f78234ea83abb2688f6e8ae"
+      },
+      {
+        "relativePath": "INCLUDE/10.0.26100.0/UM/WOW64APISET.H",
+        "sha256": "6b14e2b59ae5b9f22bfd9a1e989a5589adf5790832ff24cb9d8828d4e8d45cda"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UCRT/X64/UCRT.LIB",
+        "sha256": "7ef4eac926bf597d2f243f16cdfed7e0db22cb3ca34a1d7e088a84c994a03d66"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/ADVAPI32.LIB",
+        "sha256": "a0ea53377e6de11c5fdc07e72af11d22d8fa613cecc6ccb1b6de43490392eadc"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/COMDLG32.LIB",
+        "sha256": "cf352af0a3563907cefd36121963651fe4cc57260ebf6cf1b1e4cfc7758ef922"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/D3D11.LIB",
+        "sha256": "043f509f20d5dc6269ddd81e8741b4ff075e2fc7983f5477b6cc618577b1cd8d"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/D3D12.LIB",
+        "sha256": "3f48f63768e65fc0be7eb2bb9c06f96965bf2b692a3e96a5ffb2679ba8aeac1b"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/DXGI.LIB",
+        "sha256": "181cf09753c8db1ec62aaacc91574f1c6b54ae13526d1e77e83fd051c756af7f"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/DXGUID.LIB",
+        "sha256": "3086f597dccccb8f0e86da54f1bc7cfb9e77251e5f4be5f9525550d33ede6528"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/GDI32.LIB",
+        "sha256": "f530829c5e91cacd906c9e7363ca873bb8eaeb50114cc6a74a8a04c49bb4ec40"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/KERNEL32.LIB",
+        "sha256": "341c7d56125a03b458e4d5093e4c79b33123ccfdfd610fe236937b8e6f3134bb"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/MPR.LIB",
+        "sha256": "97624e606519354b0bc9eea1d17f3082ded236b2b2518c39944cd7664d99d336"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/OLE32.LIB",
+        "sha256": "f7b6d1e4a2f2a16c6a78ed821c8aa7f0b488112bb4da778285086e4588ca197a"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/OLEAUT32.LIB",
+        "sha256": "ccb86049288e4816e34b572f0d63a6b2c40d91777b092bb77ae639aa8e887ae5"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/SHELL32.LIB",
+        "sha256": "2a22142874964268432783a85cef5e3f5c18ed050ab77e637bb6bab30bb73ab6"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/USER32.LIB",
+        "sha256": "f45759349ad08b848bdd4eee39cd9b428b2a7ae63a09889c09a197fe7b01421d"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/USERENV.LIB",
+        "sha256": "2ae9d85e10d7536662b2657462ea6e4394c0143a187a75229e4e14599f6e4f2d"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/UUID.LIB",
+        "sha256": "d077ffb106503e057428dc7bb4c5daac019c269ffc714edb18ca028723cc840a"
+      },
+      {
+        "relativePath": "LIB/10.0.26100.0/UM/X64/WINSPOOL.LIB",
+        "sha256": "e39fccaf3a598e83a03695e2eee768d79ac8228a1bb67ad472ca6c10cc7a3a69"
+      }
+    ],
+    "BUILD_GENERATED": [
+      {
+        "relativePath": "CMAKEFILES/4.3.1/CMAKECXXCOMPILER.CMAKE",
+        "sha256": "0ee1b895c5d276aa5a7f0d53c41f00aff340259afa4d081069048f4ed49a61e9"
+      },
+      {
+        "relativePath": "CMAKEFILES/4.3.1/CMAKERCCOMPILER.CMAKE",
+        "sha256": "85223e3627ab66035651f1bc87d7ab01c67bccd4c1132ea0ebcf6fd87de0c7d1"
+      },
+      {
+        "relativePath": "CMAKEFILES/4.3.1/CMAKESYSTEM.CMAKE",
+        "sha256": "cf05e982232c22b6fe58288ef10f11c1d5ba2af1e7e050ea9d8037095b59d948"
+      },
+      {
+        "relativePath": "PITATUNER_NORMAL_SOURCE_DOCK.DIR/RELEASE/DISPLAY_ADAPTER.OBJ",
+        "sha256": "6dbd21ec9d29b667d2d6a16b90ff73beb7ffe19014be5dbfce8523a7b4aeb3d2"
+      },
+      {
+        "relativePath": "PITATUNER_NORMAL_SOURCE_DOCK.DIR/RELEASE/MOCS_COMPILATION_RELEASE.OBJ",
+        "sha256": "b859133e85593375c9f527acc1520636f6a211b6e2f54b6e7c481fa8ef4aedc0"
+      },
+      {
+        "relativePath": "PITATUNER_NORMAL_SOURCE_DOCK.DIR/RELEASE/NORMAL-SOURCE-DOCK-MODULE.OBJ",
+        "sha256": "f38e555cf79b2d765bd256634734587ddc2fd73a192962decb49a8d05a11bdee"
+      },
+      {
+        "relativePath": "PITATUNER_NORMAL_SOURCE_DOCK.DIR/RELEASE/WAVEFORM_MODEL.OBJ",
+        "sha256": "d15d3562ad41c24367e3fa884589cf5fecee4397e7644748f15a1532e45a1a60"
+      },
+      {
+        "relativePath": "QCP.DIR/RELEASE/MOCS_COMPILATION_RELEASE.OBJ",
+        "sha256": "2ae87c793d39d1984085f6490d67dbc5dfe5062bfa1e23e4b5e88dca4743fe76"
+      },
+      {
+        "relativePath": "QCP.DIR/RELEASE/QCUSTOMPLOT.OBJ",
+        "sha256": "ce54ff7f35cedd37ee6116c59fb311f63e4f5d320e18da7affee22fab82f848c"
+      },
+      {
+        "relativePath": "QCP_AUTOGEN/INCLUDE_RELEASE/OOIQJ6D2VO/MOC_QCUSTOMPLOT.CPP",
+        "sha256": "5016caed49a0ab725ec4779a025f7208d9343e9b83a39b58663cdeccdb2f92f5"
+      },
+      {
+        "relativePath": "RELEASE/QCP.LIB",
+        "sha256": "fd7eb5c85fb7e08393148c88afc40402a031421fef8ade723aa08740703750da"
+      }
+    ],
+    "PRODUCT_SOURCE": [
+      {
+        "relativePath": "INTEGRATIONS/CORRECTION-MODEL/DOCK-MODEL-DRAFT/MODEL.HPP",
+        "sha256": "3e464988572e19c86724e6b4a7fccdd8d95f29774f11c5c64c3b524d559d94d0"
+      },
+      {
+        "relativePath": "INTEGRATIONS/EVENT-DELIVERY/EVENT-QUEUE-DRAFT/EVENT_QUEUE.HPP",
+        "sha256": "b9d342662e84bc7e8532552dddedfcea1b7d2f41a1ea356cb459b11c565a1a25"
+      },
+      {
+        "relativePath": "INTEGRATIONS/WAVEFORM-MODEL/WAVEFORM-MODEL-DRAFT/WAVEFORM_MODEL.HPP",
+        "sha256": "50206590ebd7bb19ad4b52003caa3a0f7ccc61df30010d9ec921f23f1aca8036"
+      },
+      {
+        "relativePath": "POC/NORMAL-SOURCE-DOCK/CMAKELISTS.TXT",
+        "sha256": "41ab7e13f5fb8bbc037a1ee53bf4a3eef72f5407062dc621554c9faf21f9a918"
+      },
+      {
+        "relativePath": "SRC/CALLBACK_GATE.HPP",
+        "sha256": "3dfb590d3f414a0999c42e2a185bde43afe6aef115e5c313d6238215bddc5db7"
+      },
+      {
+        "relativePath": "SRC/CAPTURE_FORMAT.HPP",
+        "sha256": "b5ce239b4ed275bb4261d8819362032c751a7a94121ba7d0f511d6758cf7fcab"
+      },
+      {
+        "relativePath": "SRC/CAPTURE_PACKET_SPLIT.HPP",
+        "sha256": "cd3308e60799da1f37a33a793403a2f24d9213899b0e5597317c515ef9c0b980"
+      },
+      {
+        "relativePath": "SRC/CAPTURE_RECOVERY_POLICY.HPP",
+        "sha256": "13147b6dd549820c296e9fbe23e61683ab5653d7244b756c5ddcb956d3a8ce22"
+      },
+      {
+        "relativePath": "SRC/CAPTURE_TIMELINE_POLICY.HPP",
+        "sha256": "45dd60ca029c69657b2020ac78b8dc24d3810e5073982478fbe842d0637afde0"
+      },
+      {
+        "relativePath": "SRC/CORRECTION_ACTIONS.HPP",
+        "sha256": "b7a5484833fcc39e9e8946c07f632a6ac0bfbb534e6c01cb6159aa5c0d1a63b3"
+      },
+      {
+        "relativePath": "SRC/CORRECTION_CONTROL.HPP",
+        "sha256": "25fc39ce3ee09de26e0f09c3c74c2adaa395c57afa6205a7bcd37349eb780c5e"
+      },
+      {
+        "relativePath": "SRC/CORRECTION_PROFILE.HPP",
+        "sha256": "89ffbee6be40a6f4467530abcc3573846b465ed82d84e02371dfa424f36e4407"
+      },
+      {
+        "relativePath": "SRC/DISPLAY_ADAPTER.HPP",
+        "sha256": "bb3efe6932d527f4b9d91a652e3813c4adc53cb0139798ec3dcaecc8cd983f46"
+      },
+      {
+        "relativePath": "SRC/DISPLAY_CONSUMER.HPP",
+        "sha256": "314b05d300504f855a60dd5ec2b207e6d0a1ddc725a7922af65843a24e6f42a9"
+      },
+      {
+        "relativePath": "SRC/DISPLAY_OFFSET_COLUMNS.HPP",
+        "sha256": "47cf66191cc3864823c336298adebfa693b923c09487886e781b75c4ecee01a4"
+      },
+      {
+        "relativePath": "SRC/DISPLAY_SAMPLE_HISTORY.HPP",
+        "sha256": "586ef8a9bd3d3f5f461cbded47e5fa640739977632bb5d83515f430390104609"
+      },
+      {
+        "relativePath": "SRC/DISPLAY_WAVE_GAIN.HPP",
+        "sha256": "dab7c664c302bfafed53370d08771e6a493c09a4e4d59a8c4641c84d9f315498"
+      },
+      {
+        "relativePath": "SRC/FIRST_AUTO_GUARD.HPP",
+        "sha256": "66f7e3fb131b4f954a1afba1cc23e75745416a49dc96510d65ad5608e2037953"
+      },
+      {
+        "relativePath": "SRC/LAST_SUCCESSFUL_DELAY.HPP",
+        "sha256": "80713edbb5f4ac5d21064cee7e7cefbab9fd093984abe6772293184dedb22153"
+      },
+      {
+        "relativePath": "SRC/LATEST_ANALYSIS_LANE.HPP",
+        "sha256": "d8c45903690f92a94479b24759a7b44560f62448bbebb862ba450113f934f480"
+      },
+      {
+        "relativePath": "SRC/LIVE_CAPTURE_WAVE.HPP",
+        "sha256": "50f2b3c11aedeee345912f158446aa4cbdabe28e9c0bb2ff00ca3caec3cca9de"
+      },
+      {
+        "relativePath": "SRC/LOCALE_RUNTIME_KEYS.HPP",
+        "sha256": "d137019674d7f38eb43a742125ec168a4419b4ca540ff6fcb0798bc30f3d9fb2"
+      },
+      {
+        "relativePath": "SRC/MEASUREMENT.HPP",
+        "sha256": "d875ecbf99ea21b1b046a20efcbbc957cfc65ff258d4dc44d14a2a23f71edfb8"
+      },
+      {
+        "relativePath": "SRC/OBS_LOCALE_DYNAMIC.HPP",
+        "sha256": "f9d40aa088be139a565b46520b5ab5003eba87be582b3c7e9b925cccabb19a20"
+      },
+      {
+        "relativePath": "SRC/OBS_OFFSET_BACKEND.HPP",
+        "sha256": "d0da8b2bc85ea2f1028e151a38a1c074f06e0b74593ad800a0c5bb3851da6d54"
+      },
+      {
+        "relativePath": "SRC/OBS_SOURCE_CAPTURE.HPP",
+        "sha256": "b8f15527c9680fd5308e313aefc4aaf3f3a478ae383bd57f1a4004706c93f983"
+      },
+      {
+        "relativePath": "SRC/PAIRED_MEDIA_CLOCK.HPP",
+        "sha256": "7505d874e5daaf8d358e2f470d06dfbbd9a8c26d3230c7f7992ec26b9dbecfe4"
+      },
+      {
+        "relativePath": "SRC/QA_BUILD_GATE.HPP",
+        "sha256": "428f8139063bd96d5de77572d8e8cbc392f4404b0292f2069dccfb725afc2de9"
+      },
+      {
+        "relativePath": "SRC/QT_ADVANCED_AUDIO.HPP",
+        "sha256": "0eac3e885e3bcfd784c74208e5d65cfad96ae9dbc8dcf4c0a40b191b08ea2e29"
+      },
+      {
+        "relativePath": "SRC/QT_COMPACT_DOCK.HPP",
+        "sha256": "4064889483390f7dd0c4f4e6005bc3a68a3baea5c98d3a48382bf33061c01449"
+      },
+      {
+        "relativePath": "SRC/QT_LITERAL_SPINBOX.HPP",
+        "sha256": "cd5c5cafe33cc3fbaf771e7fde5babefc42bda9acb2976f58cdf40dfe167c159"
+      },
+      {
+        "relativePath": "SRC/QT_METRICS.HPP",
+        "sha256": "15ebcdb0e121eaece418ba1c3bb01d58faf2661812d3811cf7cfce0beda553f7"
+      },
+      {
+        "relativePath": "SRC/QT_WAVEFORM_B.HPP",
+        "sha256": "c76e44ed23d039b7c03d26378fb9cca765577b91e546b7e537f585e09ad6a719"
+      },
+      {
+        "relativePath": "SRC/QT_WAVEFORM_OVERLAY.HPP",
+        "sha256": "0a04fd65fd67ec459d1473c45e69f2a206acbdecc7563f837eb7112e6653ccc3"
+      },
+      {
+        "relativePath": "SRC/QT_WAVEFORM_RATE.HPP",
+        "sha256": "51470a25007c7c0e6918871b146f2bb46424548a7ad98691b2cb9573df855b64"
+      },
+      {
+        "relativePath": "SRC/QT_WAVEFORM_ZOOM.HPP",
+        "sha256": "db12fc957ea1314e0d231d47fac1ebe91d41321fc6c7984293ed7e6e4c0efb58"
+      },
+      {
+        "relativePath": "SRC/QT_WRAP_BUTTON.HPP",
+        "sha256": "1e100aaf6b610a96627112fb48d75a996fb4122462a187b82b35ba0424107d90"
+      },
+      {
+        "relativePath": "SRC/QT_WRAP_COMBO.HPP",
+        "sha256": "098655bb4b2627a7c35be4a14cfc10daa2376adc5457f8f641f0535249da28e6"
+      },
+      {
+        "relativePath": "SRC/QT_WRAP_LABEL.HPP",
+        "sha256": "13fff758f6e61ae3d747da1bf712a8e062f53d930e46547fc3b49b47fd5c1d35"
+      },
+      {
+        "relativePath": "SRC/RAW_CAPTURE_WAVE.HPP",
+        "sha256": "63ed767174c583ce0157c226d7037e6829efde62ec5d358f61cc25409e06b5f2"
+      },
+      {
+        "relativePath": "SRC/READBACK_GUARD.HPP",
+        "sha256": "d56ddf6902980ced3c1d5bb6f792496e58ff4f00475e110d7beab0b9dd9a2196"
+      },
+      {
+        "relativePath": "SRC/SELECTED_SOURCE_STORE.HPP",
+        "sha256": "cfaa0933437d39ed5c60725bb5ea23c0c57b1eda829591a4755309e6ece6db44"
+      },
+      {
+        "relativePath": "SRC/SLIDING_CAPTURE_WINDOW.HPP",
+        "sha256": "0e7f114296c7424566b995436e80e4d8c820a60e4a4fa7289b29b833918451b2"
+      },
+      {
+        "relativePath": "SRC/TIMELINE_DIAGNOSTIC.HPP",
+        "sha256": "539bf366d1bb4c28e7a42de793030e407078671508c5906eb80b8a72a938d6c5"
+      },
+      {
+        "relativePath": "SRC/WAVEFORM_CADENCE.HPP",
+        "sha256": "91ea7da6af472ab4e08ff8f4f8fda9fa3f37c1269c46c203bae5179506e68198"
+      },
+      {
+        "relativePath": "SRC/WAVEFORM_VIEWPORT.HPP",
+        "sha256": "73bd540c60c29cd8ffbc9904a277269a3c30fa8d04f65d2f466b0b77106608e1"
+      },
+      {
+        "relativePath": "SRC/WINDOW_MEDIA_CLOCK.HPP",
+        "sha256": "3e8344fac5724e9321d0a3c1d295d7662595cf0bf8507da9d9087a7d893bce9c"
+      },
+      {
+        "relativePath": "SRC/ZERO_OFFSET_BRIDGE.HPP",
+        "sha256": "8848f9d42a3e9909cd754a5214136d95c3867868c006ba38f5f84b75a2b093f8"
+      },
+      {
+        "relativePath": "THIRD_PARTY/QCUSTOMPLOT-2.1.1/QCUSTOMPLOT.H",
+        "sha256": "1e5de1edc93cfb05d2b431f5cd79f12aa480c48513a6ef43217fc708db5300a4"
+      }
+    ],
+    "QT_6_11_1": [
+      {
+        "relativePath": "INCLUDE/QTCORE/Q17MEMORY.H",
+        "sha256": "40a8cfc5029dae43c44dd8f226ba78f5ce11a658c752bab10f461c1a92c6735c"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/Q20ALGORITHM.H",
+        "sha256": "c0204406b21837608da0d1cba9ce527282272464bdb2af5c238bac3ae1974479"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/Q20BIT.H",
+        "sha256": "a9471154f5d5b8494b864ab02320bb6f71b314f20c9357260427d30282c7757c"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/Q20FUNCTIONAL.H",
+        "sha256": "04d390251a5a83367a5a28da9faff204a6a040bfa495d75e3aa4198da0ead1e2"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/Q20ITERATOR.H",
+        "sha256": "1605b5ca507758a4d47af6db43f24466ec75658b42a7149112ef27bc551b559d"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/Q20MEMORY.H",
+        "sha256": "3f2e0b29d4dea4537b87c5c5a66d9df4a6e65d5a41d2244962b25a07364d22d0"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/Q20TYPE_TRAITS.H",
+        "sha256": "158b042e3502b718272fd5be7092933a51e548cf8f4ffd7a500b3571692d3ff5"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/Q20UTILITY.H",
+        "sha256": "85b64364c929605f152f677fe2c1c730d2995ca8b2002346c8b1efbe49d26b9b"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/Q23TYPE_TRAITS.H",
+        "sha256": "b9a0def52d548eb8f35de25a029327b2c4a1dd46f8ba0f3eb1721b48dfeef71a"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/Q23UTILITY.H",
+        "sha256": "4254d76cfde3159173f2e24e7655739eb2e3644abbbe374350f4255f3367a184"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QABSTRACTEVENTDISPATCHER.H",
+        "sha256": "7cbcf51c0cbb555ec3aacc5546cd8ff0f7a5229c616455aa58cc81982fada4ce"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QABSTRACTITEMMODEL.H",
+        "sha256": "1115c08105907f41afa1ca3a1ef062e7a0a51e4d462ac72ae2ebdeee98920dbb"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QALGORITHMS.H",
+        "sha256": "478a571472017e21203bf9fe27003666276b5dadf35a54e9e89621060d951a78"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QALLOC.H",
+        "sha256": "a4ac66ad76786126a77a759cc276d76d16bfdc74bce8be197338a719f38b21f5"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QANYSTRINGVIEW.H",
+        "sha256": "96b3efab1e3a6397a516ac788e0aed70a23c05d404ecdc3efc732d2f6e2ef29d"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QARRAYDATA.H",
+        "sha256": "7adb9a3e0f092130c70d7059d5af90b9c1cc0b6b7b444504f982163e34922046"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QARRAYDATAOPS.H",
+        "sha256": "0a4d8695b9f3e615f372b1f850d165ce7f7a4d2b1341ef750dc1ae27cbc81152"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QARRAYDATAPOINTER.H",
+        "sha256": "c349b041653f5e2c3b322c100de88e15fe17888991a004403ae433e5b9230d99"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QASSERT.H",
+        "sha256": "10c3c05df000ceea9996451eb8fa38071d9d3692c1f07eb4587861289548bf76"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QATOMIC.H",
+        "sha256": "dc6ba5d1341f0da90ea22906356ad8accccc7818b0fdd3f765d945ffa08e5d2e"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QATOMIC_CXX11.H",
+        "sha256": "a899ee950ea997fdeba4347ab3efaa7a406ee3ff370211e9f80f50c75c02f633"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QBASICATOMIC.H",
+        "sha256": "7b14001585c7c3afe85f85ccca531bb86d28a0cbd65164b2caaa6f39f136b3fa"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QBASICTIMER.H",
+        "sha256": "e3ddcb37604d80309b71a0cd8b6868456a04ec05ad5a04d23e043414c3c9ebee"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QBINDINGSTORAGE.H",
+        "sha256": "91bebdfccb0486a0a5a73cb95a6e5e69c00a9b02d4f235fff9f0daa97261d172"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QBYTEARRAY.H",
+        "sha256": "4a82d8b1876b91f152e0793a4c6ec2680922083e1734e0847725b0a07d1397bd"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QBYTEARRAYALGORITHMS.H",
+        "sha256": "337e741c8100829eaf8d3a19427d7aad0a075d827496988095898ae2391a228c"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QBYTEARRAYLIST.H",
+        "sha256": "d4f4777cc6460b68de2c485a98c41f5daab858c76b7abf997310ca3cc2573a00"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QBYTEARRAYVIEW.H",
+        "sha256": "9d3c1485d69571e70b17e731c6f54d8f350ae974b4600aa1261465f164337079"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCACHE",
+        "sha256": "ffe610508780ff9c3652e6ae50e7e544544eec25150ba8dcc87bf17aa5161cad"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCACHE.H",
+        "sha256": "f573b7539b6a21f40a1be5d060a6a329c7ba718b25b150cb9abf46c75452486d"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCALENDAR.H",
+        "sha256": "1126785ef732c2f4ec38ee1f21abce809db73a9e121adf846c4b0b3dae5fadee"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCBORCOMMON.H",
+        "sha256": "1a4e908a93fab3aa7e0476d35a7c3a4ffb6f4c0cdbd0e127eb950761229a273b"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCBORVALUE.H",
+        "sha256": "652a7c2eadcf38f21dd1586c43b6e182b4a5500082d1f20c09bad6515faef779"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCHAR.H",
+        "sha256": "2f74a9d1bd235012291cd08f4cf881e3249f3900c07509706d99c7fa39523319"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCHECKEDINT_IMPL.H",
+        "sha256": "8d0dd7bcfa71bd84cb42ebaacbb3ac379874a9c0b0a701c33f97c8c7364f3fe8"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCOMPARE.H",
+        "sha256": "89b784d325ed0e963b4f311c1038a3c2e918ce1e43d42924a8f05deae68f330a"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCOMPARE_IMPL.H",
+        "sha256": "d62cb2d90bf61152ba1b6a23e226ccf9c78b7de3642f38c92fb53aed9c3068fc"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCOMPAREHELPERS.H",
+        "sha256": "1a09241bf225d413b32a7944399083eb9b7b9fcbd241553e0abf4a90ae6ac779"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCOMPILERDETECTION.H",
+        "sha256": "92a4b46d9ec8941d3333d76712582d8023ef347237e579438b876c04bd06544b"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCONFIG.H",
+        "sha256": "35aeb026c0fff8ee92b1d66da00a1476350900dd9ba0de0c15d1a2b56c0442c8"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCONSTRUCTORMACROS.H",
+        "sha256": "eda683ab42a75ce2568630c236f83acd6aa74c0a6ab2b65275a5a3819f9bee0f"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCONTAINERFWD.H",
+        "sha256": "074b4ba82aed8445644462c3f419a7fc051a9c62812fed363a8f79360a22614e"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCONTAINERINFO.H",
+        "sha256": "7957cbc6463221c53e3f175efc747787ce467a036c0b0f4623163b356ce1806f"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCONTAINERTOOLS_IMPL.H",
+        "sha256": "0d37ed435f5c6d17f33ed0d2c51aad6fb58922212e2897875f6440dfcb9f7b24"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCONTIGUOUSCACHE.H",
+        "sha256": "a87c08bc28707237a6b30fc5591fcab4fc2943a208a0bf60db06af223936b711"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCOREAPPLICATION.H",
+        "sha256": "44652385681fae4f301d8e6c564d32835a3a3374d7592b1040a865058be9038f"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCOREAPPLICATION_PLATFORM.H",
+        "sha256": "9720529ecba3faf13de2dd0e28be54c11b26417a3610ac816831708d8ed43487"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QCOREEVENT.H",
+        "sha256": "30e760d06428b755f0ad4d57b86a8ea7bc8d2a48d72d111e76fe291293dd58e4"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QDARWINHELPERS.H",
+        "sha256": "e78344d7dc2b1365a71f56e6ebb60802ce49c8ddcf524ffc7a694471b98f3756"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QDATASTREAM.H",
+        "sha256": "9987ab15ea4ee91ca6a1fad0e3f72311c6f34b3708a99e848fb411fdaeb8318c"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QDATETIME",
+        "sha256": "fc2677f57511a9a4777278a6160198fd7814ad9ff8580aefa4b288bdba0963ee"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QDATETIME.H",
+        "sha256": "dbdfabb636a68b05a59fbebbfa7e0a2dec831d6870259693c9c0e57caca94b94"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QDEADLINETIMER.H",
+        "sha256": "ddc4b9e7208206e1d7a658ef67ed7784a6100b9852ca95f5bb53ff2e85615402"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QDEBUG",
+        "sha256": "f8f3067d5a9806ec771f8c67b8708dcb0ad1293ab2795f97ac16be6c1b322e2a"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QDEBUG.H",
+        "sha256": "f34064bc521abe0114dca1208f7d13674480d1ac3759a6b7b2c2e83a9cba8cb2"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QDIR",
+        "sha256": "1e0c257f9e345dafb4cbdf869c02cbf477b3f53b64e3774e28cd8beffa9d667d"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QDIR.H",
+        "sha256": "387b3a506b47cbcbc278c85d0877b3db3d7116c3d253bc4bd53df66ea177d560"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QDIRLISTING.H",
+        "sha256": "9b3a6a8166837d2fcd493b6d277d00eb5909956ee61c1726e937f9331d1058d5"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QELAPSEDTIMER",
+        "sha256": "3c1f13f6685e20662b128337252173456d0ece933943ac4ca263d3960a5ed5eb"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QELAPSEDTIMER.H",
+        "sha256": "2fcfc24a4d721a8683b00ce54f02d24c0c002125b1fd35d6df99e7864f5643c5"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QENDIAN.H",
+        "sha256": "225cbd021bd3cf09fc03d6392ec354aaa07b68ee536d6223afc2722aff4d07ff"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QEVENT",
+        "sha256": "cdcb75e874a168984e80c9e735998e3be26471f4236f691aca640d3588c903ef"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QEVENTLOOP.H",
+        "sha256": "d303be9d4bcc048f88ccbebf27daa94e188a2a57bba10c45c982fd65f84e1d11"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QEXCEPTIONHANDLING.H",
+        "sha256": "7d85954067c7a6538910846afb1636f915198746b56d92a9b057c15d18c9f766"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QFILE",
+        "sha256": "bb1c10cd8f063c03f5f259cece287aa54a62520f9d74aa1bd77a8b24ff23011d"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QFILE.H",
+        "sha256": "f0d8be7469492707b0b4fd540d31d990450a82f5a043e0ada220ba48b0baba69"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QFILEDEVICE.H",
+        "sha256": "318b0514d0eb8c8eac5e0ecbe539aa4f6433c665ef500f40bfd829f60ea72ef6"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QFILEINFO",
+        "sha256": "542c67c704ba96348e305bf0a470c8d506907d88b2157c61d92861418134fab9"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QFILEINFO.H",
+        "sha256": "9a9073763934f13647b8c48f9aa41b4a02a1312e206c0cccfb4a885d0b388116"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QFLAGS",
+        "sha256": "f9b5aa92521385f6c8f3563bf5c0c1e10cee0c63e7c23e237f0ac5ee756af8b9"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QFLAGS.H",
+        "sha256": "d79467242468c221e8af51d33e9fe28fe68e1e0a2ac4fd333d15f51978852a59"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QFLOAT16.H",
+        "sha256": "519693f6245072720d21e5844889ae0aafb884c8bca00e1f5484e16de6bc9a33"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QFOREACH.H",
+        "sha256": "e7d309fa1a7003e541c81ffa741bd8d53715551867858dcec9590276f2faf840"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QFUNCTIONALTOOLS_IMPL.H",
+        "sha256": "99de2a89990ad9eb13bf445e63f5624eb61a3c8143263e04f7a8c8092c80a735"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QFUNCTIONPOINTER.H",
+        "sha256": "6b72356cb97ee4711bf8c384d1d9cc9b472a602d2973f8421e53a5b6bba5891b"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QGENERICATOMIC.H",
+        "sha256": "8e1a7c0a9f8f1e9d42ae49a601e2149260245c0544a40954539ff5ae4a3e75b8"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QGLOBAL.H",
+        "sha256": "ffb6e6d34a463b0b60525a8ef3068befbef5681b4b82b46e1532d400a9f239f3"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QGLOBALSTATIC.H",
+        "sha256": "4535f3bb2224b84f98d369906c121828049cda9df29de04766308914a52dc837"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QHASH.H",
+        "sha256": "d792c2e028c5a318a3220bb9122c0c9cd75b4c4ffc1965c35ab9f9996dc05285"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QHASHFUNCTIONS.H",
+        "sha256": "9942467c1409c815a2651149f107715385785930460665e1d5c40b5885848589"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QIODEVICE.H",
+        "sha256": "86a0ea9ca304af76a247bdcea1fc29fdc55509fea112ac0d5ec21e992b250d8d"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QIODEVICEBASE.H",
+        "sha256": "277c9da5f3b135e30de6e01f9bd22d2a4fbdeb19ce67d208c676def000a49704"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QITERABLE.H",
+        "sha256": "31155b7fcaf0857b10244a149e9043228f2b3ce22333afd8a373c3dd1b098038"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QITERATOR.H",
+        "sha256": "3d20363b26206fa06333868522a2e565b42e719e462be434ad5aba6103dd0137"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QJSONARRAY",
+        "sha256": "8745a836665cd7bb91ab6085359487cde03c5675ea6a8198a9811f6b196a1a5a"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QJSONARRAY.H",
+        "sha256": "d58ce888447de6512ab413eb3760e6b7c9bd524654431cc0b0118bcd2fdbd388"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QJSONDOCUMENT",
+        "sha256": "01fd85943bb650659150ee55459a9616d4bff827ec2b1c8b20441e5d9dcdcc92"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QJSONDOCUMENT.H",
+        "sha256": "0cef071842c4a5491833adb169e4930721b3a9d1fdcdfbe14f6bd2631e49aa43"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QJSONOBJECT",
+        "sha256": "b55db88dd1e09456f30fe417fa00cdb7bf77f9812fb18336e63bbfbbca7833b8"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QJSONOBJECT.H",
+        "sha256": "0fb73ad699d76964cbfb5bc3db5083a2c9620b52410dc4ccce3758b65d052974"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QJSONPARSEERROR.H",
+        "sha256": "756bb36dfe68b51e4f0e18ab7964aaa105b42973543018db43644babe05cce44"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QJSONVALUE.H",
+        "sha256": "300f4fbe9b24bf35f8aa86683341bdad7a8f3f0db482b60ab7fe41086a053346"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QLATIN1STRINGVIEW.H",
+        "sha256": "b5ec7052551779b86126478fd3cc21f6e72fb07fc5131a5dc3db5af4e1a0392c"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QLINE.H",
+        "sha256": "b3351708599fe2a405e24031766811e198d1563639db9a18ef4f7f4aed8dc226"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QLIST",
+        "sha256": "2558fe7a5ff1c5924bbb003dfad6bc5cfbf842035eef0c64e236716d7acd89b4"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QLIST.H",
+        "sha256": "618ecc8923f718364cae70ed5ab8c42ac5434f4a6a35b81ba45c38ba67fd7f23"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QLOCALE",
+        "sha256": "bcb204f220905b129fb68f62235d54cafc469a5bab80e4eefb1549a0f7b0c93f"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QLOCALE.H",
+        "sha256": "e09d0d62d0993ac8ea24d59c11cae38485c1ecd891a6fbc08300c47d0aac02cf"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QLOGGING.H",
+        "sha256": "dc93b16a5edce9b829e945cd2b5a6ec5c1b70284551255d31d2ab0f2997935fe"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QMALLOC.H",
+        "sha256": "93551c09de5ac5b1042748baa2d9259791997a6f5b1ba91ab67560fb59a283a9"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QMAP.H",
+        "sha256": "4fe83d7e02ac340702b2d89a08e8661345e5503f43dae69f3eb8a638570d0420"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QMARGINS",
+        "sha256": "da3f955677f8cd9e74abf8fbf25614def2bd6df26cfc7e9ef72a611360ba840b"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QMARGINS.H",
+        "sha256": "029bed2244a00ab36ca635881db8a7666da88da5112d9b6b49421d8373d039cd"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QMATH.H",
+        "sha256": "dd54f6de99822b1b762c2d2e06a5b29ab47e17b188e2f46df34a44835f6520e7"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QMETACONTAINER.H",
+        "sha256": "7c361132a75a9def8e833fbd583114ef5049f297fc602757ff884726559cba86"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QMETATYPE.H",
+        "sha256": "51e49b2262da281e3edf49659ea0965d037d3e4c07fa29937861dae92d156a37"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QMINMAX.H",
+        "sha256": "9776f56d43c87f5e126b9a679ce9296c6275ffd73537447a1660ecc40fd689b7"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QMULTIMAP",
+        "sha256": "7e00527fe34c26f9bc10bdf50ad1c675a9a3f0aa59d343def434c2cb44ce90f2"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QNAMESPACE.H",
+        "sha256": "ca0278266fab7c283acb1453e77625c4110d6d8ba1f3f3c8152b38cd3d824fc1"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QNATIVEINTERFACE.H",
+        "sha256": "36dcbff62d904e08aae4e71a6926a1ee10ee8a725b0e3db691d304c2371de5f2"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QNUMERIC.H",
+        "sha256": "e2fbb36c339019f54b4ce7ddcc0507cac2c9919532039ba82cdb0fb27c3849bb"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QOBJECT",
+        "sha256": "18916bbcb96806b0a27e2a89e11615a980538e1e116fe70c4de3923ffa456ba4"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QOBJECT.H",
+        "sha256": "be9cc484559b3427770121f071eabf62878459d385ffeed93c70c5b0704dbe7d"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QOBJECT_IMPL.H",
+        "sha256": "4842265f6770d944892b83b2b5b86b6e61897ab9efb459fbc73086f99deed8a7"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QOBJECTDEFS.H",
+        "sha256": "7a38725c394c1beddb00e2edb7b07a693723c7874f79263e019830b0f9412885"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QOBJECTDEFS_IMPL.H",
+        "sha256": "45b9d4cca3812679b5255fad7c1406d41bc7bc8634e324304cdc9f3c990b24e4"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QOVERLOAD.H",
+        "sha256": "73321571e9376036e66b36a2ca96cc3a394fff71c06760636f46f87b2856d4ba"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QPAIR.H",
+        "sha256": "99cb3b3408fa64e834c601d0a7a763565039a80c00d81616dce8c38d7a3fc2e6"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QPOINT.H",
+        "sha256": "1ae79b08f8d9e2b41689547415b037df060757e58d2ea7100225fda85f6257e4"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QPOINTER",
+        "sha256": "e69a0650529c590d3695b24b2440a650c92953339e3879028bb725309b8b83bb"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QPOINTER.H",
+        "sha256": "4e77a346778fa310322df9421523f88c3fc9fbddd25b2e4902de1d1f70f28f2a"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QPROCESSORDETECTION.H",
+        "sha256": "d2e24bdb55315164bc98e8ba15c3bf3eb876eda8d280421fc284416a82b7bfa6"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QRECT",
+        "sha256": "d3b4a77d218dc01d7c053dbbcff7e0f3afc1c0091feef53e607f8c09b1a9f0ef"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QRECT.H",
+        "sha256": "acf2c69a9e52a361ad2e0ac6b6802edc82208ea34688cd6bda6381137d035f0e"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QREFCOUNT.H",
+        "sha256": "64460a10d5c67cdbe7983802ce575dac7333da2a137dd78917f8985084dff214"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QREGULAREXPRESSION.H",
+        "sha256": "fd9539a3de9b81493b76cafc3de944e3ed7b49a1f4044143b5bcbb477e182eb7"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSAVEFILE",
+        "sha256": "2a2a9257ec3c56f26a241acdca07be2b89257175b46a698857a88d65d9284e28"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSAVEFILE.H",
+        "sha256": "cb0d99fa77b26d80dd6401a18fd0255bc310324b14ba5ba76e1b01e43aaa33a2"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSCOPEDPOINTER.H",
+        "sha256": "094938c00f8391ad6dc8e59ba5a73dd231b05393a9ac1e8421ba1e6c17e35c14"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSCOPEGUARD.H",
+        "sha256": "39b44965d0425e7057c6623908f314fc02e44d1d08ab3087398f832831b39d13"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSET.H",
+        "sha256": "343da83ee87a16ccff42688ae22c1e4b79727d46fee356d855eb8d766b8543e0"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSHAREDDATA.H",
+        "sha256": "aa88dd1e053126d1fd4d55426287f659d96859aa9a5186db48043ffbcaa744cd"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSHAREDDATA_IMPL.H",
+        "sha256": "6df98f3ed8d5be82e4138d0cf6d44537fca1688f94f930eca4738393a7d39034"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSHAREDPOINTER",
+        "sha256": "14b73ba1d6bb1d2a81cdf9ac0654f32122cd4d46fc31daf89519e4ad972be8f2"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSHAREDPOINTER.H",
+        "sha256": "dea721b4fc32693fea7e6f9d91782ca254d2a4fd9c159e79b65a2d18e3f39b32"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSHAREDPOINTER_IMPL.H",
+        "sha256": "c61f8a46f82636c0cf70857e79cb05af782883f424d8cb5c3bb20c08811ba22f"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSIGNALBLOCKER",
+        "sha256": "18916bbcb96806b0a27e2a89e11615a980538e1e116fe70c4de3923ffa456ba4"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSIZE",
+        "sha256": "6ee536239ff05ac1fb3a64831415c616805b715b07d8e144e97fb72fe889ce16"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSIZE.H",
+        "sha256": "cef49689ed9c3b7fc0c629ea840ac7638c922255a8a30d6c207cc9f83c5c8626"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSIZEF",
+        "sha256": "6ee536239ff05ac1fb3a64831415c616805b715b07d8e144e97fb72fe889ce16"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSPAN.H",
+        "sha256": "469245c93f2d214f53cbf51670f32efb41e8a7b357b15af737b1351bee8c395c"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSTACK",
+        "sha256": "9d243c8f5e42d068136db33d0059ec12c39a2b14ffeeeb61a361392b57d0e717"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSTACK.H",
+        "sha256": "cdbe8efc1febeaf73e04cfd212e2755649d4aecf7ded546ece1e2f15eab92e57"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSTDLIBDETECTION.H",
+        "sha256": "908133310dcfacb74166f69f3c32c4f65d39c9a110488dbcb8a07222d02c7f3b"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSTRING",
+        "sha256": "9aa61609bba3ad985841b0aaa03ec8699b31d32e0ea62822590b899c6df3be38"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSTRING.H",
+        "sha256": "5b0d3a8d7a5ec8d829456dc22a06c884d34093e4e653d612fc67afb5b1cfcee7"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSTRINGALGORITHMS.H",
+        "sha256": "1740d7366a549bc25c749f0f0671da0057698cc106a421c1a5b9c172d125fc21"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSTRINGBUILDER.H",
+        "sha256": "7f6dee1077a5dd17fb6527cdc970e3a17386769706073bc16472650f4cdd687b"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSTRINGCONVERTER.H",
+        "sha256": "7d4226ffa7f074e4ea25e293ce9f96c9f1bf1773847e494dfed3ed50904c2cfa"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSTRINGCONVERTER_BASE.H",
+        "sha256": "01b97a5b67a331fd3ac50b5dab42d74e9a88fc60013232332e434159d493bf8a"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSTRINGFWD.H",
+        "sha256": "94ed02f82264ff89908d4bb650840cb2b55c171bf3f75388c14a3b3935173f0a"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSTRINGLIST.H",
+        "sha256": "cb81e106289fa7887f4733622d0511862a04d2695e90ca59dff203f50bb406ad"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSTRINGMATCHER.H",
+        "sha256": "34a3d9a650391e7d5c3c19263688a066d757c230a34b8f9ac7de579b05f9b5a8"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSTRINGTOKENIZER.H",
+        "sha256": "2d5cf0d17b2a329655c7cbf95dd34a88171cd31dfeecec10c2325e548d7bc48f"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSTRINGVIEW.H",
+        "sha256": "eb924ea626f13bd8152445bc0183315bc5c95353a2ba745bf0537906bdfebe01"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSWAP.H",
+        "sha256": "77ffe4c2bee002e1ee30eb2f1ab53b59c52311e94f6f9639e550723bc7f002d5"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSYSINFO.H",
+        "sha256": "8bb8a857ff3d7693e428c19a4517e500d113a60ae744d375ff70affeaf5f81e3"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QSYSTEMDETECTION.H",
+        "sha256": "bf9a51bb58aae54a52988d862eca604c1b7526278ffb330c6f02e23b92ab8268"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTAGGEDPOINTER.H",
+        "sha256": "0fb187f9ffdf10e400ad49ec85aa7b53f4dba5d1be584691d66ba7e565bd094f"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTCLASSHELPERMACROS.H",
+        "sha256": "271a54b40551eeddeaeac5558f558808dc69945c56ef47b241e386ef2482eb40"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTCONFIGINCLUDE.H",
+        "sha256": "5bb959edf228c040d708336e0196cfbb39d04343a24d45052df58bbc9a84420f"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTCONFIGMACROS.H",
+        "sha256": "8d0770dc5806940d2e12bda4554a4d8584a2213250058cda111f635624c97cd4"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTCORE-CONFIG.H",
+        "sha256": "bb855fef6cdd7364b0546768f99bb8f723611e35ab8036f79a9c2ac44df63511"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTCOREEXPORTS.H",
+        "sha256": "2650d4b066c94fc5a4d8c841096ff8863cae30ce460c2f5c90393aeff3ac392e"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTCOREGLOBAL.H",
+        "sha256": "9781410de5bbd6fd1f9eacf6d7073c53eff15395836004cab84af187bd6145b0"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTDEPRECATIONDEFINITIONS.H",
+        "sha256": "016bf0537f49f5b043b4fe609e9c4cac91dfb361b118a97ac6d51248eb557287"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTDEPRECATIONMARKERS.H",
+        "sha256": "50157f6c39e656ee3f859b1d8d17fe11c150927caec4c77e4ddc8a67de3f8594"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTENVIRONMENTVARIABLES.H",
+        "sha256": "0d9a717b660893bad132db88e3a1fe0f0ac0cd425e3bc44e6fc5a4547302c4ec"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTEXTSTREAM.H",
+        "sha256": "7b44391cff9d77094687d94d36bdd9003ae5be30f490cae75492da9cfe5bf377"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTFORMAT_IMPL.H",
+        "sha256": "30279e222dae84cc49f7574f2f311ff1c8452d59873cbe854c4f28fadbe3e628"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTHREAD",
+        "sha256": "bfb9a879a13ae780b48a605dbaa872ebd70b8555fdd9f828b4bdae73c80f036b"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTHREAD.H",
+        "sha256": "253eb1a256874d0dce8cb7f57270ad1e8057ac09497d320d4ef0788d3cda38a9"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTIMER",
+        "sha256": "ad0b15629bcc2bc07555471c8b8d487afe5a2e4aec0f59162f8fe0bc4dd5f1c3"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTIMER.H",
+        "sha256": "d9eb5207a099a40b2d5202028195f6eb4dada1071c50a35abcdcecdb6c6cff6f"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTIMEZONE",
+        "sha256": "5fbae780558ca31b55e296e5a4b491d5ab0d53f5ac892c82f57ab07062efd00a"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTIMEZONE.H",
+        "sha256": "60d02c8526d862df5183250fafcef6c139e21da3a030ae14722a010c50eb21b9"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTMETAMACROS.H",
+        "sha256": "b5ab74d67f1bef65115b8933dbc7a00b3f6cfd626f0c9780b4cd3d21e0ba5aee"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTMOCCONSTANTS.H",
+        "sha256": "2ec057341371a3ede174789076c34780bb220730eea12e9639bb3e32c3c57517"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTMOCHELPERS.H",
+        "sha256": "336dffe63778728569bccb5ae27ebfe27a51f4c728642af11c3a8dd9f3b8c160"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTNOOP.H",
+        "sha256": "e8bf6fb6a53b5b0b5d4cd8900331047c5b86d2c80af7dbe1975fc64ea91bb2eb"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTNUMERIC",
+        "sha256": "3dac0153a7f91dcb02ffb558cf1af5e96022b31842aa59b4afb17c77eca7069d"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTPREPROCESSORSUPPORT.H",
+        "sha256": "92a23f57595457bf45bbd06d27f14a57cbbb62490923d2fad938fb31ebf0c868"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTRESOURCE.H",
+        "sha256": "61ec9f4e322bdf80bda8224e19385ccadea1b6b2094985c1c3b4e4a6083cb0d6"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTTRANSLATION.H",
+        "sha256": "7d6f2fda637d975fb10295a6da6d56d9fc966b7b3f0ff92ecf363f601f575ec8"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTTYPETRAITS.H",
+        "sha256": "f5b5c6a1e8ee2a81137766cc458d2e7330b69332575f7de6d50a7eec8fd1d182"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTVERSION.H",
+        "sha256": "63696d5d4864f16b1fdc2b19ef356983c1aa96fb4fbe1d0624cb2b821bf300a6"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTVERSIONCHECKS.H",
+        "sha256": "e2cd4ea41c9d63d5fa3d27588c52189478a7c89e6ad0d2ab8629e36d53a2c638"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTYPEINFO.H",
+        "sha256": "c93b672552d47c7e8681569f5ef752a5bd5182287ba504eaa5cb682510aec0e2"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QTYPES.H",
+        "sha256": "15d33befe3fd0c316c654e91e13b1646f8c8c5ff787f44d31b94b5e92042ed4c"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QURL.H",
+        "sha256": "a7a2debcaa1aa10e06bcd39e14e817658a2a6a6fb517a649a840ded5f73abba4"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QUTF8STRINGVIEW.H",
+        "sha256": "9ccfbccb79765d62669dca526d5f0e3366c08698e062a8a12d411aa59b2e05c2"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QUUID.H",
+        "sha256": "944d4ee6a4ad1b20ddf88e00655bab024bbcf574f62637dd4458e5bbb463cc0c"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QVARIANT.H",
+        "sha256": "f1c82d2c9dc21148ad9a734ff6be0bac10cd656d2310e2b885a11af3735652f3"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QVARLENGTHARRAY.H",
+        "sha256": "a0bf3951988f1e27e97f9198e6da866d1b833f64f2cba659eff1c261e9867200"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QVECTOR",
+        "sha256": "be893fe06c321503a7308e87750decabf32486b8b918cbbed76331d3f83bba18"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QVECTOR.H",
+        "sha256": "56a07fee950deb355b159d6fe587ca8e0986135e69520c8e739a1219912a46a9"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QVERSIONTAGGING.H",
+        "sha256": "70b8a3c33f29b3e0c87a58adcb0bb8be037224a466c56a781ad8b31dda0a4562"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QXPTYPE_TRAITS.H",
+        "sha256": "cef9699aab8447f654f88200e870bb911d27ef4831afeafb5398b7e643ac3a1d"
+      },
+      {
+        "relativePath": "INCLUDE/QTCORE/QYIELDCPU.H",
+        "sha256": "10e4bc66a59f2ec096d64e14ee7d9e107a558de9c65f811f44475500eca40267"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QACTION",
+        "sha256": "4c8c30f035ca97b1b6a59aa067620c145811a9fe71e7609de4a6488edfd3aee1"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QACTION.H",
+        "sha256": "a8209a9fc7d8cce7abd95c7924ba60da9c080c102693144d4a515eed0df04936"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QBITMAP.H",
+        "sha256": "401c96ef60f20f7e49e18288c9520786e2aef7303e26e27b5b2bd1e456ae2444"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QBRUSH.H",
+        "sha256": "0deddc589a04104fac58df956bebe710903791584f25851ca79eaf64b38970ce"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QCOLOR.H",
+        "sha256": "c1c4e52e886246672857e61c7606826d8a2afee55dc7282ff2ee459771e0e29a"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QCURSOR.H",
+        "sha256": "85c299aec4c1aba79b13067a7e0e7ee9bf23d5a4bf8db8a4c93b9b74107af73c"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QEVENT.H",
+        "sha256": "d55413fa4ea82646ce8a6e6d4b9d8fd32b794fd578292a17add594d9bb3e3449"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QEVENTPOINT.H",
+        "sha256": "08702fa00c90aa0907eecc92a4d04e30c56bf28ad8f1e100e96b8e3a0fc8869b"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QFONT.H",
+        "sha256": "e14aab2007a4f81060dcf52aafe88c6344a5701c084a0b9619d19078d10749da"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QFONTDATABASE.H",
+        "sha256": "8db10d5b4346b13043de78f941d3b3bfe45c615dd19f07e28a3f53a9b90355b5"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QFONTINFO.H",
+        "sha256": "d4cae3bd7f6c403c533bcb33eabfeed377cabcdaaebf3ee866de731b1124918a"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QFONTMETRICS.H",
+        "sha256": "8d8e49403ad4763a9d90d25cbf0bc583b3c23513ab22e9e640c8fa86a04d11c8"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QFONTVARIABLEAXIS.H",
+        "sha256": "6fc2c3032746d72000578d96ed802faf7f6b508f9c99a249b35f2c4afd47ec6d"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QGLYPHRUN.H",
+        "sha256": "3aa7dffa6c79ae90445fda2db9463b65bf0e2ab33c47064cbe8f0ab2cec969cb"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QGUIAPPLICATION.H",
+        "sha256": "be74eae5e6c323e1c1cef3cd52a9006c3e9781c936b3dbc70404ca7976c4972e"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QGUIAPPLICATION_PLATFORM.H",
+        "sha256": "2864ca42efd4b42b3c617017558800ffcd00db52a9fd11340dac6bf27d9f28ec"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QICON.H",
+        "sha256": "03e822e46f6907dd0c2b43770f4b4a1ede84911e633b6018147720cda2704ce6"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QIMAGE.H",
+        "sha256": "2ec9c38a51a40137c0182a978c4db7ce05ca4ee608e0999ad50eaa15fa57051d"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QINPUTDEVICE.H",
+        "sha256": "166900c9678074098f76ef46f4a4fa2878647b8112fb52f0057dcfead4b03e30"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QINPUTMETHOD.H",
+        "sha256": "f2115982bc8f54e5fa4a9a2172b2500eec3be1d5f0703560922257bdb22438d7"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QKEYEVENT",
+        "sha256": "5f4617fffe7a776d127ecb2ed40ab9b833ce476cffb2fbc46248286109761656"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QKEYSEQUENCE.H",
+        "sha256": "e52b5ffc43bdecf52296638877095bfccfd363452d2b7bc12939af7fd2154695"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QMOUSEEVENT",
+        "sha256": "5f4617fffe7a776d127ecb2ed40ab9b833ce476cffb2fbc46248286109761656"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QPAINTDEVICE.H",
+        "sha256": "0d12130303682ec94d464498e606843d5d19d29f0ac04c9e08ed131cfebd4aec"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QPAINTER",
+        "sha256": "9e36a5b2bd6f6cd62c856d4b16d3d738ea4548ac11d355bbe8acf74344042ffb"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QPAINTER.H",
+        "sha256": "e654efa428fbb06cad39d299d8bd20ace84d5d62728479a826cf389fb789b778"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QPAINTERPATH",
+        "sha256": "9ad165d10d0783fc751ad3fd84cccc6b37e0440aef3677f0451a480b4132dde9"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QPAINTERPATH.H",
+        "sha256": "3ec1a1b6d7391a824011f0fabf5a3f1be59913d74d2ff7fe17d93ca18349f1e8"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QPAINTEVENT",
+        "sha256": "5f4617fffe7a776d127ecb2ed40ab9b833ce476cffb2fbc46248286109761656"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QPALETTE.H",
+        "sha256": "23f2da413dae9415083cfffee072c9bd3b49e877cd3670089716ff349ec3ba21"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QPEN.H",
+        "sha256": "b4c4d4a1a9b3ac228207cc1505ad795b423f0c53857ea54bd5f8e0a794890980"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QPICTURE.H",
+        "sha256": "408167df6b3b1f66dd6d3d683fb5516b8b76cf2dc1a872d580e09f471dfb54e7"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QPIXELFORMAT.H",
+        "sha256": "ba630c0b360ec652b4b6507c59db5ec3399086194bd09bec95b83945c83d62f8"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QPIXMAP",
+        "sha256": "17ac100a206aea5ff4d941e005bb051cffc6e1548a5db624359b30d012430fcd"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QPIXMAP.H",
+        "sha256": "51abc4bdff007dde85f0491d8129fba8123cb233299a75a1c3326b593ce81a31"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QPOINTINGDEVICE.H",
+        "sha256": "2c874a9c0cfc95049010e08db90955b4657ef1924e617e40a0d0ea8ed178d044"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QPOLYGON.H",
+        "sha256": "1f09be3b759376b2245d5f9f86270e579301460e44380b3c968863c56f4b264a"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QRAWFONT.H",
+        "sha256": "7b0d91b6c4d0a155e1881a7c3bbb57dc953b455eab354ed73c7d0b562d3e57bf"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QREGION.H",
+        "sha256": "99678f951142cc1c798a030f9f4092d2a788dd1f2001e0961bb26734f8c99184"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QRESIZEEVENT",
+        "sha256": "5f4617fffe7a776d127ecb2ed40ab9b833ce476cffb2fbc46248286109761656"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QRGB.H",
+        "sha256": "4ad9b3d1c3aa21ad954e3bc7138f4c57d9a6644b29f688fdea8af6544e09d807"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QRGBA64.H",
+        "sha256": "7299977f5ae72d760c1289f5e090d5acf55c254cb9f8c2acd13ee923e14c81e0"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QSCREEN",
+        "sha256": "e3e6a82077e6589cd5f546f45ad2a4f4077adbf6586f73c1ac2890c0d060b57b"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QSCREEN.H",
+        "sha256": "64e5e58b9cb675a76ccf4925f09ab7b408c5140486e79feefb2b892cca1d6cab"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QSCREEN_PLATFORM.H",
+        "sha256": "7fd850e1c0aa98a7ee2600ecc1bd9414adebddd31d3bfda3933a656f6f3ada8c"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QSURFACE.H",
+        "sha256": "c935ed8c066b0f78ced612fa775d959308895185b1ad47b1a3699e40b45e52d7"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QSURFACEFORMAT.H",
+        "sha256": "29ffa6c9e403be69fb073e6deba857a4bf480395c435fdb08e23271aa6b0b272"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QTEXTCURSOR.H",
+        "sha256": "e0c202b9bc11be01c881c7e7ef4f16158550906a6d2a7df807bb3fe7eec57f38"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QTEXTDOCUMENT.H",
+        "sha256": "796d77bfe11be3a396ccd42b00e0606a7373133f5c39bcaf838d00eb2d8b007b"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QTEXTFORMAT.H",
+        "sha256": "06da9eb822d9c404a8ebfbfe14fc30f0a511c4fa60c93448e83fe875048d729e"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QTEXTLAYOUT",
+        "sha256": "e5120c88be18199d5b1bb9803bdd0dc9642d19c69157d627fb32225166e4050d"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QTEXTLAYOUT.H",
+        "sha256": "af067c1dde1b45687de893957255b90592d6599c5bc9ff508f3c41d838ec5825"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QTEXTOPTION",
+        "sha256": "fbd023184984b482aa600d60eb79684caf35e52a4bbc76550e2bf9fdd853ee67"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QTEXTOPTION.H",
+        "sha256": "7a0294be38bea5a1fdee10a23f717212164fa713b3cf97ec2404713c1028838d"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QTGUI-CONFIG.H",
+        "sha256": "989e2db1af732e60b197ff1018f453cc4a6e13331f08b5e5d853b5e0e4d4546c"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QTGUIEXPORTS.H",
+        "sha256": "f071dfd46a9429de9de5731b2032a4e72352210c1bc31e2c03acc66586003151"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QTGUIGLOBAL.H",
+        "sha256": "6e66c43808a7f2344e893a09c41c332d7c5974402bd8b8ee147c1f2ea92093ca"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QTRANSFORM",
+        "sha256": "a6f828db0194bfe6cf823fe5209bfa16bbecb8e3007695a6ab07ac2bc7039b05"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QTRANSFORM.H",
+        "sha256": "5895aeedef64e8d44d764daa0f3406556c9a8f117e21a22c1596701133d02c4b"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QVALIDATOR.H",
+        "sha256": "c0682b1c9fc6190455ef7c4a8a2a2a442f0401de8b6783f138ce94b5ac4ea080"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QVECTOR2D.H",
+        "sha256": "cc04dd7481e2032f4ac611234989611ab24eb851835421d3591d87adccbf1ef6"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QVECTORND.H",
+        "sha256": "cc3abc658d37db30177f643caac67c1bbd6ee65f9a829747de59dec2d48fc721"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QWHEELEVENT",
+        "sha256": "5f4617fffe7a776d127ecb2ed40ab9b833ce476cffb2fbc46248286109761656"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QWINDOW",
+        "sha256": "bffa5599c24d2e7bcf5ffa2ffa8c5b5bbbbcca3e7fd09d4f29c1ee51dda85c4e"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QWINDOW.H",
+        "sha256": "9f587b4cd396b4a0915808d22dcf66448ad0499a6247c3c552c6fe28af264f8b"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QWINDOWDEFS.H",
+        "sha256": "4e8922cb6f099284234501a414f21e8a30fd42487eeafa5e16eb41ca768346d7"
+      },
+      {
+        "relativePath": "INCLUDE/QTGUI/QWINDOWDEFS_WIN.H",
+        "sha256": "23cbd608add846d257d66909bb188f8c5201bd8853f034c8e66f6cd32316d04e"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QABSTRACTBUTTON.H",
+        "sha256": "79978620cf2b913d67535e50d6564cf5586bdae4d859488f5ce9597424ced0b8"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QABSTRACTITEMDELEGATE.H",
+        "sha256": "e5ae04fb3ea06ef96aaf75c9ef544f83bd0aadab592d8c66953a88db5ff90c9e"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QABSTRACTSCROLLAREA.H",
+        "sha256": "a3fded87249961ab456eec81ea0497c079232b7bd8b658f3031bccdf663a443b"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QABSTRACTSLIDER.H",
+        "sha256": "babd225d84d08b0cb31bdcc713adbf82028bb43cdeddd46655f75f3f50975699"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QABSTRACTSPINBOX.H",
+        "sha256": "a066a1e623719ce18fec6afefa26df7ec841dd9f6adff686bf7c17b82f9b9f65"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QBOXLAYOUT.H",
+        "sha256": "60730f1ba22f5a6d33954d0d83ef65dc652964774601204c06dd7ffa065ef15f"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QCOMBOBOX",
+        "sha256": "4dc5e1115e265bb72ec1af1510c6329a5800bf9a72deefc5b3490964d8dc08ed"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QCOMBOBOX.H",
+        "sha256": "4cdf818fd81b23e826f07eb17f8a7cf67c3a4f61dffb9c6b9568757f007487af"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QDIALOG.H",
+        "sha256": "370f772f890967b07f03877b9a2864b3ff92a908fcdd70fd237d5a13e063d52c"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QDIALOGBUTTONBOX.H",
+        "sha256": "0befc89c06db1c86fc8b5f4cd0c16c7e696118181b6be0dd4204ae1109792efa"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QDOCKWIDGET",
+        "sha256": "055cc1d1dca429065f5f9f762655474fd6cba80ec14a4c78b416c322fbd1e0bf"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QDOCKWIDGET.H",
+        "sha256": "0c51e7bacc2bb83e55baa06a88efe7c26aff10fef7a5614ffda9ad2e8820aeca"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QDOUBLESPINBOX",
+        "sha256": "c326c54d9870c5325188839bc5eb4bbce97c4178d29958a9c15cf85e4725bafd"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QFRAME.H",
+        "sha256": "519953d220b069aa745e1776a0ea32131a0a8e4abe0f200d0b324059fb6c08df"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QGRIDLAYOUT",
+        "sha256": "40153ff6f74de735528be608f0ab069761feaecd48011951b9b08809e8dff2b9"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QGRIDLAYOUT.H",
+        "sha256": "a184b347be33f816bb37775368d8d97518a1af25816e5711d95da593dbf91eab"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QLABEL",
+        "sha256": "1ae641004b1ab7d11aa265596db34f2906c33d125de88bcaa0eacb2b6ffa6a69"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QLABEL.H",
+        "sha256": "c535c8b5a945c723e4fbcfee66c17359a974d4b42f51cfe364cbc213e2ac3173"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QLAYOUT.H",
+        "sha256": "cacc81d8cb6b1ba8ae5b1b6d4fa5c59a621a0639263d0513e72e7d9a0a64adf8"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QLAYOUTITEM.H",
+        "sha256": "ff2fc62ecc23379c6521a86c94be350a711ed9e76e16a60b440a14505aa3de3c"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QLINEEDIT",
+        "sha256": "c0f09f9645f8642b56c15921f3ef0e661c5940b540281388bc2251cda0088732"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QLINEEDIT.H",
+        "sha256": "9ed3904ae262343c04efa3438a2b41e68db8732f5fbd9a3c85d5246aa280830a"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QMENU",
+        "sha256": "146311df0033681561fdcc00143c8aafd9cc7083a8d23e62ff2f3384be199cce"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QMENU.H",
+        "sha256": "0022de612f7484cc53915362e16944694ee66685a9978f8a6c3227cf39c0e97b"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QMESSAGEBOX",
+        "sha256": "0521d3c09d1c364e07abf7063b3a185e2296f0b8e927c4bb2d0c3f0efcdccb85"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QMESSAGEBOX.H",
+        "sha256": "251f472c08e7609073eb51cf47f6a053322a02c5c69f93eee77e8542bc7ec1e6"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QPUSHBUTTON",
+        "sha256": "718dc210f9bbf6cad294908dc8c235284f20152ed8a6b580f9a942739cc7fc58"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QPUSHBUTTON.H",
+        "sha256": "3d564177d4e463586e9d16e41534c1c2607544400a0c33426be6513b7c6ebce9"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QRUBBERBAND.H",
+        "sha256": "81a3a16a48ae554b38ae9729bfd08448ae613cc54ce5bf4a463f7019266425d4"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QSCROLLAREA",
+        "sha256": "751cdb82138869f7dcd97711e5676fee19595845a4e78cb81d13f27cf773cfea"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QSCROLLAREA.H",
+        "sha256": "dc38ca0c8d03010c4b2f41aeba9178926f777b1113845ca69fbe6325d9776d45"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QSCROLLBAR",
+        "sha256": "9720c4932a4409abc6492439fe732e4a2827b73e69282a9dfad9da0167b9ba4f"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QSCROLLBAR.H",
+        "sha256": "f22b8f897b3948a9cb87e9bd0520a35ec07a4ef8cf401781304bb09f1616704d"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QSIZEPOLICY.H",
+        "sha256": "84a30f343653273368f3e4a184a1c2aac1647a877371badb0437fc5d85d01d2f"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QSLIDER.H",
+        "sha256": "53ceb890ef33e8176422ee945d3000df4c5663936c242093606a3c2627c90227"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QSPINBOX.H",
+        "sha256": "8f00601cc4288783df190c3ce82fcf6292ce2a0af6b13154c1f3e85cf04f5ed5"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QSTYLE.H",
+        "sha256": "9e28de93dda9309a5f79ba1cb258847a35dbfeb9d903f3e6fdd9f37bbc1c9b25"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QSTYLEOPTION.H",
+        "sha256": "588caf777094a1ad42db194809a5fbce1740f0fc5866dd42a931c623792ea182"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QSTYLEOPTIONBUTTON",
+        "sha256": "f3d33d8aef012fd2bdd4db7841a612d61d25816808f8132ffad33f99af58be7a"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QSTYLEOPTIONCOMBOBOX",
+        "sha256": "f3d33d8aef012fd2bdd4db7841a612d61d25816808f8132ffad33f99af58be7a"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QTABBAR.H",
+        "sha256": "154c398be6dd0e7b68a655f274d091376f8cdd63e3bea9bbff26cee5da3af90a"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QTABWIDGET.H",
+        "sha256": "5f0ff43b59f713a862ed4bf5adc0e5be1a9e82e747f91d62eb0b0199e6889b71"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QTOOLBUTTON",
+        "sha256": "c65e495b345ac37f5fb1d832495d59c0bfc2d3efcbd5e6152b1de03e410c7901"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QTOOLBUTTON.H",
+        "sha256": "7fae0ec38baf13f04ee028d8806d59a9eebb68248012312adee26adafb6d75e4"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QTWIDGETS-CONFIG.H",
+        "sha256": "1cfe20dd58ab5b99fe991704747cc8c73106282f2a02e2a5149d0d9910c1eeb3"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QTWIDGETSEXPORTS.H",
+        "sha256": "5f02f810ba9bcf620ed3031d429b27b03837b6ec12bb09e3ac62a99a3e5215b2"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QTWIDGETSGLOBAL.H",
+        "sha256": "e5f8e0f66ef49683c113aef36f826a0124c1a4a2a41fe8a6ee2efd9028b997eb"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QVBOXLAYOUT",
+        "sha256": "6fa687fe6208647d66eebc875388d73aab9e46e692d56d6829d8b17d652a765e"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QWIDGET",
+        "sha256": "3301370aed5cdfd2e4b1be01e8865a2fe836cd33c8c403526d714404b0d66ae1"
+      },
+      {
+        "relativePath": "INCLUDE/QTWIDGETS/QWIDGET.H",
+        "sha256": "61537d31b93f95be15f62eff7a97f7369037057daf0be5aee621471a3e889a20"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/FINDWRAPATOMIC.CMAKE",
+        "sha256": "2378e96864db5ba2b334237d0ae91c698e154f5980496a7cb8d6e81eef672b85"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QT6CONFIG.CMAKE",
+        "sha256": "3805b174b21bf10c476514cd6b082056002a7380be2e02515e8ca867f445246d"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QT6CONFIGEXTRAS.CMAKE",
+        "sha256": "88eebe8fd3c161295f8a9853b2de45dfaa11fe3cbef7fb8642034894d6d1bdfc"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QT6CONFIGVERSION.CMAKE",
+        "sha256": "ba47fedecab8566178c2378ac9464e8cb75210b8252d7ef5b59de00e50b43ccd"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QT6CONFIGVERSIONIMPL.CMAKE",
+        "sha256": "ddb4c3f2ee1c8d355daba786eb8ea82f01ab879caed8f5cddf1355bb46f780ae"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QT6DEPENDENCIES.CMAKE",
+        "sha256": "76626af9f6ecb4d46baf0371b10c367c301ec520264e5f4890fff5c097b34091"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QT6TARGETS.CMAKE",
+        "sha256": "84211d480b345723de9d60b27a454a0fed3eda231eaf226d528c45f69a40d4be"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QT6TARGETSPRECHECK.CMAKE",
+        "sha256": "cc01fc4dda9364a2dcacfd7780f58c40857a96ac73f25112942134e6ad09e65c"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QT6VERSIONLESSALIASTARGETS.CMAKE",
+        "sha256": "1aca930fc2cb44c94a9539c29ed1fad246919182cdd055aa83749550c84790dc"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTFEATURE.CMAKE",
+        "sha256": "11b924dcf8b05bde035fd256ddaf60a34e1f67767abce5ddd69062f8174bb02d"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTFEATURECOMMON.CMAKE",
+        "sha256": "8e54944c4914bd0f0eed93cf3074c08218c01f0f56a493ae70d09d56ed27696f"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTINSTALLPATHS.CMAKE",
+        "sha256": "3fe8c41f33447240ff63a3988fbd7ef271e29a30671e46b5e682175a1607f81b"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICANDROIDHELPERS.CMAKE",
+        "sha256": "18e4cc500086e87c69032b36df88510c0b6fb58829fc4d1b147fd6bdbad517a9"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICAPPLEHELPERS.CMAKE",
+        "sha256": "8da167dcb273a617870ebdc0f1667c4ccdec93f7001a8129837edf6fd73a8b6d"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICCMAKEEARLYPOLICYHELPERS.CMAKE",
+        "sha256": "a35b0c5cd73e866a45124c664a096de763ed51ea2f00d59254d8c4edf16884c1"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICCMAKEHELPERS.CMAKE",
+        "sha256": "c3606fe07a319c09cc444411c6bfd6a67480c2397adec0eeeb1a7873a0722262"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICCMAKEVERSIONHELPERS.CMAKE",
+        "sha256": "4e5189ef3e9ffac04f070e807adebdf2ed3adeeaeebcacdf6922b3d3549a7a7a"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICDEPENDENCYHELPERS.CMAKE",
+        "sha256": "d9a62b6f6fb10ad61031efd7c2c06f208a228285448bd996f41a1bd2b472b27a"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICEXTERNALPROJECTHELPERS.CMAKE",
+        "sha256": "ab116f4d9626bb385e2a4b29a5818fa586f13ad262f0fa93e83cda098a32ac1c"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICFINALIZERHELPERS.CMAKE",
+        "sha256": "42eb8772a32d92f22f37304400b45558d7e4a85359fdeb02e6b1f17a380e2e92"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICFINDPACKAGEHELPERS.CMAKE",
+        "sha256": "b3748791431a48560feadd6ed97e086520b5533846c12d935276570f90632999"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICGITHELPERS.CMAKE",
+        "sha256": "486fd0c2a67aeacbb49849bfd760e55a9a328b4a95c92a6beb029ab3a4fe2b20"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICPLUGINHELPERS.CMAKE",
+        "sha256": "ea7ecde1c6ba3dce22c7de2ca4b5269666ce8be3795d9ae922d9ca19017aa6ff"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICPLUGINHELPERS_V2.CMAKE",
+        "sha256": "89ce615699c1cb64e5314cc496742f903dd6f9adaeecc007f8a80a9c69ef3f6c"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMATTRIBUTIONHELPERS.CMAKE",
+        "sha256": "f9d7dc4aabfcbad8e663f81781f3adcb3a6eb95ee0af4191acd13c0641eb821f"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMBUILDTOOLHELPERS.CMAKE",
+        "sha256": "40a9d8b1cab4ba99128e7ccb471691850fa989684c37a629cd970c0ff428c217"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMCOMMONGENERATIONHELPERS.CMAKE",
+        "sha256": "84839310a27ed6a96756fd918d4b849469a2fbad94f8637e4b4f894d8224ad9b"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMCPEHELPERS.CMAKE",
+        "sha256": "4a93acb5729d4564aa61c26f2faa66cb5b807dce7fb3b9acf8d50ab6892a78ee"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMCYCLONEDXHELPERS.CMAKE",
+        "sha256": "a3c06adf8e66b6fe747271ebae17e9a463796cf0fed37cddf490f041ff5b9d80"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMDEPHELPERS.CMAKE",
+        "sha256": "ea849ba6eeecaac8d59fbab70cb11fef47440d3c22289f3c2cad214b46e209ad"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMDOCUMENTNAMESPACEHELPERS.CMAKE",
+        "sha256": "41720c8329f3894af7e5184983c9404e5276453dc4db4b3957a4cb99f7b24c4c"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMEXTERNALREFERENCEHELPERS.CMAKE",
+        "sha256": "c0a4734abd012d012eea4878f4ade70ca1bbea91e2c850404a2bfce1048e258c"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMFILEHELPERS.CMAKE",
+        "sha256": "72b5a0283369484e463fbe78bef48c510df3d211e9fe29cc73e5a480ea9c8b13"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMGENERATIONCYCLONEDXHELPERS.CMAKE",
+        "sha256": "dc524d8b2d1cf7f99806918c09b169281f99dd8d0605a9c51c806cb37183416c"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMGENERATIONHELPERS.CMAKE",
+        "sha256": "7768686e7a8c1c803564b774a230f788d26d9a6dcd50b4e67a334e51a1672bc9"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMHELPERS.CMAKE",
+        "sha256": "24da6f6c2651071992fccb12846b9ac98c946303b23deffc141c24d202565dfe"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMLICENSEHELPERS.CMAKE",
+        "sha256": "60f5b2f6901665cf87e3cf5c2337b6817657374079cb2ed8cc26d0877bdc77da"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMOPSHELPERS.CMAKE",
+        "sha256": "9c30765ef9d083a400463409137f8248df2d0787c6f303dcf99fc3a7ea0b3b4d"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMPURLHELPERS.CMAKE",
+        "sha256": "9897c7e855635f8c76ab70b1ff52aadcebb570024f0522035f67f50cd6909268"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMPYTHONHELPERS.CMAKE",
+        "sha256": "8a2ecc6b6b013d8fcb4e665cfd6f028f3d36e8ed7ebd6634a7157beba118b214"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMQTENTITYHELPERS.CMAKE",
+        "sha256": "a2dde5768abfc50685b8b2bf850af00edcae10fb39d73f05a9dc6419107e3f32"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMRELATIONSHIPHELPERS.CMAKE",
+        "sha256": "1e40add1a8935491edcba769b9dd45b69eae7105a13a6684baf4e3b9b4f0afad"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICSBOMSYSTEMDEPHELPERS.CMAKE",
+        "sha256": "13ae274c132ddd37053d3cbf391099c631d041c6bfa595177ce863bc020fc6eb"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICTARGETHELPERS.CMAKE",
+        "sha256": "2774ca917d7c2b0fe292d96912501829d17ac447f844575a9b7ed4c5b627757e"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICTESTHELPERS.CMAKE",
+        "sha256": "c083d9be0ce1747c13aa5fa3fa20268d8aa6d2d39ac22859359f2a0e0328a17e"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICTOOLHELPERS.CMAKE",
+        "sha256": "d1ce8fa4a9af5c1e41cd4dcdf2b74a729c0ccb8b2affef74d164ed1575b49b9d"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICWALKLIBSHELPERS.CMAKE",
+        "sha256": "34b11471e54ca376e8d24d9d465f5ab364bf02cce86dc1c93e5b5a2d73755833"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6/QTPUBLICWINDOWSHELPERS.CMAKE",
+        "sha256": "33c03d6db3b747be968a3a2382a27cfdb91836d348303ea8cc361d3f4e02c117"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORE/QT6COREADDITIONALTARGETINFO.CMAKE",
+        "sha256": "b7d44ee4df962d6d175d568664dd3529724fc3250deedf40b4dac53c5c69ce83"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORE/QT6CORECONFIG.CMAKE",
+        "sha256": "985bc98eb58a0a37067ffb0f8acde2536fb243eb7d839de7e148fd70e303e6f6"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORE/QT6CORECONFIGEXTRAS.CMAKE",
+        "sha256": "7b0ea484b09d4d33909055d465a82cb0a934bd4f458a77585fde4ca5e4cb4425"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORE/QT6CORECONFIGVERSION.CMAKE",
+        "sha256": "c7fbbbc639446df1da031b4cd75bfcb7c1d2e3a4f703783be3230283e2fff87a"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORE/QT6CORECONFIGVERSIONIMPL.CMAKE",
+        "sha256": "ddb4c3f2ee1c8d355daba786eb8ea82f01ab879caed8f5cddf1355bb46f780ae"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORE/QT6COREDEPENDENCIES.CMAKE",
+        "sha256": "b317b6489ea66f9b4956ec393a594580700db9b23ca0a7a638fe58148e248f4d"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORE/QT6COREMACROS.CMAKE",
+        "sha256": "5ae0eda11747379efa18ee363e8fd1eddef7c78238d02af12b60a15eacfb80a9"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORE/QT6CORETARGETS-DEBUG.CMAKE",
+        "sha256": "1c373ad9960adf3e83cfb183208dc9d574d9fb1ce85d46587019b69afa2cd1e7"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORE/QT6CORETARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "9d950bbc5f12e682bb5071bf85f0b624e977077ad860441b055c6a0ae727c75d"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORE/QT6CORETARGETS.CMAKE",
+        "sha256": "a8867d7b09d1c7180ca552d5e5ba524176dbd9a84da9579f562f6e72d4192b0f"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORE/QT6CORETARGETSPRECHECK.CMAKE",
+        "sha256": "bdec3953ea0ab90c2a6834756b1dc6cd84b65eaf2aba2bc4106521c467d8262e"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORE/QT6COREVERSIONLESSALIASTARGETS.CMAKE",
+        "sha256": "54313ee094e32251c46dbbee3021023eb3489a3b7937bd728b2f000fe00b07b9"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORETOOLS/QT6CORETOOLSADDITIONALTARGETINFO.CMAKE",
+        "sha256": "bc710cf859ae340e830228ca2392f0d6d277a752614a92b8372ea6ad4714ff0a"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORETOOLS/QT6CORETOOLSCONFIG.CMAKE",
+        "sha256": "5487fa23fb8c3df9a50dbc324d97db65e5856deedfb874ea4e2c0305a0e65fd0"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORETOOLS/QT6CORETOOLSCONFIGVERSION.CMAKE",
+        "sha256": "8b6b4620c083faf14e576b8eb789544cfc1b3234ddef99cec06e2c049dcce898"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORETOOLS/QT6CORETOOLSCONFIGVERSIONIMPL.CMAKE",
+        "sha256": "1ffaa39677aa2f4af91843e3e649d268b4eef0fc24732d226dd7399338d9d910"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORETOOLS/QT6CORETOOLSDEPENDENCIES.CMAKE",
+        "sha256": "77b45a13c3ae89965d8c669d1f06a2b2c2bbc729b35e189113be0882a006ae56"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORETOOLS/QT6CORETOOLSTARGETS-DEBUG.CMAKE",
+        "sha256": "ac8752862bdf094ae121848172f4ffd7fd80f58fff976ebf8657114e9ba252e2"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORETOOLS/QT6CORETOOLSTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "38c77ba722c83e35ab7508a7e7722b20ea5ad4730ae6652308b4452a32d1df3b"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORETOOLS/QT6CORETOOLSTARGETS.CMAKE",
+        "sha256": "667229f0cdcf2f4771bea25a6ef8f44ce56a48b5db802896d4b51612e413aa7e"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORETOOLS/QT6CORETOOLSTARGETSPRECHECK.CMAKE",
+        "sha256": "b33412ceb5773a88c0f533711893f65b018f20a7d752adbd4949690bef81db79"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6CORETOOLS/QT6CORETOOLSVERSIONLESSTARGETS.CMAKE",
+        "sha256": "01e9b105a704871c867473b510f802bb81160e767a4260ff84d07703833c7f55"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6ENTRYPOINTPRIVATE/QT6ENTRYPOINTPRIVATEADDITIONALTARGETINFO.CMAKE",
+        "sha256": "6507de976ed8a36475b25c6cb313a02e68aae962cf098e735c097a4b40b1225c"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6ENTRYPOINTPRIVATE/QT6ENTRYPOINTPRIVATECONFIG.CMAKE",
+        "sha256": "62e6de4a621f0ce28c1a4fc6a78a200c12819dceeb9845f92b52ca6c65dab5fa"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6ENTRYPOINTPRIVATE/QT6ENTRYPOINTPRIVATECONFIGVERSION.CMAKE",
+        "sha256": "1da7edc0fa1c47e424b8cd57ce15cdb93dc14521d7a1ef618cd3331870347829"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6ENTRYPOINTPRIVATE/QT6ENTRYPOINTPRIVATECONFIGVERSIONIMPL.CMAKE",
+        "sha256": "ddb4c3f2ee1c8d355daba786eb8ea82f01ab879caed8f5cddf1355bb46f780ae"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6ENTRYPOINTPRIVATE/QT6ENTRYPOINTPRIVATETARGETS-DEBUG.CMAKE",
+        "sha256": "a754254cc3c8290426da93f4704a300393f0b0cfd41a5f5953b6788776bc2ed2"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6ENTRYPOINTPRIVATE/QT6ENTRYPOINTPRIVATETARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "95e2f499eea2551d62316482daf7d431c34d21b64099d03524884e74d35ac5c2"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6ENTRYPOINTPRIVATE/QT6ENTRYPOINTPRIVATETARGETS.CMAKE",
+        "sha256": "4d5252a747c6a1e6492f0a81423756cfe094b97333f9ae2ae722487cae412494"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6ENTRYPOINTPRIVATE/QT6ENTRYPOINTPRIVATETARGETSPRECHECK.CMAKE",
+        "sha256": "dd941295360c64a9750cb6ddfa88183f7e0c4f6f2dee476d19372e5109e7b8ee"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6ENTRYPOINTPRIVATE/QT6ENTRYPOINTPRIVATEVERSIONLESSALIASTARGETS.CMAKE",
+        "sha256": "c1d3d012447db2590caa8596c6bbf212dec1ec5aa651839b627f38a8185395ed"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6GUIADDITIONALTARGETINFO.CMAKE",
+        "sha256": "6fb83e72af4e87dfbe4d5731d575cc1987a29fc9b6c5568ac302a78be2d62bc4"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6GUICONFIG.CMAKE",
+        "sha256": "0965a3230fef914ca836fcf61d092a5ffd9989e3e13b2988d8147702b1a77a53"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6GUICONFIGVERSION.CMAKE",
+        "sha256": "7f8bdee6b016d736bf5902df3c64b5d9eb546783b743822e363bc3ac1abcf1a4"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6GUICONFIGVERSIONIMPL.CMAKE",
+        "sha256": "ddb4c3f2ee1c8d355daba786eb8ea82f01ab879caed8f5cddf1355bb46f780ae"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6GUIDEPENDENCIES.CMAKE",
+        "sha256": "5aa83f570e1224d0b4b753e4dff7e9ffce45b8c76a3b22cac0f7f036a6f899a0"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6GUIPLUGINS.CMAKE",
+        "sha256": "d9a52559f08ae112ee982f0e9b8a6864ce56414dc7dbcd2a1de10a45b4133a3b"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6GUITARGETS-DEBUG.CMAKE",
+        "sha256": "e1bf6781f687830341706cbcc15768a745d28124ed0250e7bd4ded16462574f1"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6GUITARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "e5796ddf1a6e2bdfe1f4c9c77f1c3957c75f2502215a2d3ca2d2910832425004"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6GUITARGETS.CMAKE",
+        "sha256": "48c48bbf06f8db469551a2a022d2294ec569a6c12074f6b182379b732e617c18"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6GUITARGETSPRECHECK.CMAKE",
+        "sha256": "35cc0cbeac8f79ff9b15dfe13cb154bfd0171390473413b94846acfe37209e94"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6GUIVERSIONLESSALIASTARGETS.CMAKE",
+        "sha256": "c905cfd5480fd476fe44b1284caaee67bce6478479208c83ab92af7cb4cad014"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QGIFPLUGINADDITIONALTARGETINFO.CMAKE",
+        "sha256": "b71db2db192c179e65e69380e43c328e267c0204a4a7a7cd7af2e85e8eb8a93f"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QGIFPLUGINCONFIG.CMAKE",
+        "sha256": "21b35afb05afe3a78b6912899afa98645231c19ec67eabfb5f94dfde8d02b23f"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QGIFPLUGINTARGETS-DEBUG.CMAKE",
+        "sha256": "b8780f5a32548179365ace299b0e814405ccf941f12a5790356fafa75ded9251"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QGIFPLUGINTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "9d9ae0ae6f10aa20d8cc95b4105379b438e1d6ca90239ce09cdd16a9188374ea"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QGIFPLUGINTARGETS.CMAKE",
+        "sha256": "edf4c3a5ed152f1a6dd35e41586ad5991ce7ef5ec5cdb136042579db33eeb3c0"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QGIFPLUGINTARGETSPRECHECK.CMAKE",
+        "sha256": "6a79d0cb8567f167a4b7808206b9a2a1e81859be06e92e7d2ab40cdb9b59cd4c"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QICNSPLUGINADDITIONALTARGETINFO.CMAKE",
+        "sha256": "ec25b49871b8c90a0eb5ce3f6090daaa9a13751ccfdb2188e106c0ff91f2e82f"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QICNSPLUGINCONFIG.CMAKE",
+        "sha256": "23f5b06e8af6e65ebbcd4d5fec29db896ad5a1f48d38d19eb68ce54f8f115cdd"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QICNSPLUGINTARGETS-DEBUG.CMAKE",
+        "sha256": "84c345869c3e35d407954db8dcc5fa3142d21a306da3f8a874af94c84c820fa3"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QICNSPLUGINTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "6dc60163a5944cf5ecf19a11cd236c00183798eda363f84113b898ceaf8583c6"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QICNSPLUGINTARGETS.CMAKE",
+        "sha256": "20391adfc21aeccebb58bfa4e1589fdd3ed72af2706bfe3a8b565d003197fd4f"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QICNSPLUGINTARGETSPRECHECK.CMAKE",
+        "sha256": "772fce6dd92d2f57451c46370ddb655688c18eb1e166a854492ec421f53c1353"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QICOPLUGINADDITIONALTARGETINFO.CMAKE",
+        "sha256": "f7ddb21bcd44a36a41d8731d515b603fc264d9ba495ede6a553dcd7e3eda3956"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QICOPLUGINCONFIG.CMAKE",
+        "sha256": "c63d6f958f0a68d8be4780617feab610d47be091671f29fdbc619556e5f5ae9a"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QICOPLUGINTARGETS-DEBUG.CMAKE",
+        "sha256": "39e42c95e56b0c0409542f7b4afb3e0b023996b3cbbbc5f186a8c3c5526574f7"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QICOPLUGINTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "7f2f1f1bff94f25df671f7e0dca0b5f75fd97bc0ad3614f83cc6a6863e845435"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QICOPLUGINTARGETS.CMAKE",
+        "sha256": "60c92463e65fc87d89a14cba02a3d6c15b6005dfc395ccc321b3b3308e13da99"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QICOPLUGINTARGETSPRECHECK.CMAKE",
+        "sha256": "955f2bc1d7a464b0f825fafc32f48fcae6f834ea543a60a66ec7e09498cd8a0c"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QJPEGPLUGINADDITIONALTARGETINFO.CMAKE",
+        "sha256": "92da57ce12c29f9298145d3e589e9c97d22e6d685e17a5161585ad8036f3fa79"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QJPEGPLUGINCONFIG.CMAKE",
+        "sha256": "1740b49f97c972ee4a104333d8114fd8b5e2faa78d6ea034602b618a4a592fac"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QJPEGPLUGINTARGETS-DEBUG.CMAKE",
+        "sha256": "bf89ee50269fe38554b855bcfde8fab53ccfad34f41be85d5e1fb6810f80b59a"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QJPEGPLUGINTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "c5f85d5dc66b5acc322d4fe3c85469686b34300efd1d2bb56beca7a9c37b8d08"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QJPEGPLUGINTARGETS.CMAKE",
+        "sha256": "86f46054330010c9819ee05d546eb3ca2640d238569fde75a51203188cded573"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QJPEGPLUGINTARGETSPRECHECK.CMAKE",
+        "sha256": "61b84312d554afd175e7b04a3e0e69fd33c2cce827a8b56cf01d83d5d020a8ec"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QMINIMALINTEGRATIONPLUGINADDITIONALTARGETINFO.CMAKE",
+        "sha256": "ba15a495dc64776abfd206e4f913d94497088bc70c7e5ea1edbd30b9030f6775"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QMINIMALINTEGRATIONPLUGINCONFIG.CMAKE",
+        "sha256": "25a5d197b7a6d65b2e0378e35b1d5531144fc497e1b44b4de2d3359acb596cd5"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QMINIMALINTEGRATIONPLUGINTARGETS-DEBUG.CMAKE",
+        "sha256": "d3e29f8f6e12119e40f8ac3c5b3c1cf5190de5021b3a9fc9a1accc087c51f38e"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QMINIMALINTEGRATIONPLUGINTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "570b54ed5ff738e1f3a1a1ccfd3b86a86fe2c2cd4f043d3badb80e3173fed06a"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QMINIMALINTEGRATIONPLUGINTARGETS.CMAKE",
+        "sha256": "bc3b144a75823d3135bfe81e5b89a91375a8081ca5f93729a997a4a817e1a849"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QMINIMALINTEGRATIONPLUGINTARGETSPRECHECK.CMAKE",
+        "sha256": "626387380bb28c94b31716f20ccd54346f0bde4ef66eae677ed900e767e4dae5"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QSVGICONPLUGINADDITIONALTARGETINFO.CMAKE",
+        "sha256": "4f584121558b6ded73202488863bee4238e439df798d76de4c9616114075d40a"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QSVGICONPLUGINCONFIG.CMAKE",
+        "sha256": "568cf7e897ee09b932488d2af59067699cd353d31eef21478b4e140711ad3eda"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QSVGICONPLUGINTARGETS-DEBUG.CMAKE",
+        "sha256": "40b2e1739050f2ef4f5fa6ba5ab44fda67c50ecac2d435a0e7c96f61a9f36e74"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QSVGICONPLUGINTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "cbcffbd3fb54e6bd6a09f07b18ecc1abc36188660e67e40c542461b47aa879d3"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QSVGICONPLUGINTARGETS.CMAKE",
+        "sha256": "934aa6357fd3785e97d08469ae0d3fbf1b5d331943dde0aa651dbe4595e3e80f"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QSVGICONPLUGINTARGETSPRECHECK.CMAKE",
+        "sha256": "a39593d8bb93f425498807118fcc64e79c4c0fb79bbc9aff5bc32769e55c64f4"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QSVGPLUGINADDITIONALTARGETINFO.CMAKE",
+        "sha256": "1f5ab1c6e5851f569ec62fbe387ecd7c3f48ab9ea052113ca7bb7a775731626d"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QSVGPLUGINCONFIG.CMAKE",
+        "sha256": "b944b4367f20efd7808a6309fb61b3a92a82bebaf1c1f9c8d399ac59bc40b896"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QSVGPLUGINTARGETS-DEBUG.CMAKE",
+        "sha256": "15c2c0546f4a586d80f5ef2797b485f5a94c4e6f8acd0e242606e4b45613d0a4"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QSVGPLUGINTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "c49ffec6b7111faadb3c942d2f99e8ea2927647930853cd2f4ca3302b8570c06"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QSVGPLUGINTARGETS.CMAKE",
+        "sha256": "adfeb5dc5abf14de47a1dbe781a24f6b8bb6dada6a9514dbda56ce00f09f7ce1"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QSVGPLUGINTARGETSPRECHECK.CMAKE",
+        "sha256": "c369a7d9a1a120ca1b1ddb2d43f864008bb6efefb6b578912db21cfcb3d130a1"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTGAPLUGINADDITIONALTARGETINFO.CMAKE",
+        "sha256": "a9bf55a2291032ffd2d2ec3a643472f93b12c4137105198c3515310e12446191"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTGAPLUGINCONFIG.CMAKE",
+        "sha256": "c935cd8f2ae5935e63387a4011da4ee0b854beaf6333406b3cf64739e2cddfd9"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTGAPLUGINTARGETS-DEBUG.CMAKE",
+        "sha256": "c2d74e4b124380a8ed38f1d4afaa87ebcb62a4eea4b6d3207ecdd54c11c9bce9"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTGAPLUGINTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "2d6e651483ace214214fc2ac55df92d2325e31ef7ace3e0c2eb0a309592a5bb0"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTGAPLUGINTARGETS.CMAKE",
+        "sha256": "1ce6477b2f0d925f26c0c38c2c7d8245b5fc51abad873e13d61cfef74c7221b6"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTGAPLUGINTARGETSPRECHECK.CMAKE",
+        "sha256": "856771134d290c1099f570d7cba8814cb45595a008f9168ad6284e25b202e7ac"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTIFFPLUGINADDITIONALTARGETINFO.CMAKE",
+        "sha256": "bf887ec1e732098bd686831871467baa0bd11c22d2f47b3fc409fa9b71eaa415"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTIFFPLUGINCONFIG.CMAKE",
+        "sha256": "3410951cfce95c594ce86f2222308e41746fdc3795a25dc00bd9f7ecd4aee762"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTIFFPLUGINTARGETS-DEBUG.CMAKE",
+        "sha256": "90504c47c25910ad289984480225781f3f4f573d3e86a9fd64412e03af315ca0"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTIFFPLUGINTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "fc8f2dc269472174d81e41d26990e1cde67d1c0276bc2cf646675d42e5448d1b"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTIFFPLUGINTARGETS.CMAKE",
+        "sha256": "7bc9f7acba805643a3fb6e4b1470b7ff48c72f93b34b694d3808ae1600ba9ffd"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTIFFPLUGINTARGETSPRECHECK.CMAKE",
+        "sha256": "b6ebe0f171566d4394b4ad9c6a36f96df62e9a7f2f1d2ddfdb2a6ea6b5afd320"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTUIOTOUCHPLUGINADDITIONALTARGETINFO.CMAKE",
+        "sha256": "f586728065d8ffe0e1aea379d6333513645747d17653cf4e755eacbf01c77831"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTUIOTOUCHPLUGINCONFIG.CMAKE",
+        "sha256": "1e68dec64d2feab2ef64d616dfe8ee7127e995d84d6ee363b5566a248ed96e72"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTUIOTOUCHPLUGINTARGETS-DEBUG.CMAKE",
+        "sha256": "252e9ed13a286010edf66786b33d3860d4e91921296c94c96e2cd4777739dc49"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTUIOTOUCHPLUGINTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "adb571375acf21a000038727e54d21f739b09e79344bbd417910db8ffce0a50d"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTUIOTOUCHPLUGINTARGETS.CMAKE",
+        "sha256": "c5eb1c34b1a4450ee7ef464b367e0530b65404c38c83ca3406aa98c06012d616"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QTUIOTOUCHPLUGINTARGETSPRECHECK.CMAKE",
+        "sha256": "8db488cb8e3876cffe8379490936d2fa5e0cf06782e0fcafad2b4c13beea6675"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWBMPPLUGINADDITIONALTARGETINFO.CMAKE",
+        "sha256": "6883578bbd5ac26e3549f20505141a0db2842d34b75102ecc22390fcf8a9f01e"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWBMPPLUGINCONFIG.CMAKE",
+        "sha256": "a757fd91b4c8a693d213003723a90ab7509f29b306b4d3fcb52708c8d7f8cd2a"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWBMPPLUGINTARGETS-DEBUG.CMAKE",
+        "sha256": "bf0d25e0a405e700533b401cd876a5c17927372f89b2b91b41ff85f9a685b42c"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWBMPPLUGINTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "866e6b172a979dc64898c4e63f4b3ee51855f4db261f68961147897f2d28066f"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWBMPPLUGINTARGETS.CMAKE",
+        "sha256": "5ed55c1640ba963968331dc0bb74ec34cb1324f683d50a4c8b914ff0f9cfe088"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWBMPPLUGINTARGETSPRECHECK.CMAKE",
+        "sha256": "000345708b50ae1df92a4db6eb22cdd740c17b16574393b8cbc0b3a0fdd779cd"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWEBPPLUGINADDITIONALTARGETINFO.CMAKE",
+        "sha256": "4101651ec0f4def7f71eeed941487d5c75483d20ac38603bf5fb4edec87beacb"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWEBPPLUGINCONFIG.CMAKE",
+        "sha256": "54ba2ef77dbf0c90aabbf67f8f28f0e59cc39da4f3472486b0cb701887ca7917"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWEBPPLUGINTARGETS-DEBUG.CMAKE",
+        "sha256": "5b02dbe6d0b0cc8eca4b4352bbb6107823468ca578da0453e187105bd40f7efe"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWEBPPLUGINTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "5d735efaaf42ee86f0576fa4958b71292be7fc5070dc8d51b8222d23515c4003"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWEBPPLUGINTARGETS.CMAKE",
+        "sha256": "c3b2329184f4d38d9151ee646682177edb5307e0cf862270ab472a6fd3a1048f"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWEBPPLUGINTARGETSPRECHECK.CMAKE",
+        "sha256": "758d8231b32b600fe375c539f563f726e4b9008952679f6f2feb799213d6d6cd"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWINDOWSDIRECT2DINTEGRATIONPLUGINADDITIONALTARGETINFO.CMAKE",
+        "sha256": "0c11815f0b9c503b6f2d043805575554d89816591f208c1184f2cb647f2835e4"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWINDOWSDIRECT2DINTEGRATIONPLUGINCONFIG.CMAKE",
+        "sha256": "936cce8d192140977aa3dde19181477c3ecff504d8d40d772d62216fe5729bce"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWINDOWSDIRECT2DINTEGRATIONPLUGINTARGETS-DEBUG.CMAKE",
+        "sha256": "bc98c74f9e8da0ae5bed5df06eb7b9012f875d93338ffbdebc39ad7ac96fd6d6"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWINDOWSDIRECT2DINTEGRATIONPLUGINTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "062a782d64510d4cee62038a43f8731ea231955d0702e227f6a44f6128e0efff"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWINDOWSDIRECT2DINTEGRATIONPLUGINTARGETS.CMAKE",
+        "sha256": "67c24cc013d43c892d08d69de6ab8b44a5938a2f199e413992ce920b9c5fedec"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWINDOWSDIRECT2DINTEGRATIONPLUGINTARGETSPRECHECK.CMAKE",
+        "sha256": "a7577c0c9fceabfe706b95f52f4b1c060f1be94ed61661788d4484795cbff348"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWINDOWSINTEGRATIONPLUGINADDITIONALTARGETINFO.CMAKE",
+        "sha256": "7a9637ad4c6cc72fd6ee468c40f7d5340b9f505325add2712111efa0e616356b"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWINDOWSINTEGRATIONPLUGINCONFIG.CMAKE",
+        "sha256": "32e5d815ee057ffd92496031b2d8be3c76dee0d27c136d523b4ce2afc838d8a1"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWINDOWSINTEGRATIONPLUGINTARGETS-DEBUG.CMAKE",
+        "sha256": "fb9a0333d2d9d5c878eaacf62f6916b783349394b4fd3207d2ebb66d690d0c5f"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWINDOWSINTEGRATIONPLUGINTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "934bf22036956a9d994d3194c6838bf1abe25381f2bc82f0a9a75cc1aae9435e"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWINDOWSINTEGRATIONPLUGINTARGETS.CMAKE",
+        "sha256": "225ead6f768f5de87a6451b59ebc629edf183b45dac7d10ac940266c322b475c"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUI/QT6QWINDOWSINTEGRATIONPLUGINTARGETSPRECHECK.CMAKE",
+        "sha256": "15b609574187c328c42f976bb68407103ca784508acde4a9ca4ec505195c94d3"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUITOOLS/QT6GUITOOLSADDITIONALTARGETINFO.CMAKE",
+        "sha256": "7b4c1551def7bf8bc9c651695767b25914e777eb4a41d723595c1c7b85df3505"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUITOOLS/QT6GUITOOLSCONFIG.CMAKE",
+        "sha256": "dc39a617956d60963e2dcb528611d4d3d049ba8e2fe8904f3e89378fc3223fcf"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUITOOLS/QT6GUITOOLSCONFIGVERSION.CMAKE",
+        "sha256": "9d897ac580972b9a8c78e0bbb32b42e7d3e760091059f8f7db6cdcc9a040698b"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUITOOLS/QT6GUITOOLSCONFIGVERSIONIMPL.CMAKE",
+        "sha256": "1ffaa39677aa2f4af91843e3e649d268b4eef0fc24732d226dd7399338d9d910"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUITOOLS/QT6GUITOOLSDEPENDENCIES.CMAKE",
+        "sha256": "f59a7dfacc52b22e3ffb2dc23fd68551bbe59f35108f39a34ad1c17a2ea23d94"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUITOOLS/QT6GUITOOLSTARGETS-DEBUG.CMAKE",
+        "sha256": "f805ff8a546d93d5b7fe21bd0489876287e1f0dba2f2cce707b278516b2eee8b"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUITOOLS/QT6GUITOOLSTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "fb0e6ae7e5f3bc912ac3a1921472391360fedc56f2a9a88bd8a92f2a1d0fe118"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUITOOLS/QT6GUITOOLSTARGETS.CMAKE",
+        "sha256": "7f882323cc258761eeef801a15d4c0d40d9d9e3e59f426b69a794d7a0ee31184"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUITOOLS/QT6GUITOOLSTARGETSPRECHECK.CMAKE",
+        "sha256": "3cdc91669b6c45649cbea550931e5c2661564568ca47b05bf31f39fd20c56695"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6GUITOOLS/QT6GUITOOLSVERSIONLESSTARGETS.CMAKE",
+        "sha256": "18ca6f1fd01ee923ff67da108022b06d84a0b1bd378a0bdba337b4e2f8b7bc5a"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6QMODERNWINDOWSSTYLEPLUGINADDITIONALTARGETINFO.CMAKE",
+        "sha256": "3b2ec5fdc2a08b97b5c97f6576bfce8bfc607980839bbc9367e2fcef83b3ad59"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6QMODERNWINDOWSSTYLEPLUGINCONFIG.CMAKE",
+        "sha256": "c5c6ed333add97ef1e197ec30f070c6363ce1131b609bee090ed2a82a990aefa"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6QMODERNWINDOWSSTYLEPLUGINTARGETS-DEBUG.CMAKE",
+        "sha256": "6aa6b0a965e91987ddcbd52e8f302d2e32826e6a117c63ff3b4119a9b8130e04"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6QMODERNWINDOWSSTYLEPLUGINTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "bd40c176fa0e36d61b9e394195e74bb46c4b7940c384b2fc4d3b3b91b2cc18a7"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6QMODERNWINDOWSSTYLEPLUGINTARGETS.CMAKE",
+        "sha256": "e31b2cad74f17244415998a826bd75274f0db02ce519cedcee8f46e036f1f737"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6QMODERNWINDOWSSTYLEPLUGINTARGETSPRECHECK.CMAKE",
+        "sha256": "b7fe4a9f021017e679e1f982db21cb5926fc7f2cf4a07bf6ed53b24564368cf9"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6WIDGETSADDITIONALTARGETINFO.CMAKE",
+        "sha256": "b638b877f77056631dd077d4724f177fdfc2106f37e05745c67445873b52b510"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6WIDGETSCONFIG.CMAKE",
+        "sha256": "30e13d0b0cf5e19339842196789a3935a05d398d3eafe8b050610918ae0eb5fa"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6WIDGETSCONFIGVERSION.CMAKE",
+        "sha256": "1d19a83b37282742136f6e8d2e4f3800e322c55bb8897d5ace85d628df023b15"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6WIDGETSCONFIGVERSIONIMPL.CMAKE",
+        "sha256": "ddb4c3f2ee1c8d355daba786eb8ea82f01ab879caed8f5cddf1355bb46f780ae"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6WIDGETSDEPENDENCIES.CMAKE",
+        "sha256": "b60dd13c4224ce4010a50f75a2991a8d8606322abf365f0e79b01d686142feb6"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6WIDGETSMACROS.CMAKE",
+        "sha256": "7db32af1acd02ec83f8bd14f2512b642e028b73e7c593f0d65013956b348fcca"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6WIDGETSPLUGINS.CMAKE",
+        "sha256": "3647368d9d64801c9d503932315b66230804e7489c8e48a08d9b2aa95ce8126e"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6WIDGETSTARGETS-DEBUG.CMAKE",
+        "sha256": "84b6a623493c03413fd3b73e104e481ee257ddba2d3bd3a711cfbeaf5041a649"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6WIDGETSTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "33277b9cd50dc5bf1dcf63e52632f715284f5626f47b4cc858f65cb1c3453a83"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6WIDGETSTARGETS.CMAKE",
+        "sha256": "12a4ceadee34956804cc91258e7dd8ecf9e3d11f4da3a702ef060def1af53290"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6WIDGETSTARGETSPRECHECK.CMAKE",
+        "sha256": "28459841b0c84cde0554e331251189c0ad49f11a240729ffbcafeaa1ebb1c8ea"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETS/QT6WIDGETSVERSIONLESSALIASTARGETS.CMAKE",
+        "sha256": "906ae0258731e9c13c786b743e30cd0b2622912b9a5ae02f18c85055d5e71504"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETSTOOLS/QT6WIDGETSTOOLSADDITIONALTARGETINFO.CMAKE",
+        "sha256": "7bf6174db202305343b753b3593ec31d3a73635544cb660685c0fc25d8c8ff1b"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETSTOOLS/QT6WIDGETSTOOLSCONFIG.CMAKE",
+        "sha256": "152ee78cf4cfe0e65ad60c6694f96450b0750b069ea5ad8f3689476f967d800b"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETSTOOLS/QT6WIDGETSTOOLSCONFIGVERSION.CMAKE",
+        "sha256": "326c71f2bf371971561fbf243cf6dff415707d21e00602092df4070b70c50ad0"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETSTOOLS/QT6WIDGETSTOOLSCONFIGVERSIONIMPL.CMAKE",
+        "sha256": "1ffaa39677aa2f4af91843e3e649d268b4eef0fc24732d226dd7399338d9d910"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETSTOOLS/QT6WIDGETSTOOLSDEPENDENCIES.CMAKE",
+        "sha256": "2a8853ead88fe39d09809cfe14b8fe51a5fe014bf206998ed62c5e369ff7a110"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETSTOOLS/QT6WIDGETSTOOLSTARGETS-DEBUG.CMAKE",
+        "sha256": "d700cd66c80711c181bf76a1e8fe1354a96a06f9fb25293a78a0194891037aa5"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETSTOOLS/QT6WIDGETSTOOLSTARGETS-RELWITHDEBINFO.CMAKE",
+        "sha256": "5c3580725582eeb5ab83f6a6e796875e24f55fc1030519c4dc60829800af414e"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETSTOOLS/QT6WIDGETSTOOLSTARGETS.CMAKE",
+        "sha256": "41b9b67402c37d665923a9cb76e1c4047ae60a95ddbe0e1faaf11fb2fce4a1d2"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETSTOOLS/QT6WIDGETSTOOLSTARGETSPRECHECK.CMAKE",
+        "sha256": "671db693949a17f24059467f4644728a085a95abd18f170fd42dbebc1452b8e4"
+      },
+      {
+        "relativePath": "LIB/CMAKE/QT6WIDGETSTOOLS/QT6WIDGETSTOOLSVERSIONLESSTARGETS.CMAKE",
+        "sha256": "da1f2b799c7cdc6b81e3b0acb5e268d6fccf202d3b2a1bb4fd807bd39d5224c6"
+      },
+      {
+        "relativePath": "LIB/QT6CORE.LIB",
+        "sha256": "ff6e73f8a520efe15487febdb7d46dc49ad663ce65fd5a106470b023a1e01f4a"
+      },
+      {
+        "relativePath": "LIB/QT6GUI.LIB",
+        "sha256": "096f0a69d76de2d5bcdb456a5913a730ef66728c2899d76e299752e4f2ad3e7d"
+      },
+      {
+        "relativePath": "LIB/QT6WIDGETS.LIB",
+        "sha256": "d5072d213933431497f0473e6c87ff07aa821172ae98cf23a262f36ca428a58b"
+      }
+    ],
+    "OBS_33_RC2": [
+      {
+        "relativePath": "FRONTEND/API/OBS-FRONTEND-API.H",
+        "sha256": "a8e93d8baa2179eee32dcd298e79dfafe24178e6e860e6e3f5562a88d6f56760"
+      },
+      {
+        "relativePath": "LIBOBS/CALLBACK/CALLDATA.H",
+        "sha256": "ff17692b20cd9bcfd0e40bb01befaa868471434c19ec0d04f08ce86a4e0edec4"
+      },
+      {
+        "relativePath": "LIBOBS/CALLBACK/PROC.H",
+        "sha256": "177ce8106f79f15ed3f645fdefc4c4d3bf0dd69553462ed20d2f08fc39fc10ec"
+      },
+      {
+        "relativePath": "LIBOBS/CALLBACK/SIGNAL.H",
+        "sha256": "9de0e2eb85261321efde9a18933c0a77e3cd96113f344b49963fdfc34bef3e6e"
+      },
+      {
+        "relativePath": "LIBOBS/GRAPHICS/GRAPHICS.H",
+        "sha256": "e98b3078aed401725875a37d4e6a5a47264661720042d326faf0f14f03acaaa1"
+      },
+      {
+        "relativePath": "LIBOBS/GRAPHICS/INPUT.H",
+        "sha256": "e1d0ac2ed6848e6dc60afdacd60e96b489810bc14bf46baac9d0be05baf1207a"
+      },
+      {
+        "relativePath": "LIBOBS/GRAPHICS/MATH-DEFS.H",
+        "sha256": "b7fb2e0615a1746a2e0136aad29496c7ad041b43074d55be5c57c4926a8a2621"
+      },
+      {
+        "relativePath": "LIBOBS/GRAPHICS/SRGB.H",
+        "sha256": "9db1900bd8dfeb20db2ee432217a9bdaf4605f42f90e43de7df715b44b2973d1"
+      },
+      {
+        "relativePath": "LIBOBS/GRAPHICS/VEC2.H",
+        "sha256": "69f617416e4d7667c78faccd8e3754c18e2b644bb5cca6cbd280e37ebd47f845"
+      },
+      {
+        "relativePath": "LIBOBS/GRAPHICS/VEC3.H",
+        "sha256": "4cfba62815fc307bca44cd02dd165856d7e353963afbe9314cfa7cbbb9d15131"
+      },
+      {
+        "relativePath": "LIBOBS/GRAPHICS/VEC4.H",
+        "sha256": "891d7f540eadda01a721d41a001b9719aa3756cfb7e8b18ce8d98242f896735c"
+      },
+      {
+        "relativePath": "LIBOBS/MEDIA-IO/AUDIO-IO.H",
+        "sha256": "b088b6a2bdd5b50b2aa51a110ad4a6311b1d2d8fc94abf9d7e0a63c13bc095a1"
+      },
+      {
+        "relativePath": "LIBOBS/MEDIA-IO/FRAME-RATE.H",
+        "sha256": "c719ce2f3f3121b3ce3fd20c1748bc7764b162c8d2425e5a113ebb124b8d2487"
+      },
+      {
+        "relativePath": "LIBOBS/MEDIA-IO/MEDIA-IO-DEFS.H",
+        "sha256": "c473c0635b89090b707653420af1213f36c14f1a5365eb6f49cedc4ce4a1af97"
+      },
+      {
+        "relativePath": "LIBOBS/MEDIA-IO/VIDEO-IO.H",
+        "sha256": "1eadbb41dae53b0bd0b01b7fa6a9cfe528efc4b6da8b528bc34bb58d6f6f385a"
+      },
+      {
+        "relativePath": "LIBOBS/OBS-AUDIO-CONTROLS.H",
+        "sha256": "5f76c947228a37bb32d8b7f41d1e8702e27967f88d97fc89e28f513109f15566"
+      },
+      {
+        "relativePath": "LIBOBS/OBS-CONFIG.H",
+        "sha256": "144b1a498b14aa025c470bc9a413aad367a32b013962734d1a0f23eecc645ca6"
+      },
+      {
+        "relativePath": "LIBOBS/OBS-DATA.H",
+        "sha256": "2d9e4831b2b81050f6e881b0da7401a50526d29c12f271089c227e3f4a216253"
+      },
+      {
+        "relativePath": "LIBOBS/OBS-DEFS.H",
+        "sha256": "1d26324fc42e8472856069cdccac4c1140498245a79ef80d79c71f166749861f"
+      },
+      {
+        "relativePath": "LIBOBS/OBS-ENCODER.H",
+        "sha256": "54e9e2544b1c8566b66f8cae5654a9ed8ba7ef05f42f7aeb9076f28bd44202e4"
+      },
+      {
+        "relativePath": "LIBOBS/OBS-HOTKEY.H",
+        "sha256": "18cc0428d6d70a29a9f203d54181da7fe24b2000ad13d2344a1c5c2c60b8b87c"
+      },
+      {
+        "relativePath": "LIBOBS/OBS-HOTKEYS.H",
+        "sha256": "5f9049d289e2a50596218d297734bfd704169d64d1195105a8f82f26ba7b1ac7"
+      },
+      {
+        "relativePath": "LIBOBS/OBS-INTERACTION.H",
+        "sha256": "f48a34d5eea2118124dd727538885d09095368f2fbeb5f373ca834a03c7d87f5"
+      },
+      {
+        "relativePath": "LIBOBS/OBS-MISSING-FILES.H",
+        "sha256": "7d171310061c1c8914a390532255f47a79021c35a9edfc8b2fece2dc58efc749"
+      },
+      {
+        "relativePath": "LIBOBS/OBS-MODULE.H",
+        "sha256": "9ca68209f58a7d70f13588d793f4599e260057b2cc7c31f50ef90e6fd1740cbe"
+      },
+      {
+        "relativePath": "LIBOBS/OBS-OUTPUT.H",
+        "sha256": "ed4680df934a89b5a3210a14e02994acd84561441b46bf1da3a5b38da72ca753"
+      },
+      {
+        "relativePath": "LIBOBS/OBS-PROPERTIES.H",
+        "sha256": "629aeda79448cc7b093a705e6f3f36e99a630f799c932b43a7014fb04fe1e491"
+      },
+      {
+        "relativePath": "LIBOBS/OBS-SERVICE.H",
+        "sha256": "49ebb2257380e9f1ff912b6f0c6d9fd3d0ca078fd22cf2621d383214b123c738"
+      },
+      {
+        "relativePath": "LIBOBS/OBS-SOURCE.H",
+        "sha256": "e7ded7d04e7137c99797f115820b41665e8fb4cc200bf72416e80f2033b5c5d3"
+      },
+      {
+        "relativePath": "LIBOBS/OBS.H",
+        "sha256": "a89a6b1505a9876f35d94f2a2c8b154a3627c8fc323ce9f6ad3bfb8ec8f53eaf"
+      },
+      {
+        "relativePath": "LIBOBS/UTIL/BASE.H",
+        "sha256": "ac7518e37fbd34ab6e4a95d27b200ef01d8a894214ee273fa948fcc5a783cf49"
+      },
+      {
+        "relativePath": "LIBOBS/UTIL/BMEM.H",
+        "sha256": "a6a98b93ef6bdabe9bf880d389397846ac2952fcd17a6f9afa332748cff9d52e"
+      },
+      {
+        "relativePath": "LIBOBS/UTIL/C99DEFS.H",
+        "sha256": "7254b872882dda6ac3bdabad1981aba3f34548d5f7c46e43ec67b4c7fee6fca7"
+      },
+      {
+        "relativePath": "LIBOBS/UTIL/DARRAY.H",
+        "sha256": "47cda306b0a6109cfa804b950cf9c3e739aaa63260016f90eace20455cfe08c9"
+      },
+      {
+        "relativePath": "LIBOBS/UTIL/PROFILER.H",
+        "sha256": "79173e705ac288dccc2ac28d7b03e33dfb73c011cddfdb464843d91f330b27b1"
+      },
+      {
+        "relativePath": "LIBOBS/UTIL/SSE-INTRIN.H",
+        "sha256": "2e9def7ff81f9045b523cef2e1b6b4f0928e17e58f8cabb7bacb737104575d76"
+      },
+      {
+        "relativePath": "LIBOBS/UTIL/TEXT-LOOKUP.H",
+        "sha256": "8919f3a9ff55cc4fc523a711795a820a469a6769c70a4bac687ad274715696ca"
+      },
+      {
+        "relativePath": "LIBOBS/UTIL/UTIL_UINT64.H",
+        "sha256": "31d623b6a25705883addd86b11a8da309aab3770f0376f3d7e6cd77b52427823"
+      }
+    ],
+    "OBS_33_CONFIG": [
+      {
+        "relativePath": "OBSCONFIG.H",
+        "sha256": "be0ff8239632948b6bf711c002a61e04c06e890eb5139106e01c16aef9200ea7"
+      }
+    ],
+    "WINDOWS_SYSTEM": [
+      {
+        "relativePath": "GLOBALIZATION/SORTING/SORTDEFAULT.NLS",
+        "sha256": "5710c47f5c5c745854e11fc06c8d349cd61d084f5a90937396e88ab762298b67"
+      },
+      {
+        "relativePath": "SYSTEM32/TZRES.DLL",
+        "sha256": "1398cf1d866e49a8ba351e2a30a7803b50c8b595d17f776abe8d2ec4a9c6fb10"
+      }
+    ]
+  },
+  "note": "Actual MSBuild read inputs. PRODUCT_SOURCE and BUILD_GENERATED describe compile inputs/output dependencies, not extra payload. No external runtime is redistributed."
+}

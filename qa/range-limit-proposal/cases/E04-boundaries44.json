@@ -1,0 +1,76 @@
+{
+  "id": "E04-boundaries44",
+  "rate": 44100,
+  "delayMs": 50,
+  "initialNs": "0",
+  "product": true,
+  "timeoutSeconds": 150,
+  "steps": [
+    {
+      "kind": "observe"
+    },
+    {
+      "kind": "numeric",
+      "ns": "-950000000",
+      "text": "-950"
+    },
+    {
+      "kind": "mix"
+    },
+    {
+      "kind": "invalid",
+      "text": "-951"
+    },
+    {
+      "kind": "step",
+      "deltaNs": "1000000"
+    },
+    {
+      "kind": "step",
+      "deltaNs": "-1000000"
+    },
+    {
+      "kind": "numeric",
+      "ns": "995000000",
+      "text": "995"
+    },
+    {
+      "kind": "step",
+      "deltaNs": "5000000"
+    },
+    {
+      "kind": "mix"
+    },
+    {
+      "kind": "invalid",
+      "text": "1001"
+    },
+    {
+      "kind": "invalid",
+      "text": "1000.000001"
+    },
+    {
+      "kind": "invalid",
+      "text": "3000"
+    },
+    {
+      "kind": "invalid",
+      "text": "20000"
+    },
+    {
+      "kind": "step",
+      "deltaNs": "-1000000"
+    },
+    {
+      "kind": "numeric",
+      "ns": "1000000000",
+      "text": "1000"
+    },
+    {
+      "kind": "mix"
+    },
+    {
+      "kind": "reset"
+    }
+  ]
+}

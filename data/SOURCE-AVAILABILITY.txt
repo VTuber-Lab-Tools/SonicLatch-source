@@ -1,0 +1,15 @@
+SonicLatch 0.1.0 — ソースコードとライセンス / Source and license
+
+公開先 / Publication repository:
+https://github.com/VTuber-Lab-Tools/SonicLatch-source
+
+対応ソースのビルド手順は BUILDING.md を参照してください。
+独自部分: GPL-3.0-or-later。LICENSE と THIRD_PARTY_NOTICES.md も参照してください。
+同梱 QCustomPlot の原著作権・ライセンス表記は保持されています。
+
+これは公開前の候補文書です。対応ソースの初回公開は未完了です。
+配布開始前に、同じ配布場所から対応ソース ZIP を取得できることを確認してください。
+
+For build instructions, see BUILDING.md in the matching source archive.
+See LICENSE and THIRD_PARTY_NOTICES.md for licensing information.
+This pre-publication document does not assert that the source is already available.
