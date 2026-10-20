@@ -1,0 +1,29 @@
+SonicLatch — Aide sur le délai audio
+
+Environnement et installation
+
+Cible : Windows 64 bits et OBS 30 ou version ultérieure (OBS 32.2.2 recommandé). Le chargement et l’affichage du dock ont été confirmés dans OBS 32.2.2 sur une machine réelle ; OBS 30/31 n’ont pas été testés sur une machine réelle. Fermez OBS avant l’installation. Consultez les instructions d’installation et de suppression fournies en japonais et en anglais.
+
+Mesurer, vérifier, ajuster
+
+1. Sélectionnez la source audio et fournissez un signal actif. Le filtre de mesure « Mesure du retard audio (SonicLatch) » est ajouté automatiquement. Ne l’ajoutez pas manuellement et ne le désactivez, supprimez ou déplacez pas pendant l’utilisation. Le décalage affecte toutes les scènes utilisant cette source.
+
+2. Vérifiez les formes d’onde PRE (avant traitement), POST (après traitement), Retard D et Mesure. « — » signifie indisponible, pas zéro. Silence, sourdine, faible confiance, mesure périmée ou invalide peuvent empêcher l’ajustement. Vérifiez le signal et attendez une nouvelle estimation valide.
+
+3. Utilisez Ajustement automatique (Auto) lorsque l’estimation est valide. Le décalage absolu S devient −D ; D n’est pas soustrait du décalage existant. Pour D = +80 ms, la cible est −80 ms. La mesure et l’affichage seuls ne changent rien.
+
+4. Affinez avec −5 ms, −1 ms, +1 ms, +5 ms, ou saisissez une valeur puis utilisez Appliquer le décalage saisi. La saisie seule n’écrit rien. Annuler restaure la valeur précédant la dernière opération réussie, si elle reste valide. Réinitialiser le décalage définit 0 ms, pas la valeur initiale.
+
+5. Vérifiez l’enregistrement ou la diffusion réelle. Selon l’environnement et la charge de traitement, l’alignement peut rester imparfait. Les valeurs et le délai peuvent varier après le réglage ou pendant la diffusion. En cas de décalage, attendez une estimation actuelle valide et réutilisez Auto. Auto est un réajustement explicite, pas un suivi continu ni une garantie de synchronisation parfaite.
+
+Ce que montre l’affichage
+
+D est estimé en comparant PRE et POST. S est le décalage de synchronisation OBS (Décalage actuel O). Résidu actuel vaut D + S. La position POST affichée tient compte de S ; cette position et le résidu sont des estimations du modèle, pas une nouvelle mesure de la sortie corrigée. Une relecture concordante confirme uniquement la valeur enregistrée dans OBS, pas la synchronisation de l’enregistrement.
+
+Plages et résolution des problèmes
+
+Stéréo : 44,1 kHz ou 48 kHz. La mesure du délai couvre environ ±500 ms, hors extrémités de recherche ; l’écriture du décalage couvre −950 à +1000 ms. Ces plages diffèrent. Une modification externe de la source ou du décalage peut invalider les propositions et l’annulation. Lire le décalage actuel lit uniquement et ne rétablit pas l’annulation. Si l’écriture ou la relecture n’est pas confirmée, ne supposez pas une réussite et ne cliquez pas sans cesse. Vérifiez l’état, la source et les propriétés audio avancées d’OBS.
+
+Langues et assistance
+
+L’interface et l’aide couvrent les mêmes 16 paramètres régionaux. Les demandes sont traitées en japonais et en anglais, sans promettre une assistance ou un Setup dans les 16 langues. Indiquez la version OBS, le type de source, le message d’état, les étapes et le résultat dans un véritable enregistrement. N’envoyez aucun mot de passe ni enregistrement privé sans accord sur la nécessité et sur le partage. Changez la langue dans les paramètres OBS, puis redémarrez OBS. Ouvrez le fichier d’aide correspondant à cette langue.

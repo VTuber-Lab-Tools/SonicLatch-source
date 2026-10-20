@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "product": "SonicLatch",
+  "revision": "help16-20261020-filter-localized-candidate",
+  "fallbackLocale": "en-US",
+  "supportLanguages": [
+    "ja",
+    "en"
+  ],
+  "guides": {
+    "de-DE": "guide-de-DE.txt",
+    "en-US": "guide-en-US.txt",
+    "es-ES": "guide-es-ES.txt",
+    "fr-FR": "guide-fr-FR.txt",
+    "id-ID": "guide-id-ID.txt",
+    "it-IT": "guide-it-IT.txt",
+    "ja-JP": "guide-ja-JP.txt",
+    "ko-KR": "guide-ko-KR.txt",
+    "pl-PL": "guide-pl-PL.txt",
+    "pt-BR": "guide-pt-BR.txt",
+    "ru-RU": "guide-ru-RU.txt",
+    "th-TH": "guide-th-TH.txt",
+    "tr-TR": "guide-tr-TR.txt",
+    "vi-VN": "guide-vi-VN.txt",
+    "zh-CN": "guide-zh-CN.txt",
+    "zh-TW": "guide-zh-TW.txt"
+  },
+  "candidateStatus": "PRE_RELEASE_NOT_RUNTIME_ACCEPTED",
+  "installationGuides": {
+    "ja": "USAGE-ja.txt",
+    "en": "USAGE-en.txt"
+  },
+  "installationGuideSources": {
+    "ja": "../../USAGE-ja.md",
+    "en": "../../USAGE-en.md"
+  },
+  "supportReports": {
+    "ja": "SUPPORT-ja.txt",
+    "en": "SUPPORT-en.txt"
+  },
+  "testedScope": {
+    "ja": "KNOWN-LIMITS-ja.txt",
+    "en": "KNOWN-LIMITS-en.txt"
+  }
+}

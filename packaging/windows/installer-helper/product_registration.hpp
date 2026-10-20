@@ -1,12 +1,13 @@
 #pragma once
 #include "product_windows_store.hpp"
 #include <sddl.h>
+#include <functional>
 
 namespace soniclatch::product::win {
 // One machine registration key; never enumerate/delete other products.
 inline constexpr wchar_t uninstallKey[]=L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\SonicLatch";
 struct RegKey {
- HKEY value{};~RegKey(){if(value)RegCloseKey(value);}
+ HKEY value{};void close(){if(value)RegCloseKey(std::exchange(value,nullptr));}~RegKey(){close();}
  RegKey()=default;RegKey(const RegKey&)=delete;RegKey& operator=(const RegKey&)=delete;
 };
 struct NewRegistrationSecurity {
@@ -49,27 +50,86 @@ inline void requireRegistrationOwner(HKEY key,const Plan& plan){
  auto manifest=regString(key,L"SonicLatchManifest");
  need(manifest&&(manifest==widenAscii(plan.oldManifest)||manifest==widenAscii(plan.newManifest)),"registration manifest mismatch");
 }
-inline void publishRegistration(const Plan& plan,const fs::path& metadata,const std::string& priorVersion){
+inline constexpr wchar_t uninstallParent[]=L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall";
+inline Bytes registrationIntent(const Plan& plan,const fs::path& metadata,const std::string& stage){
+ const auto prefix="SonicLatch-stage-"+plan.transactionId+"-";need(stage.starts_with(prefix)&&hex(stage.substr(prefix.size()),32),"bounded registration stage name");
+ Writer values;for(const auto& [name,value]:registration(plan,metadata))for(const auto* text:{&name,&value}){values.number(text->size());for(wchar_t c:*text)values.number(static_cast<unsigned short>(c));}
+ Writer out;out.text("SonicLatch-registration-rename-v2");out.text(plan.transactionId);out.text(hashBytes(encode(plan)));out.text(hashBytes(values.b));out.text(stage);return out.b;
+}
+inline std::string registrationStage(const Bytes& raw,const Plan& plan,const fs::path& metadata){
+ Reader r{raw};need(r.text()=="SonicLatch-registration-rename-v2","unsupported registration intent strategy retained");need(r.text()==plan.transactionId&&r.text()==hashBytes(encode(plan)),"registration intent binding mismatch");r.text();auto stage=r.text();r.end();need(raw==registrationIntent(plan,metadata,stage),"registration intent mismatch retained");return stage;
+}
+struct RegistrationIntentIO {
+ std::function<std::optional<Bytes>()> read;
+ std::function<void(const Image&,const Bytes&)> write;
+};
+inline void exactRegistration(HKEY key,const Plan& plan,const fs::path& metadata){
+ protectedAcl(key,false,SE_REGISTRY_KEY);DWORD children{},values{};
+ need(RegQueryInfoKeyW(key,nullptr,nullptr,nullptr,&children,nullptr,nullptr,&values,nullptr,nullptr,nullptr,nullptr)==ERROR_SUCCESS&&children==0&&values==7,"incomplete/unknown registration retained");
+ for(const auto& [name,value]:registration(plan,metadata))need(regString(key,name.c_str())==std::optional<std::wstring>{value},"registration recovery mismatch");
+}
+inline bool ownershipName(const std::wstring& name){return name==L"SonicLatchOwner"||name==L"SonicLatchRoot"||name==L"SonicLatchManifest";}
+inline void exactOwnershipStage(HKEY key,const Plan& plan,const fs::path& metadata){
+ protectedAcl(key,false,SE_REGISTRY_KEY);DWORD children{},count{};need(RegQueryInfoKeyW(key,nullptr,nullptr,nullptr,&children,nullptr,nullptr,&count,nullptr,nullptr,nullptr,nullptr)==ERROR_SUCCESS&&!children&&count==3,"registration stage must have exactly three ownership values");
+ for(const auto& [name,value]:registration(plan,metadata))if(ownershipName(name))need(regString(key,name.c_str())==std::optional<std::wstring>{value},"registration stage mismatch retained");
+}
+inline void validatePartialFinal(HKEY key,const Plan& plan,const fs::path& metadata){
+ protectedAcl(key,false,SE_REGISTRY_KEY);DWORD children{},count{},known{};need(RegQueryInfoKeyW(key,nullptr,nullptr,nullptr,&children,nullptr,nullptr,&count,nullptr,nullptr,nullptr,nullptr)==ERROR_SUCCESS&&!children,"unknown registration children retained");
+ for(const auto& [name,value]:registration(plan,metadata)){auto actual=regString(key,name.c_str());if(actual){++known;need(*actual==value,"registration recovery mismatch");}else need(!ownershipName(name),"registration ownership missing");}
+ need(count==known,"unknown registration values retained");
+}
+inline void finishRegistration(HKEY key,const Plan& plan,const fs::path& metadata){
+ validatePartialFinal(key,plan,metadata);const auto expected=registration(plan,metadata);
+ for(const auto& [name,value]:expected)if(name!=L"DisplayName"&&!regString(key,name.c_str()))setString(key,name.c_str(),value);
+ if(!regString(key,L"DisplayName"))setString(key,L"DisplayName",expected.at(L"DisplayName")); // visibility last
+ exactRegistration(key,plan,metadata);need(RegFlushKey(key)==ERROR_SUCCESS,"registration flush");exactRegistration(key,plan,metadata);
+}
+inline void publishRegistration(const Plan& plan,const fs::path& metadata,const std::string& priorVersion,RegistrationIntentIO* intents=nullptr){
  need(plan.operation!=Operation::Uninstall,"uninstall cannot publish registration");
- RegKey key;DWORD disposition{};NewRegistrationSecurity creationSecurity;
- need(RegCreateKeyExW(HKEY_LOCAL_MACHINE,uninstallKey,0,nullptr,0,READ_CONTROL|KEY_QUERY_VALUE|KEY_SET_VALUE|KEY_WOW64_64KEY,&creationSecurity.attributes,&key.value,&disposition)==ERROR_SUCCESS,"registration open/create");
- protectedAcl(key.value,false,SE_REGISTRY_KEY);
- if(disposition!=REG_CREATED_NEW_KEY){
+ RegKey key;const auto access=READ_CONTROL|KEY_QUERY_VALUE|KEY_SET_VALUE|KEY_WOW64_64KEY;
+ auto status=RegOpenKeyExW(HKEY_LOCAL_MACHINE,uninstallKey,0,access,&key.value);
+ need(status==ERROR_SUCCESS||status==ERROR_FILE_NOT_FOUND,"registration open");
+ auto intent=intents?intents->read():std::optional<Bytes>{};const auto stage=intent?registrationStage(*intent,plan,metadata):std::string{};
+ if(status==ERROR_SUCCESS){
+  if(intent){RegKey remaining;const auto path=std::wstring(uninstallParent)+L"\\"+widenAscii(stage);const auto check=RegOpenKeyExW(HKEY_LOCAL_MACHINE,path.c_str(),0,READ_CONTROL|KEY_QUERY_VALUE|KEY_WOW64_64KEY,&remaining.value);need(check==ERROR_FILE_NOT_FOUND,"both registration stage/final present or stage observation failed; retained");finishRegistration(key.value,plan,metadata);return;}
+  protectedAcl(key.value,false,SE_REGISTRY_KEY);
   requireRegistrationOwner(key.value,plan);
   Plan prior=plan;prior.newManifest=plan.oldManifest;prior.version=priorVersion.empty()?plan.version:priorVersion;
   // Existing version is bound to the authenticated prior receipt by the host.
   auto before=registration(prior,metadata),after=registration(plan,metadata);
-  for(const auto& [name,value]:after){auto actual=regString(key.value,name.c_str());
+  DWORD known{},children{},count{};
+  for(const auto& [name,value]:after){auto actual=regString(key.value,name.c_str());if(actual)++known;
    need(!actual||*actual==value||*actual==before.at(name),"modified registration value retained");
   }
- }
- // Owner/root first make interrupted registration identifiable. An interrupted
- // pre-owner creation is deliberately not acquired or silently deleted.
+  need(RegQueryInfoKeyW(key.value,nullptr,nullptr,nullptr,&children,nullptr,nullptr,&count,nullptr,nullptr,nullptr,nullptr)==ERROR_SUCCESS&&!children&&count==known,"unknown registration values/children retained");
+ // Existing owned-key updates retain their previous validation and writes.
  setString(key.value,L"SonicLatchOwner",L"SonicLatch-machine-v1");
  setString(key.value,L"SonicLatchRoot",widenAscii(plan.rootIdentity));
  setString(key.value,L"SonicLatchManifest",widenAscii(plan.newManifest));
- for(const auto& [name,value]:registration(plan,metadata))setString(key.value,name.c_str(),value);
+ for(const auto& [name,value]:registration(plan,metadata))if(name!=L"DisplayName")setString(key.value,name.c_str(),value);
+ setString(key.value,L"DisplayName",L"SonicLatch");
  need(RegFlushKey(key.value)==ERROR_SUCCESS,"registration flush");
+ exactRegistration(key.value,plan,metadata);
+  return;
+ }
+ need(intents!=nullptr,"new registration requires protected intent");
+ // The parent is opened, never created or assigned different permissions.
+ RegKey parent;need(RegOpenKeyExW(HKEY_LOCAL_MACHINE,uninstallParent,0,KEY_READ|KEY_CREATE_SUB_KEY|KEY_WOW64_64KEY,&parent.value)==ERROR_SUCCESS,"existing 64-bit Uninstall parent unavailable");
+ RegKey created;std::string allocated=stage;
+ if(!intent){
+  std::array<unsigned char,16> nonce{};need(BCryptGenRandom(nullptr,nonce.data(),static_cast<ULONG>(nonce.size()),BCRYPT_USE_SYSTEM_PREFERRED_RNG)==0,"registration stage identity");allocated="SonicLatch-stage-"+plan.transactionId+"-";for(auto c:nonce){allocated+="0123456789abcdef"[c>>4];allocated+="0123456789abcdef"[c&15];}
+  DWORD disposition{};NewRegistrationSecurity security;need(RegCreateKeyExW(parent.value,widenAscii(allocated).c_str(),0,nullptr,REG_OPTION_NON_VOLATILE,access|KEY_WRITE|DELETE,&security.attributes,&created.value,&disposition)==ERROR_SUCCESS,"registration stage create");need(disposition==REG_CREATED_NEW_KEY,"existing registration stage retained");protectedAcl(created.value,false,SE_REGISTRY_KEY);
+  // An interrupted unsealed stage has no DisplayName and is never adopted or
+  // deleted by a later attempt. Each new attempt allocates a distinct name.
+  for(const auto& [name,value]:registration(plan,metadata))if(ownershipName(name))setString(created.value,name.c_str(),value);
+  exactOwnershipStage(created.value,plan,metadata);need(RegFlushKey(created.value)==ERROR_SUCCESS,"registration stage flush");exactOwnershipStage(created.value,plan,metadata);
+  const auto sealed=registrationIntent(plan,metadata,allocated);intents->write({},sealed);need(intents->read()==std::optional<Bytes>{sealed},"registration intent readback");
+ }else{const auto path=std::wstring(uninstallParent)+L"\\"+widenAscii(allocated);need(RegOpenKeyExW(HKEY_LOCAL_MACHINE,path.c_str(),0,access|KEY_WRITE|DELETE,&created.value)==ERROR_SUCCESS,"sealed registration stage missing; retained");exactOwnershipStage(created.value,plan,metadata);}
+ // New final only. No overwrite/delete and no TxR fallback. A failed rename is
+ // reconciled on a later invocation from the sealed intent and both key names.
+ const auto renamed=RegRenameKey(created.value,nullptr,L"SonicLatch");need(renamed==ERROR_SUCCESS,"registration stage rename failed; inspect/retry from intent");created.close();
+ status=RegOpenKeyExW(HKEY_LOCAL_MACHINE,uninstallKey,0,access,&key.value);
+ need(status==ERROR_SUCCESS,"renamed registration missing; retained");finishRegistration(key.value,plan,metadata);
 }
 inline void removeRegistration(const Plan& plan,const fs::path& metadata){
  need(plan.operation==Operation::Uninstall,"only uninstall removes registration");

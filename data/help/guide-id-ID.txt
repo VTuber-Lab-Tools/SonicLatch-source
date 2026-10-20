@@ -1,0 +1,29 @@
+SonicLatch — Bantuan penundaan audio
+
+Lingkungan dan pemasangan
+
+Target: Windows 64-bit dan OBS 30 atau yang lebih baru (OBS 32.2.2 direkomendasikan). Pemuatan dan tampilan dock telah dikonfirmasi pada OBS 32.2.2 di komputer nyata; OBS 30/31 belum diuji di komputer nyata. Tutup OBS sebelum pemasangan. Gunakan petunjuk pemasangan dan penghapusan bahasa Jepang/Inggris yang disertakan.
+
+Ukur, periksa, sesuaikan
+
+1. Pilih sumber audio dan berikan sinyal aktif. Filter pengukuran “Pengukuran Penundaan Audio (SonicLatch)” ditambahkan otomatis. Jangan tambahkan secara manual, nonaktifkan, hapus, atau ubah urutannya selama penggunaan. Perubahan offset memengaruhi semua adegan yang memakai sumber ini.
+
+2. Periksa gelombang PRE (sebelum pemrosesan), POST (sesudah), Penundaan D, dan Pengukuran. “—” berarti tidak tersedia, bukan nol. Tanpa suara, mute, keyakinan rendah, atau pengukuran usang/tidak valid dapat menghalangi penyesuaian. Periksa sinyal dan tunggu perkiraan valid yang baru.
+
+3. Gunakan Sesuaikan otomatis (Auto) saat perkiraan valid tersedia. Offset absolut S diatur ke −D; D tidak dikurangkan dari offset yang sudah ada. Untuk D = +80 ms, targetnya −80 ms. Pengukuran dan tampilan saja tidak mengubah offset.
+
+4. Sesuaikan dengan −5 ms, −1 ms, +1 ms, +5 ms, atau masukkan nilai lalu gunakan Terapkan offset yang dimasukkan. Mengetik saja tidak menulis nilai. Urungkan mengembalikan nilai sebelum operasi terakhir yang berhasil jika masih valid. Reset offset mengatur ke 0 ms, bukan nilai awal.
+
+5. Periksa rekaman atau siaran yang sebenarnya. Lingkungan dan beban pemrosesan dapat menyebabkan ketidakselarasan. Nilai dan penundaan dapat berubah setelah pengaturan atau saat siaran. Jika terjadi pergeseran, tunggu perkiraan terkini yang valid dan gunakan Auto lagi. Auto adalah penyesuaian ulang secara eksplisit, bukan pelacakan terus-menerus atau jaminan sinkronisasi sempurna.
+
+Arti tampilan
+
+D diperkirakan dengan membandingkan PRE dan POST. S adalah offset sinkronisasi OBS (Offset saat ini O). Residu saat ini adalah D + S. Posisi POST yang ditampilkan mencakup S; posisi dan sisa ini adalah perkiraan model, bukan pengukuran baru atas keluaran yang telah dikoreksi. Pembacaan balik yang cocok hanya memastikan nilai tersimpan di OBS, bukan sinkronisasi rekaman.
+
+Rentang dan pemulihan
+
+Stereo: 44,1 kHz atau 48 kHz. Pengukuran penundaan kira-kira dalam ±500 ms, tidak termasuk titik ujung pencarian; penulisan offset memakai −950 hingga +1000 ms. Rentangnya berbeda. Perubahan sumber atau offset dari luar dapat membatalkan rekomendasi dan Undo. Baca offset saat ini hanya membaca dan tidak memulihkan Undo. Jika penulisan/pembacaan balik belum dikonfirmasi, jangan menganggap berhasil atau mengeklik berulang kali. Periksa status, sumber, dan properti audio lanjutan OBS.
+
+Bahasa dan dukungan
+
+Antarmuka dan bantuan mencakup 16 lokal yang sama. Pertanyaan dilayani dalam bahasa Jepang dan Inggris; dukungan atau Setup dalam seluruh 16 bahasa tidak dijanjikan. Sertakan versi OBS, jenis sumber, teks status, langkah, dan apakah masalah terjadi dalam rekaman nyata. Jangan kirim kata sandi atau rekaman pribadi kecuali kebutuhan dan pembagiannya telah disepakati. Ubah bahasa di pengaturan OBS lalu mulai ulang OBS. Buka berkas bantuan yang sesuai dengan lokal tersebut.

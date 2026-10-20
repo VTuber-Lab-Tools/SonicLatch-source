@@ -19,6 +19,18 @@ target_compile_definitions(SonicLatch-registration-boundary-tests PRIVATE UNICOD
 target_link_libraries(SonicLatch-registration-boundary-tests PRIVATE bcrypt advapi32 shell32 ole32)
 add_test(NAME registration_boundaries COMMAND SonicLatch-registration-boundary-tests)
 
+add_executable(SonicLatch-directory-policy-tests directory_policy_tests.cpp)
+target_compile_options(SonicLatch-directory-policy-tests PRIVATE /W4 /WX /permissive- /utf-8)
+target_compile_definitions(SonicLatch-directory-policy-tests PRIVATE UNICODE _UNICODE NOMINMAX WIN32_LEAN_AND_MEAN)
+target_link_libraries(SonicLatch-directory-policy-tests PRIVATE bcrypt advapi32 shell32 ole32)
+add_test(NAME directory_policy COMMAND SonicLatch-directory-policy-tests)
+
+add_executable(SonicLatch-uninstaller-slot-tests uninstaller_slot_tests.cpp)
+target_compile_options(SonicLatch-uninstaller-slot-tests PRIVATE /W4 /WX /permissive- /utf-8)
+target_compile_definitions(SonicLatch-uninstaller-slot-tests PRIVATE UNICODE _UNICODE NOMINMAX WIN32_LEAN_AND_MEAN)
+target_link_libraries(SonicLatch-uninstaller-slot-tests PRIVATE bcrypt advapi32 shell32 ole32)
+add_test(NAME uninstaller_slots COMMAND SonicLatch-uninstaller-slot-tests)
+
 # Product connection sources are staged for integration review only.
 # Existing fixture is unchanged; no product CLI is enabled here.
 add_library(SonicLatch-product-transaction INTERFACE)

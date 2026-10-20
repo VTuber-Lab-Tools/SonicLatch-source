@@ -1,0 +1,29 @@
+SonicLatch — Ayuda sobre el retardo de audio
+
+Entorno e instalación
+
+Destino: Windows de 64 bits y OBS 30 o posterior (se recomienda OBS 32.2.2). Se han confirmado la carga y la visualización del panel en OBS 32.2.2 en un equipo real; OBS 30/31 aún no se han probado en un equipo real. Cierre OBS antes de instalar. Consulte las instrucciones de instalación y desinstalación incluidas en japonés e inglés.
+
+Medir, comprobar y ajustar
+
+1. Seleccione la fuente de audio y proporcione una señal activa. El filtro de medición «Medición del retardo de audio (SonicLatch)» se añade automáticamente. No lo añada manualmente ni lo desactive, elimine o reordene durante el uso. Los cambios afectan a todas las escenas que usan esta fuente.
+
+2. Compruebe las formas de onda PRE (antes del procesamiento) y POST (después), Retardo D y Medición. «—» significa no disponible, no cero. El silencio, la fuente silenciada, la baja confianza o una medición caducada o inválida pueden impedir el ajuste. Compruebe la señal y espere una nueva estimación válida.
+
+3. Use Ajuste automático (Auto) con una estimación válida. Establece el desplazamiento absoluto S en −D; no resta D al desplazamiento existente. Si D = +80 ms, el objetivo es −80 ms. Medir y mostrar no cambia el desplazamiento.
+
+4. Afine con −5 ms, −1 ms, +1 ms, +5 ms, o introduzca un valor y use Aplicar desfase introducido. La entrada por sí sola no escribe. Deshacer restaura el valor anterior a la última operación correcta si sigue siendo válido. Restablecer desfase establece 0 ms, no el valor original.
+
+5. Compruebe una grabación o emisión real. Según el entorno y la carga de procesamiento, la coincidencia puede no ser perfecta. Los valores y el retardo pueden cambiar después del ajuste o durante la emisión. Si aparece desfase, espere una estimación actual válida y vuelva a usar Auto. Auto reajusta de forma explícita: no sigue los cambios continuamente ni garantiza una sincronización exacta.
+
+Significado de la pantalla
+
+D se estima comparando PRE y POST. S es el desplazamiento de sincronización OBS (Desfase actual O). Residuo actual es D + S. La posición POST mostrada incluye S; dicha posición y el residuo son estimaciones del modelo, no una nueva medición de la salida corregida. Una lectura coincidente solo confirma el valor guardado en OBS, no la sincronización de la grabación.
+
+Rangos y solución de problemas
+
+Estéreo: 44,1 kHz o 48 kHz. La medición está aproximadamente dentro de ±500 ms, sin los extremos de búsqueda; el desplazamiento admite escritura de −950 a +1000 ms. Son rangos diferentes. Los cambios externos en la fuente o el desplazamiento pueden invalidar recomendaciones y Deshacer. Leer desfase actual solo lee y no recupera Deshacer. Si no se confirma la escritura o la lectura, no suponga éxito ni pulse repetidamente. Revise el estado, la fuente y las propiedades de audio avanzadas de OBS.
+
+Idiomas y asistencia
+
+La interfaz y la ayuda cubren las mismas 16 configuraciones regionales. Las consultas se atienden en japonés e inglés; no se promete asistencia ni Setup en los 16 idiomas. Indique la versión de OBS, el tipo de fuente, el mensaje de estado, los pasos y si ocurre en una grabación real. No envíe contraseñas ni grabaciones privadas a menos que se hayan acordado tanto la necesidad como su envío. Cambie el idioma en los ajustes de OBS y reinicie OBS. Abra el archivo de ayuda de esa configuración regional.

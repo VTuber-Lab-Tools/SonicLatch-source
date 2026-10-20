@@ -1,0 +1,29 @@
+SonicLatch — Audio delay help
+
+Scope and installation
+
+Target: 64-bit Windows and OBS 30+ (OBS 32.2.2 recommended). Loading and dock display have been confirmed in OBS 32.2.2 on a real system; OBS 30/31 remain untested on a real system. Close OBS before installation. Use the supplied Japanese/English installation and removal instructions.
+
+Measure, inspect, adjust
+
+1. Select the audio source and provide an active signal. The measurement filter “Audio Delay Measurement (SonicLatch)” is added automatically. Do not manually add it, disable it, remove it, or reorder it during use. Offset changes affect every scene using this source.
+
+2. Inspect the PRE (before processing) and POST (after processing) waveforms, Delay D, and Measurement. A dash “—” means unavailable, not zero. Silence, mute, low confidence, stale or invalid measurements can prevent adjustment. Check the source and wait for a new valid estimate.
+
+3. Use Auto adjust (Auto) when a valid estimate is available. It sets the absolute offset S to −D; it does not subtract D from the existing offset. For D = +80 ms, the target is −80 ms. Measurement and display alone never apply an offset.
+
+4. Fine-tune using −5 ms, −1 ms, +1 ms, +5 ms, or enter a value and use Apply entered offset. Editing the numeric field alone does not write a value. Undo restores the value before the previous successful operation when still valid; Reset offset sets the offset to 0 ms, not the original value.
+
+5. Verify the actual recording or stream. Depending on the environment and processing load, perfect alignment may not be possible. Values and delay may change after setup or during streaming. If timing drifts, wait for a valid current estimate and use Auto again. Auto is an explicit readjustment, not continuous tracking or a guarantee of exact synchronization.
+
+What the display proves
+
+D is estimated by comparing PRE and POST. S is the OBS sync offset (shown as Current offset O). Current residual is D + S. The displayed POST position includes S; that shifted position and residual are model estimates, not a new measurement of corrected output. Matching OBS readback confirms only the stored offset, not recorded synchronization.
+
+Ranges and recovery
+
+Stereo: 44.1 kHz or 48 kHz. Delay measurement is approximately within ±500 ms, excluding search endpoints; offset writes use −950 to +1000 ms. These ranges are different. If OBS values or the source change externally, review the new state: previous recommendations and Undo may be invalidated. Read current offset only reads the offset; it does not restore Undo. If a write/readback cannot be confirmed, do not assume success or repeatedly click. Check the status, source, and OBS Advanced Audio Properties.
+
+Languages and support
+
+The UI and help cover the same 16 locales. Inquiries are supported in Japanese and English; this does not promise support or Setup localization in all 16 languages. Include the OBS version, source type, status text, steps, and whether the problem occurs in an actual recording. Do not send passwords or private recordings unless both the need and the sharing have been agreed. To change the interface language, change the language in OBS Settings and restart OBS. Open the help file matching that locale.

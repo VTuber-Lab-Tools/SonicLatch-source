@@ -24,6 +24,13 @@ OutFile "${SONICLATCH_INSTALLER_OUTPUT}"
 Var HelperCode
 Var HelperReply
 Var Management
+Var SlotTx
+Var SlotId
+Var RecoveryReapplyPending
+Var InstallRetried
+!include "nsis-obs-preflight.nsh"
+!insertmacro DefineObsCheck ""
+!insertmacro DefineObsCheck "un."
 !macro ExtractHelper
  InitPluginsDir
  SetOutPath "$PLUGINSDIR"
@@ -35,6 +42,13 @@ Var Management
  nsExec::ExecToStack '"$PLUGINSDIR\SonicLatch-helper.exe" ${ARG}'
  Pop $HelperCode
  Pop $HelperReply
+ StrCmp $HelperCode "31" 0 +2
+ DetailPrint "$HelperReply"
+ StrCmp $HelperCode "40" 0 +5
+ DetailPrint "$HelperReply"
+ MessageBox MB_OK|MB_ICONEXCLAMATION "導入前の確認で停止しました。この補助実行では変更処理を開始していません。OBSを閉じてから、Setupを新しく起動してください。OKを押すとSetupを終了します。管理者権限等の理由は詳細表示を確認してください。" /SD IDOK
+ SetErrorLevel 40
+ Quit
 !macroend
 !macro RequireReply EXPECTED LABEL
  StrCmp $HelperReply "${EXPECTED}$\r$\n" ${LABEL}
@@ -70,12 +84,18 @@ Var Management
  RMDir "$APPDATA\SonicLatch"
 !macroend
 Section "SonicLatch"
+ !insertmacro RequireObsClosed ""
  !insertmacro ExtractHelper
+ StrCpy $RecoveryReapplyPending 0
+ StrCpy $InstallRetried 0
+ install_target:
  !insertmacro CallHelper "--install"
  StrCmp $HelperCode "0" install_validate
  StrCmp $HelperCode "33" handoff_validate
  StrCmp $HelperCode "34" resume_cleanup_validate
+ StrCmp $InstallRetried 1 install_failed
  MessageBox MB_YESNO|MB_ICONEXCLAMATION "導入が完了しませんでした。中断記録から復旧しますか？" /SD IDNO IDNO install_failed
+ StrCpy $RecoveryReapplyPending 1
  !insertmacro CallHelper "--recover-active"
  StrCmp $HelperCode "0" install_validate
  StrCmp $HelperCode "33" handoff_validate
@@ -93,23 +113,53 @@ Section "SonicLatch"
  !insertmacro RequireReply "SONICLATCH/1 AWAITING_NSIS_UNINSTALLER" write_uninstaller
  Goto install_failed
  write_uninstaller:
- ; Only new own bootstrap file. Never overwrite an existing uninstaller here.
- IfFileExists "$Management\Uninstall.exe" finalize_registration
- ; The final filename is promoted only after WriteUninstaller succeeded.
- ; A partial write remains at the separate pending name and is never registered.
- IfFileExists "$Management\Uninstall.pending.exe" install_failed
+ ; Each attempt gets a new protected slot bound to tx/plan/helper. Unsealed
+ ; leftovers and the legacy fixed pending filename are preserved, not adopted.
+ !insertmacro CallHelper "--prepare-uninstaller-slot"
+ StrCmp $HelperCode "36" resumed_slot_validate
+ StrCmp $HelperCode "35" 0 install_failed
+ StrCpy $SlotTx $HelperReply 32 30
+ StrCpy $SlotId $HelperReply 32 63
+ !insertmacro RequireReply "SONICLATCH/1 UNINSTALLER_SLOT $SlotTx $SlotId" verify_slot
+ Goto install_failed
+ resumed_slot_validate:
+ !insertmacro RequireReply "SONICLATCH/1 UNINSTALLER_PROMOTED" finalize_registration
+ Goto install_failed
+ verify_slot:
+ ; The helper validates bounded hex IDs and exact active ownership before any
+ ; path derived from the reply is used for a write.
+ !insertmacro CallHelper "--verify-uninstaller-slot $SlotTx $SlotId"
+ StrCmp $HelperCode "0" 0 install_failed
+ !insertmacro RequireReply "SONICLATCH/1 UNINSTALLER_SLOT_VERIFIED" write_slot
+ Goto install_failed
+ write_slot:
  ClearErrors
- WriteUninstaller "$Management\Uninstall.pending.exe"
+ WriteUninstaller "$Management\transactions\$SlotTx\uninstaller-slots\$SlotId\Uninstall.pending.exe"
  IfErrors install_failed
- ClearErrors
- Rename "$Management\Uninstall.pending.exe" "$Management\Uninstall.exe"
- IfErrors install_failed
+ ; Seal is invoked only after this WriteUninstaller reported success.
+ !insertmacro CallHelper "--seal-uninstaller-slot $SlotTx $SlotId"
+ StrCmp $HelperCode "0" 0 install_failed
+ !insertmacro RequireReply "SONICLATCH/1 UNINSTALLER_SEALED" promote_slot
+ Goto install_failed
+ promote_slot:
+ !insertmacro CallHelper "--promote-uninstaller-slot $SlotTx $SlotId"
+ StrCmp $HelperCode "0" 0 install_failed
+ !insertmacro RequireReply "SONICLATCH/1 UNINSTALLER_PROMOTED" finalize_registration
+ Goto install_failed
  finalize_registration:
  !insertmacro CallHelper "--finalize-registration"
  StrCmp $HelperCode "0" install_validate install_failed
  install_validate:
- !insertmacro RequireReply "SONICLATCH/1 PAYLOAD_COMMITTED REGISTERED" install_done
+ !insertmacro RequireReply "SONICLATCH/1 PAYLOAD_COMMITTED REGISTERED" install_registered
  Goto install_failed
+ install_registered:
+ ; Recovery may have registered an older plan. Require one current-catalog
+ ; install after it, including any old uninstaller handoff. Never recover twice.
+ StrCmp $RecoveryReapplyPending 1 reapply_current_target install_done
+ reapply_current_target:
+ StrCpy $RecoveryReapplyPending 0
+ StrCpy $InstallRetried 1
+ Goto install_target
  resume_cleanup_validate:
  !insertmacro RequireReply "SONICLATCH/1 CLEANUP_PENDING" resume_cleanup
  Goto install_failed
@@ -132,6 +182,7 @@ Section "SonicLatch"
  SetErrorLevel 0
 SectionEnd
 Section "Uninstall"
+ !insertmacro RequireObsClosed "un."
  ; NSIS runs its normal temporary copy; embedded helper is also temporary.
  !insertmacro ExtractHelper
  !insertmacro CallHelper "--uninstall"

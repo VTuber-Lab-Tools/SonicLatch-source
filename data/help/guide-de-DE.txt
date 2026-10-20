@@ -1,0 +1,29 @@
+SonicLatch — Hilfe zur Audioverzögerung
+
+Umgebung und Installation
+
+Ziel: 64-Bit-Windows und OBS 30 oder neuer (OBS 32.2.2 empfohlen). Laden und Dock-Anzeige wurden in OBS 32.2.2 auf einem realen System bestätigt; OBS 30/31 wurden nicht praktisch getestet. Schließen Sie OBS vor der Installation. Verwenden Sie die beigefügten japanischen/englischen Installations- und Entfernungsanleitungen.
+
+Messen, prüfen, anpassen
+
+1. Wählen Sie die Audioquelle und geben Sie ein aktives Signal ein. Der Messfilter „Audioverzögerungsmessung (SonicLatch)“ wird automatisch hinzugefügt. Fügen Sie ihn nicht manuell hinzu und deaktivieren, entfernen oder verschieben Sie ihn während der Verwendung nicht. Offsetänderungen betreffen alle Szenen, die diese Quelle verwenden.
+
+2. Prüfen Sie PRE (vor der Verarbeitung), POST (nach der Verarbeitung), Verzögerung D und Messung. „—“ bedeutet nicht verfügbar, nicht null. Stille, Stummschaltung, geringe Zuverlässigkeit sowie veraltete oder ungültige Messungen können die Anpassung verhindern. Prüfen Sie das Signal und warten Sie auf eine neue gültige Schätzung.
+
+3. Verwenden Sie Automatisch anpassen (Auto) bei gültiger Schätzung. Der absolute Offset S wird auf −D gesetzt; D wird nicht vom bisherigen Offset abgezogen. Bei D = +80 ms ist das Ziel −80 ms. Messen und Anzeigen allein ändern keinen Offset.
+
+4. Korrigieren Sie mit −5 ms, −1 ms, +1 ms, +5 ms oder geben Sie einen Wert ein und wählen Sie Eingegebenen Versatz anwenden. Die Eingabe allein schreibt nichts. Rückgängig stellt, sofern noch gültig, den Wert vor dem letzten erfolgreichen Vorgang wieder her. Offset zurücksetzen setzt 0 ms, nicht den ursprünglichen Wert.
+
+5. Prüfen Sie die tatsächliche Aufnahme oder Übertragung. Je nach Umgebung und Verarbeitungslast ist eine perfekte Übereinstimmung nicht immer möglich. Werte und Verzögerung können sich nach der Einstellung oder während des Streams ändern. Warten Sie bei einer Abweichung auf eine gültige aktuelle Schätzung und verwenden Sie Auto erneut. Auto ist eine bewusste Neuanpassung, keine kontinuierliche Nachführung oder Synchronitätsgarantie.
+
+Aussagekraft der Anzeige
+
+D wird aus PRE und POST geschätzt. S ist der OBS-Synchronisationsoffset (Aktueller Versatz O). Aktuelles Residuum ist D + S. Die angezeigte POST-Position berücksichtigt S; diese Position und der Restwert sind Modellschätzungen, keine neue Messung des korrigierten Ausgangs. Ein übereinstimmender Rücklesewert bestätigt nur den gespeicherten Offset, nicht die Synchronität der Aufnahme.
+
+Bereiche und Fehlerbehebung
+
+Stereo: 44,1 kHz oder 48 kHz. Die Verzögerungsmessung liegt ungefähr innerhalb ±500 ms ohne Suchendpunkte; der Schreibbereich ist −950 bis +1000 ms. Die Bereiche sind verschieden. Externe Änderungen an Quelle oder OBS-Offset können Vorschläge und Rückgängig ungültig machen. Aktuellen Versatz lesen liest nur und stellt Rückgängig nicht wieder her. Bei unbestätigtem Schreiben oder Rücklesen keinen Erfolg annehmen und nicht wiederholt klicken. Prüfen Sie Status, Quelle und die erweiterten Audioeigenschaften in OBS.
+
+Sprachen und Support
+
+UI und Hilfe unterstützen dieselben 16 Sprachvarianten. Anfragen werden auf Japanisch und Englisch unterstützt; dies verspricht weder Support noch Setup-Übersetzungen in allen 16 Sprachen. Nennen Sie OBS-Version, Quellentyp, Statustext, Schritte und das Verhalten in einer tatsächlichen Aufnahme. Senden Sie keine Passwörter oder privaten Aufnahmen, solange nicht sowohl die Notwendigkeit als auch die Weitergabe vereinbart wurden. Ändern Sie die Sprache in den OBS-Einstellungen und starten Sie OBS neu. Öffnen Sie die Hilfedatei für diese Sprachvariante.

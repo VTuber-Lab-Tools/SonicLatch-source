@@ -9,9 +9,9 @@ import sys
 import uuid
 
 PINS = {
-    'product_package.py': 'd45bcc226b78684f9ed7d5d14b41867b19e865626701f6a73639d13653eda448',
+    'product_package.py': 'f00021a444c07c22388557f840188ca17b6fd6a9bfa9702450a276846e6abb2e',
     'build_release_package.py': '3262d1d9908c8eccefccc619cb2a33efc5da4416325ec0e601a1c98581bcaee0',
-    'generate_release_catalog.py': 'e6889407f474bbeab1d27a8f013e9208a69f85b2d8386fe52d7a78219976ec0b',
+    'generate_release_catalog.py': '40f469db91ff1c6c9b5b1775e4f094b019a12a0cb46f48e97b76f33867d88f5d',
 }
 def require(ok, message):
     if not ok: raise ValueError(message)
@@ -122,7 +122,7 @@ def main():
     a.output_dir.mkdir(parents=True, exist_ok=False)
     spec = {'sourceContext': context, 'sourceArchivePath': str(a.source_zip.resolve()),
             'sourceArchiveSha256': a.source_sha256,
-            'payload': [{'relativePath': 'SonicLatch/SonicLatch.dll', 'inputPath': str(a.dll.resolve()), 'sha256': a.dll_sha256}] + rows}
+            'payload': [{'relativePath': 'SonicLatch/bin/64bit/SonicLatch.dll', 'inputPath': str(a.dll.resolve()), 'sha256': a.dll_sha256}] + rows}
     spec_path = a.output_dir / 'release-inputs.json'
     spec_path.write_bytes(product.canonical(spec))
     (a.output_dir / 'source-context.json').write_bytes(product.canonical(context))

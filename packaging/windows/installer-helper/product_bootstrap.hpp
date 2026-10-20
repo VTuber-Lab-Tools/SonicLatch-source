@@ -12,19 +12,19 @@ class Bootstrap {
  const fs::path root=base/L"obs-studio"/L"plugins";
  const fs::path metadata=base/L"SonicLatch"/L"Installer";
  explicit Bootstrap(bool create){
-  need(IsUserAnAdmin(),"normal installer requires elevated administrator");obsStopped();
-  PSECURITY_DESCRIPTOR raw{};need(ConvertStringSecurityDescriptorToSecurityDescriptorW(L"O:BAG:BAD:P(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)(A;OICI;FRFX;;;BU)",SDDL_REVISION_1,&raw,nullptr),"bootstrap security descriptor");
-  std::unique_ptr<void,decltype(&LocalFree)> security(raw,LocalFree);SECURITY_ATTRIBUTES sa{sizeof(sa),raw,FALSE};
+  if(!IsUserAnAdmin())throw PreflightBlocked("normal installer requires elevated administrator");obsStopped();
+  if(create)markProtectedMutationRisk(); // OPEN_IF may create bootstrap directories.
   // Pin drive and ProgramData first; no environment-variable root override.
-  for(const auto& path:{base.root_path(),base})pin(path,false);
+  for(const auto& path:{base.root_path(),base})pin(path);
   for(const auto& path:{base/L"obs-studio",root,base/L"SonicLatch",metadata,metadata/L"transactions"}){
-   if(create&&!CreateDirectoryW(path.c_str(),&sa))need(GetLastError()==ERROR_ALREADY_EXISTS,"bootstrap create refused");
-   pin(path,path==root||path==base/L"SonicLatch"||path==metadata||path==metadata/L"transactions");
+   pin(path,create);
   }
  }
- void pin(const fs::path& path,bool managed){
-  Handle h(CreateFileW(path.c_str(),FILE_READ_ATTRIBUTES|READ_CONTROL,FILE_SHARE_READ|FILE_SHARE_WRITE,nullptr,OPEN_EXISTING,FILE_FLAG_BACKUP_SEMANTICS|FILE_FLAG_OPEN_REPARSE_POINT,nullptr));
-  auto i=information(h.value);need(i.dwFileAttributes&FILE_ATTRIBUTE_DIRECTORY,"bootstrap directory");need(equalPath(finalPath(h.value),path),"bootstrap alias refused");if(path!=path.root_path())protectedAcl(h.value,!managed);pins.push_back(std::move(h));
+ void pin(const fs::path& path,bool create=false){
+  for(const auto& h:pins)if(h.value!=INVALID_HANDLE_VALUE&&equalPath(finalPath(h.value),path)){inspectDirectory(h.value,path,base);return;}
+  HANDLE parent=INVALID_HANDLE_VALUE;
+  if(path!=path.root_path()){pin(path.parent_path());for(const auto& h:pins)if(h.value!=INVALID_HANDLE_VALUE&&equalPath(finalPath(h.value),path.parent_path())){parent=h.value;break;}}
+  auto h=acquireDirectory(parent,path,base,create);pins.push_back(std::move(h));
  }
  void releaseDirectory(const fs::path& path){for(auto& h:pins)if(h.value!=INVALID_HANDLE_VALUE&&equalPath(finalPath(h.value),path))h.close();}
  std::string rootIdentity()const {for(const auto& h:pins)if(h.value!=INVALID_HANDLE_VALUE&&equalPath(finalPath(h.value),root))return identity(h.value);throw std::runtime_error("root not pinned");}
